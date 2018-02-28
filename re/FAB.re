@@ -1,3 +1,5 @@
+open Utils;
+
 [@bs.module "react-native-paper"]
 external reactClass : ReasonReact.reactClass = "FAB";
 
