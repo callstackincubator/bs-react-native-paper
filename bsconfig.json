@@ -10,5 +10,6 @@
     {
       "dir": "re"
     }
-  ]
+  ],
+  "namespace": "true"
 }
