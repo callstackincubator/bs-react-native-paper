@@ -54,7 +54,7 @@ module Button = {
       ~dark: option(bool)=?,
       ~icon: option(ReasonReact.reactElement)=?,
       ~color: option(string)=?,
-      ~style: option(ReactDOMRe.Style.t)=?,
+      ~style: option(BsReactNative.Style.t)=?,
       ~theme: option(Js.t({..}))=?,
       ~onPress: option(BsReactNative.RNEvent.NativeEvent.t => unit)=?,
       children
@@ -87,7 +87,7 @@ module Caption = {
 
   let make =
     (
-      ~style: option(ReactDOMRe.Style.t)=?,
+      ~style: option(BsReactNative.Style.t)=?,
       children
     ) =>
   ReasonReact.wrapJsForReason(
@@ -110,7 +110,7 @@ module Card = {
     (
       ~elevation: option(int)=?,
       ~theme: option(Js.t({..}))=?,
-      ~style: option(ReactDOMRe.Style.t)=?,
+      ~style: option(BsReactNative.Style.t)=?,
       ~onPress: option(BsReactNative.RNEvent.NativeEvent.t => unit)=?,
       children
     ) =>
@@ -135,7 +135,7 @@ module CardActions = {
 
   let make =
     (
-      ~style: option(ReactDOMRe.Style.t)=?,
+      ~style: option(BsReactNative.Style.t)=?,
       children
     ) =>
   ReasonReact.wrapJsForReason(
@@ -156,7 +156,7 @@ module CardContent = {
 
   let make =
     (
-      ~style: option(ReactDOMRe.Style.t)=?,
+      ~style: option(BsReactNative.Style.t)=?,
       children
     ) =>
   ReasonReact.wrapJsForReason(
@@ -178,7 +178,7 @@ module CardCover = {
   let make =
     (
       ~theme: option(Js.t({..}))=?,
-      ~style: option(ReactDOMRe.Style.t)=?,
+      ~style: option(BsReactNative.Style.t)=?,
       children
     ) =>
   ReasonReact.wrapJsForReason(
@@ -204,7 +204,7 @@ module Checkbox = {
       ~theme: option(Js.t({..}))=?,
       ~disabled: option(bool)=?,
       ~color: option(string)=?,
-      ~style: option(ReactDOMRe.Style.t)=?,
+      ~style: option(BsReactNative.Style.t)=?,
       ~onPress: option(BsReactNative.RNEvent.NativeEvent.t => unit)=?,
       children
     ) =>
@@ -234,7 +234,7 @@ module Dialog = {
       ~dismissable: option(bool)=?,
       ~visible: option(bool),
       ~theme: option(Js.t({..}))=?,
-      ~style: option(ReactDOMRe.Style.t)=?,
+      ~style: option(BsReactNative.Style.t)=?,
       ~onDismiss: option(unit => unit),
       children
     ) =>
@@ -260,7 +260,7 @@ module DialogActions = {
 
   let make =
     (
-      ~style: option(ReactDOMRe.Style.t)=?,
+      ~style: option(BsReactNative.Style.t)=?,
       children
     ) =>
   ReasonReact.wrapJsForReason(
@@ -281,7 +281,7 @@ module DialogContent = {
 
   let make =
     (
-      ~style: option(ReactDOMRe.Style.t)=?,
+      ~style: option(BsReactNative.Style.t)=?,
       children
     ) =>
   ReasonReact.wrapJsForReason(
@@ -302,7 +302,7 @@ module DialogScrollArea = {
 
   let make =
     (
-      ~style: option(ReactDOMRe.Style.t)=?,
+      ~style: option(BsReactNative.Style.t)=?,
       children
     ) =>
   ReasonReact.wrapJsForReason(
@@ -324,7 +324,7 @@ module DialogTitle = {
   let make =
     (
       ~theme: option(Js.t({..}))=?,
-      ~style: option(ReactDOMRe.Style.t)=?,
+      ~style: option(BsReactNative.Style.t)=?,
       children
     ) =>
   ReasonReact.wrapJsForReason(
@@ -348,7 +348,7 @@ module Divider = {
     (
       ~inset: option(bool)=?,
       ~theme: option(Js.t({..}))=?,
-      ~style: option(ReactDOMRe.Style.t)=?,
+      ~style: option(BsReactNative.Style.t)=?,
       children
     ) =>
   ReasonReact.wrapJsForReason(
@@ -430,7 +430,7 @@ module FAB = {
       ~color: option(string)=?,
       ~theme: option(Js.t({..}))=?,
       ~icon: option(ReasonReact.reactElement),
-      ~style: option(ReactDOMRe.Style.t)=?,
+      ~style: option(BsReactNative.Style.t)=?,
       ~onPress: option(BsReactNative.RNEvent.NativeEvent.t => unit)=?,
       children
     ) =>
@@ -458,7 +458,7 @@ module Headline = {
 
   let make =
     (
-      ~style: option(ReactDOMRe.Style.t)=?,
+      ~style: option(BsReactNative.Style.t)=?,
       children
     ) =>
   ReasonReact.wrapJsForReason(
@@ -505,7 +505,7 @@ module Paper = {
   let make =
     (
       ~theme: option(Js.t({..}))=?,
-      ~style: option(ReactDOMRe.Style.t)=?,
+      ~style: option(BsReactNative.Style.t)=?,
       children
     ) =>
   ReasonReact.wrapJsForReason(
@@ -527,7 +527,7 @@ module Paragraph = {
 
   let make =
     (
-      ~style: option(ReactDOMRe.Style.t)=?,
+      ~style: option(BsReactNative.Style.t)=?,
       children
     ) =>
   ReasonReact.wrapJsForReason(
@@ -551,7 +551,7 @@ module ProgressBar = {
       ~progress: option(float),
       ~color: option(string)=?,
       ~theme: option(Js.t({..}))=?,
-      ~style: option(ReactDOMRe.Style.t)=?,
+      ~style: option(BsReactNative.Style.t)=?,
       children
     ) =>
   ReasonReact.wrapJsForReason(
@@ -608,7 +608,7 @@ module SearchBar = {
       ~value: option(string),
       ~icon: option(ReasonReact.reactElement)=?,
       ~theme: option(Js.t({..}))=?,
-      ~style: option(ReactDOMRe.Style.t)=?,
+      ~style: option(BsReactNative.Style.t)=?,
       ~onChangeText: option(string => unit),
       ~onIconPress: option(BsReactNative.RNEvent.NativeEvent.t => unit)=?,
       children
@@ -637,7 +637,7 @@ module Subheading = {
 
   let make =
     (
-      ~style: option(ReactDOMRe.Style.t)=?,
+      ~style: option(BsReactNative.Style.t)=?,
       children
     ) =>
   ReasonReact.wrapJsForReason(
@@ -662,7 +662,7 @@ module Switch = {
       ~value: option(bool)=?,
       ~color: option(string)=?,
       ~theme: option(Js.t({..}))=?,
-      ~style: option(ReactDOMRe.Style.t)=?,
+      ~style: option(BsReactNative.Style.t)=?,
       ~onValueChange: option(bool => unit)=?,
       children
     ) =>
@@ -697,7 +697,7 @@ module Text = {
       ~pressRetentionOffset: option(Js.t({..}))=?,
       ~allowFontScaling: option(bool)=?,
       ~theme: option(Js.t({..}))=?,
-      ~style: option(ReactDOMRe.Style.t)=?,
+      ~style: option(BsReactNative.Style.t)=?,
       ~onLayout: option(unit => unit)=?,
       ~onLongPress: option(unit => unit)=?,
       ~onPress: option(unit => unit)=?,
@@ -771,7 +771,7 @@ module TextInput = {
       ~numberOfLines: option(int),
       ~value: option(string)=?,
       ~theme: option(Js.t({..}))=?,
-      ~style: option(ReactDOMRe.Style.t)=?,
+      ~style: option(BsReactNative.Style.t)=?,
       ~onChange: option(unit => unit)=?,
       ~onChangeText: option(string => unit)=?,
       ~onContentSizeChange: option(unit => unit)=?,
@@ -853,7 +853,7 @@ module Title = {
 
   let make =
     (
-      ~style: option(ReactDOMRe.Style.t)=?,
+      ~style: option(BsReactNative.Style.t)=?,
       children
     ) =>
   ReasonReact.wrapJsForReason(
@@ -877,7 +877,7 @@ module Toolbar = {
       ~dark: option(bool)=?,
       ~statusBarHeight: option(float)=?,
       ~theme: option(Js.t({..}))=?,
-      ~style: option(ReactDOMRe.Style.t)=?,
+      ~style: option(BsReactNative.Style.t)=?,
       children
     ) =>
   ReasonReact.wrapJsForReason(
@@ -904,7 +904,7 @@ module ToolbarAction = {
       ~dark: option(bool)=?,
       ~size: option(float)=?,
       ~icon: option(ReasonReact.reactElement),
-      ~style: option(ReactDOMRe.Style.t)=?,
+      ~style: option(BsReactNative.Style.t)=?,
       ~onPress: option(BsReactNative.RNEvent.NativeEvent.t => unit)=?,
       children
     ) =>
@@ -931,7 +931,7 @@ module ToolbarBackAction = {
   let make =
     (
       ~dark: option(bool)=?,
-      ~style: option(ReactDOMRe.Style.t)=?,
+      ~style: option(BsReactNative.Style.t)=?,
       ~onPress: option(BsReactNative.RNEvent.NativeEvent.t => unit)=?,
       children
     ) =>
@@ -961,7 +961,7 @@ module ToolbarContent = {
       ~subtitle: option(string)=?,
       ~subtitleStyle: option(Js.t({..}))=?,
       ~theme: option(Js.t({..}))=?,
-      ~style: option(ReactDOMRe.Style.t)=?,
+      ~style: option(BsReactNative.Style.t)=?,
       ~onPress: option(BsReactNative.RNEvent.NativeEvent.t => unit)=?,
       children
     ) =>
@@ -995,7 +995,7 @@ module TouchableRipple = {
       ~disabled: option(bool)=?,
       ~rippleColor: option(string)=?,
       ~underlayColor: option(string)=?,
-      ~style: option(ReactDOMRe.Style.t)=?,
+      ~style: option(BsReactNative.Style.t)=?,
       ~theme: option(Js.t({..}))=?,
       ~onPress: option(BsReactNative.RNEvent.NativeEvent.t => unit)=?,
       children
