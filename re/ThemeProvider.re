@@ -1,7 +1,7 @@
 open Utils;
 
 [@bs.module "react-native-paper"]
-external reactClass : ReasonReact.reactClass = "PaperProvider";
+external reactClass : ReasonReact.reactClass = "ThemeProvider";
 
 let make =
   (
