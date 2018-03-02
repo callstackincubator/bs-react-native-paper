@@ -1,5 +1,3 @@
-
-
 [@bs.module "react-native-paper"]
 external reactClass : ReasonReact.reactClass = "TextInput";
 
@@ -77,8 +75,8 @@ let make =
           "keyboardAppearance": from_opt(keyboardAppearance),
           "defaultValue": from_opt(defaultValue),
           "disabled": Js.Boolean.to_js_boolean(disabled),
-          "disableFullscreenUI": from_opt(disableFullscreenUI),
-          "editable": from_opt(editable),
+          "disableFullscreenUI": Js.Boolean.to_js_boolean(disableFullscreenUI),
+          "editable": Js.Boolean.to_js_boolean(editable),
           "keyboardType": from_opt(keyboardType),
           "inlineImageLeft": from_opt(inlineImageLeft),
           "inlineImagePadding": from_opt(inlineImagePadding),
@@ -89,17 +87,17 @@ let make =
           "placeholderTextColor": from_opt(placeholderTextColor),
           "returnKeyType": from_opt(returnKeyType),
           "returnKeyLabel": from_opt(returnKeyLabel),
-          "spellCheck": from_opt(spellCheck),
+          "spellCheck": Js.Boolean.to_js_boolean(spellCheck),
           "textBreakStrategy": from_opt(textBreakStrategy),
           "underlineColorAndroid": from_opt(underlineColorAndroid),
           "clearButtonMode": from_opt(clearButtonMode),
           "clearTextOnFocus": from_opt(clearTextOnFocus),
-          "secureTextEntry": from_opt(secureTextEntry),
-          "selectTextOnFocus": from_opt(selectTextOnFocus),
+          "secureTextEntry": Js.Boolean.to_js_boolean(secureTextEntry),
+          "selectTextOnFocus": Js.Boolean.to_js_boolean(selectTextOnFocus),
           "selection": from_opt(selection),
           "selectionColor": from_opt(selectionColor),
           "underlineColor": from_opt(underlineColor),
-          "multline": from_opt(multline),
+          "multline": Js.Boolean.to_js_boolean(multline),
           "numberOfLines": from_opt(numberOfLines),
           "value": from_opt(value),
           "theme": from_opt(theme),
