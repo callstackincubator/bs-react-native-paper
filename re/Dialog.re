@@ -4,25 +4,25 @@ open Utils;
 external reactClass : ReasonReact.reactClass = "Dialog";
 
 let make =
-  (
-    ~dismissable: option(bool)=?,
-    ~visible: option(bool),
-    ~theme: option(Js.t({..}))=?,
-    ~style: option(BsReactNative.Style.t)=?,
-    ~onDismiss: option(unit => unit),
+    (
+      ~dismissable: bool=false,
+      ~visible: bool=false,
+      ~theme: option(Js.t({..}))=?,
+      ~style: option(BsReactNative.Style.t)=?,
+      ~onDismiss: option(unit => unit),
+      children
+    ) =>
+  ReasonReact.wrapJsForReason(
+    ~reactClass,
+    ~props=
+      Js.Nullable.(
+        {
+          "dismissable": Js.Boolean.to_js_boolean(dismissable),
+          "visible": Js.Boolean.to_js_boolean(visible),
+          "style": from_opt(style),
+          "theme": from_opt(theme),
+          "onDismiss": from_opt(onDismiss)
+        }
+      ),
     children
-  ) =>
-ReasonReact.wrapJsForReason(
-  ~reactClass,
-  ~props=
-    Js.Nullable.(
-      {
-        "dismissable": from_opt(dismissable),
-        "visible": from_opt(visible),
-        "style": from_opt(style),
-        "theme": from_opt(theme),
-        "onDismiss": from_opt(onDismiss)
-      }
-    ),
-  children
-);
+  );
