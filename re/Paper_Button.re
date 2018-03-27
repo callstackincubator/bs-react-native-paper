@@ -1,5 +1,3 @@
-
-
 [@bs.module "react-native-paper"]
 external reactClass : ReasonReact.reactClass = "Button";
 
@@ -29,11 +27,11 @@ let make =
           "primary": Js.Boolean.to_js_boolean(primary),
           "loading": Js.Boolean.to_js_boolean(loading),
           "dark": Js.Boolean.to_js_boolean(dark),
-          "icon": from_opt(icon),
-          "color": from_opt(color),
-          "style": from_opt(style),
-          "theme": from_opt(theme),
-          "onPress": from_opt(onPress)
+          "icon": Js.Undefined.fromOption(icon),
+          "color": Js.Undefined.fromOption(color),
+          "style": Js.Undefined.fromOption(style),
+          "theme": Js.Undefined.fromOption(theme),
+          "onPress": Js.Undefined.fromOption(onPress)
         }
       ),
     children

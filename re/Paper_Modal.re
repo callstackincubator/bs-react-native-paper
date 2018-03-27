@@ -1,5 +1,3 @@
-
-
 [@bs.module "react-native-paper"]
 external reactClass : ReasonReact.reactClass = "Modal";
 
@@ -17,7 +15,7 @@ let make =
         {
           "dismissable": Js.Boolean.to_js_boolean(dismissable),
           "visible": Js.Boolean.to_js_boolean(visible),
-          "onDismiss": from_opt(onDismiss)
+          "onDismiss": Js.Undefined.fromOption(onDismiss)
         }
       ),
     children

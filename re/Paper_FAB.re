@@ -19,11 +19,11 @@ let make =
         {
           "small": Js.Boolean.to_js_boolean(small),
           "dark": Js.Boolean.to_js_boolean(dark),
-          "color": from_opt(color),
+          "color": Js.Undefined.fromOption(color),
           "icon": icon,
-          "onPress": from_opt(onPress),
-          "style": from_opt(style),
-          "theme": from_opt(theme)
+          "onPress": Js.Undefined.fromOption(onPress),
+          "style": Js.Undefined.fromOption(style),
+          "theme": Js.Undefined.fromOption(theme)
         }
       ),
     children

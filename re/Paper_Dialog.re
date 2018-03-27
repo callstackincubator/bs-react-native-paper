@@ -1,5 +1,3 @@
-
-
 [@bs.module "react-native-paper"]
 external reactClass : ReasonReact.reactClass = "Dialog";
 
@@ -19,9 +17,9 @@ let make =
         {
           "dismissable": Js.Boolean.to_js_boolean(dismissable),
           "visible": Js.Boolean.to_js_boolean(visible),
-          "style": from_opt(style),
-          "theme": from_opt(theme),
-          "onDismiss": from_opt(onDismiss)
+          "style": Js.Undefined.fromOption(style),
+          "theme": Js.Undefined.fromOption(theme),
+          "onDismiss": Js.Undefined.fromOption(onDismiss)
         }
       ),
     children

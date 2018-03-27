@@ -1,5 +1,3 @@
-
-
 [@bs.module "react-native-paper"]
 external reactClass : ReasonReact.reactClass = "RadioButton";
 
@@ -19,9 +17,9 @@ let make =
         {
           "checked": Js.Boolean.to_js_boolean(checked),
           "disabled": Js.Boolean.to_js_boolean(disabled),
-          "onPress": from_opt(onPress),
-          "color": from_opt(color),
-          "theme": from_opt(theme)
+          "onPress": Js.Undefined.fromOption(onPress),
+          "color": Js.Undefined.fromOption(color),
+          "theme": Js.Undefined.fromOption(theme)
         }
       ),
     children

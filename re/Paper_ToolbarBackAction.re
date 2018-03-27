@@ -1,5 +1,3 @@
-
-
 [@bs.module "react-native-paper"]
 external reactClass : ReasonReact.reactClass = "ToolbarBackAction";
 
@@ -16,8 +14,8 @@ let make =
       Js.Nullable.(
         {
           "dark": Js.Boolean.to_js_boolean(dark),
-          "onPress": from_opt(onPress),
-          "style": from_opt(style)
+          "onPress": Js.Undefined.fromOption(onPress),
+          "style": Js.Undefined.fromOption(style)
         }
       ),
     children

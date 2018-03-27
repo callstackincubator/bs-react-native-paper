@@ -1,5 +1,3 @@
-
-
 [@bs.module "react-native-paper"]
 external reactClass : ReasonReact.reactClass = "TouchableRipple";
 
@@ -21,13 +19,13 @@ let make =
       Js.Nullable.(
         {
           "borderless": Js.Boolean.to_js_boolean(borderless),
-          "background": from_opt(background),
+          "background": Js.Undefined.fromOption(background),
           "disabled": Js.Boolean.to_js_boolean(disabled),
-          "rippleColor": from_opt(rippleColor),
-          "underlayColor": from_opt(underlayColor),
-          "theme": from_opt(theme),
-          "onPress": from_opt(onPress),
-          "style": from_opt(style)
+          "rippleColor": Js.Undefined.fromOption(rippleColor),
+          "underlayColor": Js.Undefined.fromOption(underlayColor),
+          "theme": Js.Undefined.fromOption(theme),
+          "onPress": Js.Undefined.fromOption(onPress),
+          "style": Js.Undefined.fromOption(style)
         }
       ),
     children

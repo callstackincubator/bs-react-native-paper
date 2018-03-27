@@ -1,5 +1,3 @@
-
-
 [@bs.module "react-native-paper"]
 external reactClass : ReasonReact.reactClass = "Divider";
 
@@ -16,8 +14,8 @@ let make =
       Js.Nullable.(
         {
           "inset": Js.Boolean.to_js_boolean(inset),
-          "style": from_opt(style),
-          "theme": from_opt(theme)
+          "style": Js.Undefined.fromOption(style),
+          "theme": Js.Undefined.fromOption(theme)
         }
       ),
     children

@@ -1,5 +1,3 @@
-
-
 [@bs.module "react-native-paper"]
 external reactClass : ReasonReact.reactClass = "Text";
 
@@ -26,16 +24,16 @@ let make =
         {
           "selectable": Js.Boolean.to_js_boolean(selectable),
           "acessible": Js.Boolean.to_js_boolean(acessible),
-          "elipsizeMode": from_opt(elipsizeMode),
-          "nativeID": from_opt(nativeID),
-          "numberOfLines": from_opt(numberOfLines),
-          "pressRetentionOffset": from_opt(pressRetentionOffset),
+          "elipsizeMode": Js.Undefined.fromOption(elipsizeMode),
+          "nativeID": Js.Undefined.fromOption(nativeID),
+          "numberOfLines": Js.Undefined.fromOption(numberOfLines),
+          "pressRetentionOffset": Js.Undefined.fromOption(pressRetentionOffset),
           "allowFontScaling": Js.Boolean.to_js_boolean(allowFontScaling),
-          "onLayout": from_opt(onLayout),
-          "onLongPress": from_opt(onLongPress),
-          "onPress": from_opt(onPress),
-          "theme": from_opt(theme),
-          "style": from_opt(style)
+          "onLayout": Js.Undefined.fromOption(onLayout),
+          "onLongPress": Js.Undefined.fromOption(onLongPress),
+          "onPress": Js.Undefined.fromOption(onPress),
+          "theme": Js.Undefined.fromOption(theme),
+          "style": Js.Undefined.fromOption(style)
         }
       ),
     children

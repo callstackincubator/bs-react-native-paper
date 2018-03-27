@@ -39,4 +39,3 @@ let option_map = (fn, option) =>
   | Some(value) => Some(fn(value))
   | None => None
   };
-  

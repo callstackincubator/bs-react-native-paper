@@ -1,5 +1,3 @@
-
-
 [@bs.module "react-native-paper"]
 external reactClass : ReasonReact.reactClass = "Toolbar";
 
@@ -17,9 +15,9 @@ let make =
       Js.Nullable.(
         {
           "dark": Js.Boolean.to_js_boolean(dark),
-          "statusBarHeight": from_opt(statusBarHeight),
-          "theme": from_opt(theme),
-          "style": from_opt(style)
+          "statusBarHeight": Js.Undefined.fromOption(statusBarHeight),
+          "theme": Js.Undefined.fromOption(theme),
+          "style": Js.Undefined.fromOption(style)
         }
       ),
     children

@@ -1,5 +1,3 @@
-
-
 [@bs.module "react-native-paper"]
 external reactClass : ReasonReact.reactClass = "DrawerItem";
 
@@ -18,12 +16,12 @@ let make =
     ~props=
       Js.Nullable.(
         {
-          "label": from_opt(label),
-          "icon": from_opt(icon),
+          "label": Js.Undefined.fromOption(label),
+          "icon": Js.Undefined.fromOption(icon),
           "active": Js.Boolean.to_js_boolean(active),
-          "color": from_opt(color),
-          "onPress": from_opt(onPress),
-          "theme": from_opt(theme)
+          "color": Js.Undefined.fromOption(color),
+          "onPress": Js.Undefined.fromOption(onPress),
+          "theme": Js.Undefined.fromOption(theme)
         }
       ),
     children
