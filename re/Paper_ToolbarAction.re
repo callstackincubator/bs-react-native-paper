@@ -13,13 +13,13 @@ let make =
   ReasonReact.wrapJsForReason(
     ~reactClass,
     ~props=
-      Js.Nullable.(
+      Js.Null_undefined.(
         {
           "dark": Js.Boolean.to_js_boolean(dark),
-          "size": Js.Undefined.fromOption(size),
-          "icon": Js.Undefined.fromOption(icon),
-          "onPress": Js.Undefined.fromOption(onPress),
-          "style": Js.Undefined.fromOption(style)
+          "size": from_opt(size),
+          "icon": from_opt(icon),
+          "onPress": from_opt(onPress),
+          "style": from_opt(style)
         }
       ),
     children

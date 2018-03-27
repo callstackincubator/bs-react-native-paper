@@ -4,6 +4,6 @@ external reactClass : ReasonReact.reactClass = "CardContent";
 let make = (~style: option(BsReactNative.Style.t)=?, children) =>
   ReasonReact.wrapJsForReason(
     ~reactClass,
-    ~props=Js.Nullable.({"style": Js.Undefined.fromOption(style)}),
+    ~props=Js.Null_undefined.({"style": from_opt(style)}),
     children
   );

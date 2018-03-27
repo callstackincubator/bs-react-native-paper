@@ -12,12 +12,12 @@ let make =
   ReasonReact.wrapJsForReason(
     ~reactClass,
     ~props=
-      Js.Nullable.(
+      Js.Null_undefined.(
         {
-          "progress": Js.Undefined.fromOption(progress),
-          "color": Js.Undefined.fromOption(color),
-          "theme": Js.Undefined.fromOption(theme),
-          "style": Js.Undefined.fromOption(style)
+          "progress": from_opt(progress),
+          "color": from_opt(color),
+          "theme": from_opt(theme),
+          "style": from_opt(style)
         }
       ),
     children

@@ -4,8 +4,8 @@ external toJsUnsafe : 'a => jsUnsafe = "%identity";
 
 let wrap_bool = (b: option(bool)) =>
   switch b {
-  | Some(value) => Js.Nullable.return(Js.Boolean.to_js_boolean(value))
-  | None => Js.Nullable.undefined
+  | Some(value) => Js.Null_undefined.return(Js.Boolean.to_js_boolean(value))
+  | None => Js.Null_undefined.undefined
   };
 
 let unwrap_value =

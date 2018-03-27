@@ -16,16 +16,16 @@ let make =
   ReasonReact.wrapJsForReason(
     ~reactClass,
     ~props=
-      Js.Nullable.(
+      Js.Null_undefined.(
         {
           "dark": Js.Boolean.to_js_boolean(dark),
-          "onPress": Js.Undefined.fromOption(onPress),
-          "title": Js.Undefined.fromOption(title),
-          "titleStyle": Js.Undefined.fromOption(titleStyle),
-          "subtitle": Js.Undefined.fromOption(subtitle),
-          "subtitleStyle": Js.Undefined.fromOption(subtitleStyle),
-          "style": Js.Undefined.fromOption(style),
-          "theme": Js.Undefined.fromOption(theme)
+          "onPress": from_opt(onPress),
+          "title": from_opt(title),
+          "titleStyle": from_opt(titleStyle),
+          "subtitle": from_opt(subtitle),
+          "subtitleStyle": from_opt(subtitleStyle),
+          "style": from_opt(style),
+          "theme": from_opt(theme)
         }
       ),
     children

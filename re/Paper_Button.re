@@ -19,7 +19,7 @@ let make =
   ReasonReact.wrapJsForReason(
     ~reactClass,
     ~props=
-      Js.Nullable.(
+      Js.Null_undefined.(
         {
           "disabled": Js.Boolean.to_js_boolean(disabled),
           "compact": Js.Boolean.to_js_boolean(compact),
@@ -27,11 +27,11 @@ let make =
           "primary": Js.Boolean.to_js_boolean(primary),
           "loading": Js.Boolean.to_js_boolean(loading),
           "dark": Js.Boolean.to_js_boolean(dark),
-          "icon": Js.Undefined.fromOption(icon),
-          "color": Js.Undefined.fromOption(color),
-          "style": Js.Undefined.fromOption(style),
-          "theme": Js.Undefined.fromOption(theme),
-          "onPress": Js.Undefined.fromOption(onPress)
+          "icon": from_opt(icon),
+          "color": from_opt(color),
+          "style": from_opt(style),
+          "theme": from_opt(theme),
+          "onPress": from_opt(onPress)
         }
       ),
     children

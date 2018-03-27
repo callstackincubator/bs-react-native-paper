@@ -4,7 +4,7 @@ external reactClass : ReasonReact.reactClass = "SearchBar";
 let make =
     (
       ~placeholder: option(string)=?,
-      ~value: option(string),
+      ~value: option(string)=?,
       ~icon: option(ReasonReact.reactElement)=?,
       ~theme: option(Js.t({..}))=?,
       ~style: option(BsReactNative.Style.t)=?,
@@ -15,15 +15,15 @@ let make =
   ReasonReact.wrapJsForReason(
     ~reactClass,
     ~props=
-      Js.Nullable.(
+      Js.Null_undefined.(
         {
-          "placeholder": Js.Undefined.fromOption(placeholder),
-          "value": Js.Undefined.fromOption(value),
-          "icon": Js.Undefined.fromOption(icon),
-          "onChangeText": Js.Undefined.fromOption(onChangeText),
-          "onIconPress": Js.Undefined.fromOption(onIconPress),
-          "theme": Js.Undefined.fromOption(theme),
-          "style": Js.Undefined.fromOption(style)
+          "placeholder": from_opt(placeholder),
+          "value": from_opt(value),
+          "icon": from_opt(icon),
+          "onChangeText": from_opt(onChangeText),
+          "onIconPress": from_opt(onIconPress),
+          "theme": from_opt(theme),
+          "style": from_opt(style)
         }
       ),
     children
