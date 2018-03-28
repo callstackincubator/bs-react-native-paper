@@ -1,5 +1,3 @@
-
-
 [@bs.module "react-native-paper"]
 external reactClass : ReasonReact.reactClass = "ToolbarAction";
 
@@ -15,7 +13,7 @@ let make =
   ReasonReact.wrapJsForReason(
     ~reactClass,
     ~props=
-      Js.Nullable.(
+      Js.Null_undefined.(
         {
           "dark": Js.Boolean.to_js_boolean(dark),
           "size": from_opt(size),

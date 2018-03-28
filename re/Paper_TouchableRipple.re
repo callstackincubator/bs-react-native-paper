@@ -1,5 +1,3 @@
-
-
 [@bs.module "react-native-paper"]
 external reactClass : ReasonReact.reactClass = "TouchableRipple";
 
@@ -18,7 +16,7 @@ let make =
   ReasonReact.wrapJsForReason(
     ~reactClass,
     ~props=
-      Js.Nullable.(
+      Js.Null_undefined.(
         {
           "borderless": Js.Boolean.to_js_boolean(borderless),
           "background": from_opt(background),

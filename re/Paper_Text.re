@@ -1,5 +1,3 @@
-
-
 [@bs.module "react-native-paper"]
 external reactClass : ReasonReact.reactClass = "Text";
 
@@ -22,7 +20,7 @@ let make =
   ReasonReact.wrapJsForReason(
     ~reactClass,
     ~props=
-      Js.Nullable.(
+      Js.Null_undefined.(
         {
           "selectable": Js.Boolean.to_js_boolean(selectable),
           "acessible": Js.Boolean.to_js_boolean(acessible),

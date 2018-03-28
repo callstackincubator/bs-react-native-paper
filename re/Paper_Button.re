@@ -1,5 +1,3 @@
-
-
 [@bs.module "react-native-paper"]
 external reactClass : ReasonReact.reactClass = "Button";
 
@@ -21,7 +19,7 @@ let make =
   ReasonReact.wrapJsForReason(
     ~reactClass,
     ~props=
-      Js.Nullable.(
+      Js.Null_undefined.(
         {
           "disabled": Js.Boolean.to_js_boolean(disabled),
           "compact": Js.Boolean.to_js_boolean(compact),

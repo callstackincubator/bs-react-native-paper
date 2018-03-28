@@ -15,7 +15,7 @@ let make =
   ReasonReact.wrapJsForReason(
     ~reactClass,
     ~props=
-      Js.Nullable.(
+      Js.Null_undefined.(
         {
           "small": Js.Boolean.to_js_boolean(small),
           "dark": Js.Boolean.to_js_boolean(dark),

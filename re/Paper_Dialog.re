@@ -1,5 +1,3 @@
-
-
 [@bs.module "react-native-paper"]
 external reactClass : ReasonReact.reactClass = "Dialog";
 
@@ -15,7 +13,7 @@ let make =
   ReasonReact.wrapJsForReason(
     ~reactClass,
     ~props=
-      Js.Nullable.(
+      Js.Null_undefined.(
         {
           "dismissable": Js.Boolean.to_js_boolean(dismissable),
           "visible": Js.Boolean.to_js_boolean(visible),

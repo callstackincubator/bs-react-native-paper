@@ -1,12 +1,15 @@
 [@bs.module "react-native-paper"]
 external reactClass : ReasonReact.reactClass = "TextInput";
 
+[@bs.deriving jsConverter]
+type capitalize = [ | `none | `sentences | `words | `characters];
+
 let make =
     (
       ~allowFontScaling: bool=false,
       ~autoCorrect: bool=false,
       ~autoFocus: bool=false,
-      ~autoCapitalize: bool=false,
+      ~autoCapitalize: option(capitalize)=?,
       ~autoGrow: bool=false,
       ~blurOnSubmit: bool=false,
       ~caretHidden: bool=false,
@@ -39,7 +42,7 @@ let make =
       ~selectionColor: option(string)=?,
       ~underlineColor: option(string)=?,
       ~multline: bool=false,
-      ~numberOfLines: option(int),
+      ~numberOfLines: option(int)=?,
       ~value: option(string)=?,
       ~theme: option(Js.t({..}))=?,
       ~style: option(BsReactNative.Style.t)=?,
@@ -59,12 +62,12 @@ let make =
   ReasonReact.wrapJsForReason(
     ~reactClass,
     ~props=
-      Js.Nullable.(
+      Js.Null_undefined.(
         {
           "allowFontScaling": Js.Boolean.to_js_boolean(allowFontScaling),
           "autoCorrect": Js.Boolean.to_js_boolean(autoCorrect),
           "autoFocus": Js.Boolean.to_js_boolean(autoFocus),
-          "autoCapitalize": Js.Boolean.to_js_boolean(autoCapitalize),
+          "autoCapitalize": from_opt(autoCapitalize),
           "autoGrow": Js.Boolean.to_js_boolean(autoGrow),
           "blurOnSubmit": Js.Boolean.to_js_boolean(blurOnSubmit),
           "caretHidden": Js.Boolean.to_js_boolean(caretHidden),

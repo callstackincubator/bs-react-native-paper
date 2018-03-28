@@ -1,5 +1,3 @@
-
-
 [@bs.module "react-native-paper"]
 external reactClass : ReasonReact.reactClass = "Switch";
 
@@ -16,7 +14,7 @@ let make =
   ReasonReact.wrapJsForReason(
     ~reactClass,
     ~props=
-      Js.Nullable.(
+      Js.Null_undefined.(
         {
           "disabled": Js.Boolean.to_js_boolean(disabled),
           "value": Js.Boolean.to_js_boolean(value),
