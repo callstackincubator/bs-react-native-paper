@@ -41,7 +41,7 @@ let make =
       ~selection: option(Js.t({..}))=?,
       ~selectionColor: option(string)=?,
       ~underlineColor: option(string)=?,
-      ~multline: bool=false,
+      ~multiline: bool=false,
       ~numberOfLines: option(int)=?,
       ~value: option(string)=?,
       ~theme: option(Js.t({..}))=?,
@@ -67,7 +67,14 @@ let make =
           "allowFontScaling": Js.Boolean.to_js_boolean(allowFontScaling),
           "autoCorrect": Js.Boolean.to_js_boolean(autoCorrect),
           "autoFocus": Js.Boolean.to_js_boolean(autoFocus),
-          "autoCapitalize": from_opt(autoCapitalize),
+          "autoCapitalize":
+            (
+              switch autoCapitalize {
+              | Some(autoCapitalize) => Some(capitalizeToJs(autoCapitalize))
+              | None => None
+              }
+            )
+            |> from_opt,
           "autoGrow": Js.Boolean.to_js_boolean(autoGrow),
           "blurOnSubmit": Js.Boolean.to_js_boolean(blurOnSubmit),
           "caretHidden": Js.Boolean.to_js_boolean(caretHidden),
@@ -100,7 +107,7 @@ let make =
           "selection": from_opt(selection),
           "selectionColor": from_opt(selectionColor),
           "underlineColor": from_opt(underlineColor),
-          "multline": Js.Boolean.to_js_boolean(multline),
+          "multiline": Js.Boolean.to_js_boolean(multiline),
           "numberOfLines": from_opt(numberOfLines),
           "value": from_opt(value),
           "theme": from_opt(theme),
