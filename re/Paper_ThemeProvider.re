@@ -25,7 +25,7 @@ type themeFonts = {
 };
 
 [@bs.deriving abstract]
-type theme = {
+type appTheme = {
   [@bs.optional]
   roundess: int,
   [@bs.optional]
@@ -37,7 +37,7 @@ type theme = {
 [@bs.deriving abstract]
 type props = {
   [@bs.optional]
-  theme,
+  theme: appTheme,
 };
 
 let make = (~theme=?, children) =>
