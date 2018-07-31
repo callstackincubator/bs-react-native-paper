@@ -8,7 +8,7 @@ let make =
       ~active: bool=false,
       ~theme: option(Paper_ThemeProvider.theme)=?,
       ~color: option(string)=?,
-      ~onPress: option(BsReactNative.RNEvent.NativeEvent.t => unit)=?,
+      ~onPress: option(Rebolt.RNEvent.NativeEvent.t => unit)=?,
       children,
     ) =>
   ReasonReact.wrapJsForReason(

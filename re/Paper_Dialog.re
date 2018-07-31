@@ -6,7 +6,7 @@ let make =
       ~dismissable: bool=false,
       ~visible: bool=false,
       ~theme: option(Paper_ThemeProvider.theme)=?,
-      ~style: option(BsReactNative.Style.t)=?,
+      ~style: option(Rebolt.Style.t)=?,
       ~onDismiss: option(unit => unit),
       children,
     ) =>

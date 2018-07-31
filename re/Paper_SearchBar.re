@@ -12,10 +12,10 @@ type props = {
   [@bs.optional]
   theme: Paper_ThemeProvider.theme,
   [@bs.optional]
-  style: BsReactNative.Style.t,
+  style: Rebolt.Style.t,
   onChangeText: string => unit,
   [@bs.optional]
-  onIconPress: BsReactNative.RNEvent.NativeEvent.t => unit,
+  onIconPress: Rebolt.RNEvent.NativeEvent.t => unit,
 };
 
 let make =

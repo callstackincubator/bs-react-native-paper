@@ -7,7 +7,7 @@ let make =
       ~value: bool=false,
       ~color: option(string)=?,
       ~theme: option(Paper_ThemeProvider.theme)=?,
-      ~style: option(BsReactNative.Style.t)=?,
+      ~style: option(Rebolt.Style.t)=?,
       ~onValueChange: option(bool => unit)=?,
       children,
     ) =>

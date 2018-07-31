@@ -20,10 +20,10 @@ type props = {
   [@bs.optional]
   color: string,
   [@bs.optional]
-  style: BsReactNative.Style.t,
+  style: Rebolt.Style.t,
   [@bs.optional]
   theme: Paper_ThemeProvider.theme,
-  onPress: BsReactNative.RNEvent.NativeEvent.t => unit,
+  onPress: Rebolt.RNEvent.NativeEvent.t => unit,
 };
 
 let make =

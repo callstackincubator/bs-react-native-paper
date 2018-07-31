@@ -3,7 +3,7 @@
   "reason": {
     "react-jsx": 2
   },
-  "bs-dependencies": ["reason-react", "bs-react-native"],
+  "bs-dependencies": ["reason-react", "rebolt"],
   "refmt": 3,
   "bsc-flags": ["-bs-super-errors"],
   "sources": [

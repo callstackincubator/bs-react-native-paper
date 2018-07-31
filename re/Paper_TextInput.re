@@ -45,7 +45,7 @@ let make =
       ~numberOfLines: option(int)=?,
       ~value: option(string)=?,
       ~theme: option(Paper_ThemeProvider.theme)=?,
-      ~style: option(BsReactNative.Style.t)=?,
+      ~style: option(Rebolt.Style.t)=?,
       ~onChange: option(unit => unit)=?,
       ~onChangeText: option(string => unit)=?,
       ~onContentSizeChange: option(unit => unit)=?,

@@ -6,7 +6,7 @@ let make =
       ~dark: bool=false,
       ~statusBarHeight: option(float)=?,
       ~theme: option(Paper_ThemeProvider.theme)=?,
-      ~style: option(BsReactNative.Style.t)=?,
+      ~style: option(Rebolt.Style.t)=?,
       children,
     ) =>
   ReasonReact.wrapJsForReason(

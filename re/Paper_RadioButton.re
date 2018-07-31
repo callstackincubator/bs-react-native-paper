@@ -7,7 +7,7 @@ let make =
       ~disabled: bool=false,
       ~color: option(string)=?,
       ~theme: option(Paper_ThemeProvider.theme)=?,
-      ~onPress: option(BsReactNative.RNEvent.NativeEvent.t => unit)=?,
+      ~onPress: option(Rebolt.RNEvent.NativeEvent.t => unit)=?,
       ~value: string,
       children,
     ) =>

@@ -4,15 +4,15 @@ external reactClass : ReasonReact.reactClass = "Checkbox";
 [@bs.deriving abstract]
 type props = {
   checked: bool,
-  [@bs.optional] [@bs.optional]
+  [@bs.optional]
   theme: Paper_ThemeProvider.theme,
   [@bs.optional]
   disabled: bool,
   [@bs.optional]
   color: string,
   [@bs.optional]
-  style: BsReactNative.Style.t,
-  onPress: BsReactNative.RNEvent.NativeEvent.t => unit,
+  style: Rebolt.Style.t,
+  onPress: Rebolt.RNEvent.NativeEvent.t => unit,
 };
 
 let make =

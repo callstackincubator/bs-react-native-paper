@@ -11,7 +11,7 @@ let make =
       ~pressRetentionOffset: option(Js.t({..}))=?,
       ~allowFontScaling: bool=false,
       ~theme: option(Paper_ThemeProvider.theme)=?,
-      ~style: option(BsReactNative.Style.t)=?,
+      ~style: option(Rebolt.Style.t)=?,
       ~onLayout: option(unit => unit)=?,
       ~onLongPress: option(unit => unit)=?,
       ~onPress: option(unit => unit)=?,

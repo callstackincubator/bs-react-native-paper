@@ -4,12 +4,14 @@ external reactClass : ReasonReact.reactClass = "CardCover";
 let make =
     (
       ~theme: option(Js.t({..}))=?,
-      ~style: option(BsReactNative.Style.t)=?,
-      children
+      ~style: option(Rebolt.Style.t)=?,
+      children,
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass,
     ~props=
-      Js.Null_undefined.({"style": from_opt(style), "theme": from_opt(theme)}),
-    children
+      Js.Null_undefined.(
+        {"style": fromOption(style), "theme": fromOption(theme)}
+      ),
+    children,
   );

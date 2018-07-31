@@ -5,7 +5,7 @@ let make =
     (
       ~inset: bool=false,
       ~theme: option(Paper_ThemeProvider.theme)=?,
-      ~style: option(BsReactNative.Style.t)=?,
+      ~style: option(Rebolt.Style.t)=?,
       children,
     ) =>
   ReasonReact.wrapJsForReason(

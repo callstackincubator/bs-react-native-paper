@@ -221,10 +221,6 @@ bs-platform@^4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-4.0.2.tgz#ee80f4948f5db0533df667612a53d9a52837cf24"
 
-bs-react-native@^0.8.0:
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/bs-react-native/-/bs-react-native-0.8.0.tgz#1e68b75ed78aad858548456fd985632b8642acfe"
-
 buffer-from@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/buffer-from/-/buffer-from-1.0.0.tgz#4cb8832d23612589b0406e9e2956c17f06fdf531"
@@ -1823,6 +1819,10 @@ reason-react@^0.4.2:
   dependencies:
     react ">=15.0.0 || >=16.0.0"
     react-dom ">=15.0.0 || >=16.0.0"
+
+rebolt@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/rebolt/-/rebolt-0.2.0.tgz#7bbe0c4242a0d572b878e910bd6e6f376ade10be"
 
 regex-cache@^0.4.2:
   version "0.4.4"

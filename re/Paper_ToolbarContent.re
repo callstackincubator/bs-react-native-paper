@@ -5,12 +5,12 @@ let make =
     (
       ~dark: bool=false,
       ~title: string,
-      ~titleStyle: option(BsReactNative.Style.t)=?,
+      ~titleStyle: option(Rebolt.Style.t)=?,
       ~subtitle: option(string)=?,
-      ~subtitleStyle: option(BsReactNative.Style.t)=?,
+      ~subtitleStyle: option(Rebolt.Style.t)=?,
       ~theme: option(Paper_ThemeProvider.theme)=?,
-      ~style: option(BsReactNative.Style.t)=?,
-      ~onPress: option(BsReactNative.RNEvent.NativeEvent.t => unit)=?,
+      ~style: option(Rebolt.Style.t)=?,
+      ~onPress: option(Rebolt.RNEvent.NativeEvent.t => unit)=?,
       children,
     ) =>
   ReasonReact.wrapJsForReason(

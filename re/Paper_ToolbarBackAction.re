@@ -4,8 +4,8 @@ external reactClass : ReasonReact.reactClass = "ToolbarBackAction";
 let make =
     (
       ~dark: bool=false,
-      ~style: option(BsReactNative.Style.t)=?,
-      ~onPress: option(BsReactNative.RNEvent.NativeEvent.t => unit)=?,
+      ~style: option(Rebolt.Style.t)=?,
+      ~onPress: option(Rebolt.RNEvent.NativeEvent.t => unit)=?,
       children,
     ) =>
   ReasonReact.wrapJsForReason(
