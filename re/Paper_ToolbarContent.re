@@ -4,29 +4,29 @@ external reactClass : ReasonReact.reactClass = "ToolbarContent";
 let make =
     (
       ~dark: bool=false,
-      ~title: option(string),
-      ~titleStyle: option(Js.t({..}))=?,
+      ~title: string,
+      ~titleStyle: option(BsReactNative.Style.t)=?,
       ~subtitle: option(string)=?,
-      ~subtitleStyle: option(Js.t({..}))=?,
-      ~theme: option(Js.t({..}))=?,
+      ~subtitleStyle: option(BsReactNative.Style.t)=?,
+      ~theme: option(Paper_ThemeProvider.theme)=?,
       ~style: option(BsReactNative.Style.t)=?,
       ~onPress: option(BsReactNative.RNEvent.NativeEvent.t => unit)=?,
-      children
+      children,
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass,
     ~props=
       Js.Null_undefined.(
         {
-          "dark": Js.Boolean.to_js_boolean(dark),
-          "onPress": from_opt(onPress),
-          "title": from_opt(title),
-          "titleStyle": from_opt(titleStyle),
-          "subtitle": from_opt(subtitle),
-          "subtitleStyle": from_opt(subtitleStyle),
-          "style": from_opt(style),
-          "theme": from_opt(theme)
+          "dark": dark,
+          "onPress": fromOption(onPress),
+          "title": title,
+          "titleStyle": fromOption(titleStyle),
+          "subtitle": fromOption(subtitle),
+          "subtitleStyle": fromOption(subtitleStyle),
+          "style": fromOption(style),
+          "theme": fromOption(theme),
         }
       ),
-    children
+    children,
   );

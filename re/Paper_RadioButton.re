@@ -6,21 +6,23 @@ let make =
       ~checked: bool=false,
       ~disabled: bool=false,
       ~color: option(string)=?,
-      ~theme: option(Js.t({..}))=?,
+      ~theme: option(Paper_ThemeProvider.theme)=?,
       ~onPress: option(BsReactNative.RNEvent.NativeEvent.t => unit)=?,
-      children
+      ~value: string,
+      children,
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass,
     ~props=
       Js.Null_undefined.(
         {
-          "checked": Js.Boolean.to_js_boolean(checked),
-          "disabled": Js.Boolean.to_js_boolean(disabled),
-          "onPress": from_opt(onPress),
-          "color": from_opt(color),
-          "theme": from_opt(theme)
+          "checked": checked,
+          "disabled": disabled,
+          "onPress": fromOption(onPress),
+          "color": fromOption(color),
+          "theme": fromOption(theme),
+          "value": value,
         }
       ),
-    children
+    children,
   );

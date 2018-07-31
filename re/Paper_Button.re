@@ -1,38 +1,62 @@
 [@bs.module "react-native-paper"]
 external reactClass : ReasonReact.reactClass = "Button";
 
+[@bs.deriving abstract]
+type props = {
+  [@bs.optional]
+  disabled: bool,
+  [@bs.optional]
+  compact: bool,
+  [@bs.optional]
+  raised: bool,
+  [@bs.optional]
+  primary: bool,
+  [@bs.optional]
+  loading: bool,
+  [@bs.optional]
+  dark: bool,
+  [@bs.optional]
+  icon: ReasonReact.reactElement,
+  [@bs.optional]
+  color: string,
+  [@bs.optional]
+  style: BsReactNative.Style.t,
+  [@bs.optional]
+  theme: Paper_ThemeProvider.theme,
+  onPress: BsReactNative.RNEvent.NativeEvent.t => unit,
+};
+
 let make =
     (
-      ~disabled: bool=false,
-      ~compact: bool=false,
-      ~raised: bool=false,
-      ~primary: bool=false,
-      ~loading: bool=false,
-      ~dark: bool=false,
-      ~icon: option(ReasonReact.reactElement)=?,
-      ~color: option(string)=?,
-      ~style: option(BsReactNative.Style.t)=?,
-      ~theme: option(Js.t({..}))=?,
-      ~onPress: option(BsReactNative.RNEvent.NativeEvent.t => unit)=?,
-      children
+      ~disabled=?,
+      ~compact=?,
+      ~raised=?,
+      ~primary=?,
+      ~loading=?,
+      ~dark=?,
+      ~icon=?,
+      ~color=?,
+      ~style=?,
+      ~theme=?,
+      ~onPress,
+      children,
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass,
     ~props=
-      Js.Null_undefined.(
-        {
-          "disabled": Js.Boolean.to_js_boolean(disabled),
-          "compact": Js.Boolean.to_js_boolean(compact),
-          "raised": Js.Boolean.to_js_boolean(raised),
-          "primary": Js.Boolean.to_js_boolean(primary),
-          "loading": Js.Boolean.to_js_boolean(loading),
-          "dark": Js.Boolean.to_js_boolean(dark),
-          "icon": from_opt(icon),
-          "color": from_opt(color),
-          "style": from_opt(style),
-          "theme": from_opt(theme),
-          "onPress": from_opt(onPress)
-        }
+      props(
+        ~disabled?,
+        ~compact?,
+        ~raised?,
+        ~primary?,
+        ~loading?,
+        ~dark?,
+        ~icon?,
+        ~color?,
+        ~style?,
+        ~theme?,
+        ~onPress,
+        (),
       ),
-    children
+    children,
   );

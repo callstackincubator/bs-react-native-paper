@@ -4,19 +4,19 @@ external reactClass : ReasonReact.reactClass = "Divider";
 let make =
     (
       ~inset: bool=false,
-      ~theme: option(Js.t({..}))=?,
+      ~theme: option(Paper_ThemeProvider.theme)=?,
       ~style: option(BsReactNative.Style.t)=?,
-      children
+      children,
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass,
     ~props=
       Js.Null_undefined.(
         {
-          "inset": Js.Boolean.to_js_boolean(inset),
-          "style": from_opt(style),
-          "theme": from_opt(theme)
+          "inset": inset,
+          "style": fromOption(style),
+          "theme": fromOption(theme),
         }
       ),
-    children
+    children,
   );

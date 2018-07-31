@@ -5,22 +5,22 @@ let make =
     (
       ~dismissable: bool=false,
       ~visible: bool=false,
-      ~theme: option(Js.t({..}))=?,
+      ~theme: option(Paper_ThemeProvider.theme)=?,
       ~style: option(BsReactNative.Style.t)=?,
       ~onDismiss: option(unit => unit),
-      children
+      children,
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass,
     ~props=
       Js.Null_undefined.(
         {
-          "dismissable": Js.Boolean.to_js_boolean(dismissable),
-          "visible": Js.Boolean.to_js_boolean(visible),
-          "style": from_opt(style),
-          "theme": from_opt(theme),
-          "onDismiss": from_opt(onDismiss)
+          "dismissable": dismissable,
+          "visible": visible,
+          "style": fromOption(style),
+          "theme": fromOption(theme),
+          "onDismiss": fromOption(onDismiss),
         }
       ),
-    children
+    children,
   );

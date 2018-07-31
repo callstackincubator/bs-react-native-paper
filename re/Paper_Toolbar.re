@@ -5,20 +5,20 @@ let make =
     (
       ~dark: bool=false,
       ~statusBarHeight: option(float)=?,
-      ~theme: option(Js.t({..}))=?,
+      ~theme: option(Paper_ThemeProvider.theme)=?,
       ~style: option(BsReactNative.Style.t)=?,
-      children
+      children,
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass,
     ~props=
       Js.Null_undefined.(
         {
-          "dark": Js.Boolean.to_js_boolean(dark),
-          "statusBarHeight": from_opt(statusBarHeight),
-          "theme": from_opt(theme),
-          "style": from_opt(style)
+          "dark": dark,
+          "statusBarHeight": fromOption(statusBarHeight),
+          "theme": fromOption(theme),
+          "style": fromOption(style),
         }
       ),
-    children
+    children,
   );

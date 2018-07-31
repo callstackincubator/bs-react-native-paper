@@ -5,22 +5,22 @@ let make =
     (
       ~dark: bool=false,
       ~size: option(float)=?,
-      ~icon: option(ReasonReact.reactElement),
+      ~icon: ReasonReact.reactElement,
       ~style: option(BsReactNative.Style.t)=?,
       ~onPress: option(BsReactNative.RNEvent.NativeEvent.t => unit)=?,
-      children
+      children,
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass,
     ~props=
       Js.Null_undefined.(
         {
-          "dark": Js.Boolean.to_js_boolean(dark),
-          "size": from_opt(size),
-          "icon": from_opt(icon),
-          "onPress": from_opt(onPress),
-          "style": from_opt(style)
+          "dark": dark,
+          "size": fromOption(size),
+          "icon": icon,
+          "onPress": fromOption(onPress),
+          "style": fromOption(style),
         }
       ),
-    children
+    children,
   );

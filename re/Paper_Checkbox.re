@@ -1,28 +1,33 @@
 [@bs.module "react-native-paper"]
 external reactClass : ReasonReact.reactClass = "Checkbox";
 
+[@bs.deriving abstract]
+type props = {
+  checked: bool,
+  [@bs.optional] [@bs.optional]
+  theme: Paper_ThemeProvider.theme,
+  [@bs.optional]
+  disabled: bool,
+  [@bs.optional]
+  color: string,
+  [@bs.optional]
+  style: BsReactNative.Style.t,
+  onPress: BsReactNative.RNEvent.NativeEvent.t => unit,
+};
+
 let make =
     (
-      ~checked: bool=false,
-      ~theme: option(Js.t({..}))=?,
-      ~disabled: bool=false,
-      ~color: option(string)=?,
-      ~style: option(BsReactNative.Style.t)=?,
-      ~onPress: option(BsReactNative.RNEvent.NativeEvent.t => unit)=?,
-      children
+      ~checked=false,
+      ~theme=?,
+      ~disabled=?,
+      ~color=?,
+      ~style=?,
+      ~onPress,
+      children,
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass,
     ~props=
-      Js.Null_undefined.(
-        {
-          "style": from_opt(style),
-          "checked": Js.Boolean.to_js_boolean(checked),
-          "theme": from_opt(theme),
-          "onPress": from_opt(onPress),
-          "color": from_opt(color),
-          "disabled": Js.Boolean.to_js_boolean(disabled)
-        }
-      ),
-    children
+      props(~checked, ~theme?, ~disabled?, ~color?, ~style?, ~onPress, ()),
+    children,
   );

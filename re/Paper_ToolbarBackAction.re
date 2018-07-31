@@ -6,17 +6,17 @@ let make =
       ~dark: bool=false,
       ~style: option(BsReactNative.Style.t)=?,
       ~onPress: option(BsReactNative.RNEvent.NativeEvent.t => unit)=?,
-      children
+      children,
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass,
     ~props=
       Js.Null_undefined.(
         {
-          "dark": Js.Boolean.to_js_boolean(dark),
-          "onPress": from_opt(onPress),
-          "style": from_opt(style)
+          "dark": dark,
+          "onPress": fromOption(onPress),
+          "style": fromOption(style),
         }
       ),
-    children
+    children,
   );
