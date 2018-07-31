@@ -6,23 +6,23 @@ let make =
       ~label: option(string),
       ~icon: option(ReasonReact.reactElement)=?,
       ~active: bool=false,
-      ~theme: option(Js.t({..}))=?,
+      ~theme: option(Paper_ThemeProvider.theme)=?,
       ~color: option(string)=?,
       ~onPress: option(BsReactNative.RNEvent.NativeEvent.t => unit)=?,
-      children
+      children,
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass,
     ~props=
       Js.Null_undefined.(
         {
-          "label": from_opt(label),
-          "icon": from_opt(icon),
-          "active": Js.Boolean.to_js_boolean(active),
-          "color": from_opt(color),
-          "onPress": from_opt(onPress),
-          "theme": from_opt(theme)
+          "label": fromOption(label),
+          "icon": fromOption(icon),
+          "active": active,
+          "color": fromOption(color),
+          "onPress": fromOption(onPress),
+          "theme": fromOption(theme),
         }
       ),
-    children
+    children,
   );

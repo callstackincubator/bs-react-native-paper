@@ -6,25 +6,25 @@ let make =
       ~small: bool=false,
       ~dark: bool=false,
       ~color: option(string)=?,
-      ~theme: option(Js.t({..}))=?,
+      ~theme: option(Paper_ThemeProvider.theme)=?,
       ~icon: ReasonReact.reactElement,
       ~style: option(BsReactNative.Style.t)=?,
       ~onPress: option(BsReactNative.RNEvent.NativeEvent.t => unit)=?,
-      children
+      children,
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass,
     ~props=
       Js.Null_undefined.(
         {
-          "small": Js.Boolean.to_js_boolean(small),
-          "dark": Js.Boolean.to_js_boolean(dark),
-          "color": from_opt(color),
+          "small": small,
+          "dark": dark,
+          "color": fromOption(color),
           "icon": icon,
-          "onPress": from_opt(onPress),
-          "style": from_opt(style),
-          "theme": from_opt(theme)
+          "onPress": fromOption(onPress),
+          "style": fromOption(style),
+          "theme": fromOption(theme),
         }
       ),
-    children
+    children,
   );

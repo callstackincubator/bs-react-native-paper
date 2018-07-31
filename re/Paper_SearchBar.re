@@ -1,30 +1,46 @@
 [@bs.module "react-native-paper"]
 external reactClass : ReasonReact.reactClass = "SearchBar";
 
+[@bs.deriving abstract]
+type props = {
+  [@bs.optional]
+  placeholder: string,
+  [@bs.optional]
+  value: string,
+  [@bs.optional]
+  icon: ReasonReact.reactElement,
+  [@bs.optional]
+  theme: Paper_ThemeProvider.theme,
+  [@bs.optional]
+  style: BsReactNative.Style.t,
+  onChangeText: string => unit,
+  [@bs.optional]
+  onIconPress: BsReactNative.RNEvent.NativeEvent.t => unit,
+};
+
 let make =
     (
-      ~placeholder: option(string)=?,
-      ~value: option(string)=?,
-      ~icon: option(ReasonReact.reactElement)=?,
-      ~theme: option(Js.t({..}))=?,
-      ~style: option(BsReactNative.Style.t)=?,
-      ~onChangeText: option(string => unit),
-      ~onIconPress: option(BsReactNative.RNEvent.NativeEvent.t => unit)=?,
-      children
+      ~placeholder=?,
+      ~value=?,
+      ~icon=?,
+      ~theme=?,
+      ~style=?,
+      ~onChangeText,
+      ~onIconPress=?,
+      children,
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass,
     ~props=
-      Js.Null_undefined.(
-        {
-          "placeholder": from_opt(placeholder),
-          "value": from_opt(value),
-          "icon": from_opt(icon),
-          "onChangeText": from_opt(onChangeText),
-          "onIconPress": from_opt(onIconPress),
-          "theme": from_opt(theme),
-          "style": from_opt(style)
-        }
+      props(
+        ~placeholder?,
+        ~value?,
+        ~icon?,
+        ~theme?,
+        ~style?,
+        ~onChangeText,
+        ~onIconPress?,
+        (),
       ),
-    children
+    children,
   );

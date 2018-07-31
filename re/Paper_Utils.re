@@ -3,8 +3,8 @@ type jsUnsafe;
 external toJsUnsafe : 'a => jsUnsafe = "%identity";
 
 let wrap_bool = (b: option(bool)) =>
-  switch b {
-  | Some(value) => Js.Null_undefined.return(Js.Boolean.to_js_boolean(value))
+  switch (b) {
+  | Some(value) => Js.Null_undefined.return(value)
   | None => Js.Null_undefined.undefined
   };
 
@@ -20,9 +20,9 @@ let unwrap_value =
         | `Date(Js.Date.t)
         | `ReactElement(ReasonReact.reactElement)
         | `Object(Js.t({..}))
-      ]
+      ],
     ) =>
-  switch r {
+  switch (r) {
   | `String(s) => toJsUnsafe(s)
   | `Int(i) => toJsUnsafe(i)
   | `StringArray(a) => toJsUnsafe(a)
@@ -35,7 +35,7 @@ let unwrap_value =
   };
 
 let option_map = (fn, option) =>
-  switch option {
+  switch (option) {
   | Some(value) => Some(fn(value))
   | None => None
   };
