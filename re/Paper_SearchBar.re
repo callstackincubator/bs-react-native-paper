@@ -10,7 +10,7 @@ type props = {
   [@bs.optional]
   icon: ReasonReact.reactElement,
   [@bs.optional]
-  theme: Paper_ThemeProvider.theme,
+  theme: Paper_ThemeProvider.appTheme,
   [@bs.optional]
   style: Rebolt.Style.t,
   onChangeText: string => unit,

@@ -5,7 +5,7 @@ external reactClass : ReasonReact.reactClass = "Checkbox";
 type props = {
   checked: bool,
   [@bs.optional]
-  theme: Paper_ThemeProvider.theme,
+  theme: Paper_ThemeProvider.appTheme,
   [@bs.optional]
   disabled: bool,
   [@bs.optional]

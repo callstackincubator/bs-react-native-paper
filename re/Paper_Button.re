@@ -22,7 +22,7 @@ type props = {
   [@bs.optional]
   style: Rebolt.Style.t,
   [@bs.optional]
-  theme: Paper_ThemeProvider.theme,
+  theme: Paper_ThemeProvider.appTheme,
   onPress: Rebolt.RNEvent.NativeEvent.t => unit,
 };
 

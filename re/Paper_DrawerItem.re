@@ -6,7 +6,7 @@ let make =
       ~label: option(string),
       ~icon: option(ReasonReact.reactElement)=?,
       ~active: bool=false,
-      ~theme: option(Paper_ThemeProvider.theme)=?,
+      ~theme: option(Paper_ThemeProvider.appTheme)=?,
       ~color: option(string)=?,
       ~onPress: option(Rebolt.RNEvent.NativeEvent.t => unit)=?,
       children,

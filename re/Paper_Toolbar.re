@@ -5,7 +5,7 @@ let make =
     (
       ~dark: bool=false,
       ~statusBarHeight: option(float)=?,
-      ~theme: option(Paper_ThemeProvider.theme)=?,
+      ~theme: option(Paper_ThemeProvider.appTheme)=?,
       ~style: option(Rebolt.Style.t)=?,
       children,
     ) =>

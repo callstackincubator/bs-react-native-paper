@@ -6,7 +6,7 @@ let make =
       ~checked: bool=false,
       ~disabled: bool=false,
       ~color: option(string)=?,
-      ~theme: option(Paper_ThemeProvider.theme)=?,
+      ~theme: option(Paper_ThemeProvider.appTheme)=?,
       ~onPress: option(Rebolt.RNEvent.NativeEvent.t => unit)=?,
       ~value: string,
       children,

@@ -44,7 +44,7 @@ let make =
       ~multiline: bool=false,
       ~numberOfLines: option(int)=?,
       ~value: option(string)=?,
-      ~theme: option(Paper_ThemeProvider.theme)=?,
+      ~theme: option(Paper_ThemeProvider.appTheme)=?,
       ~style: option(Rebolt.Style.t)=?,
       ~onChange: option(unit => unit)=?,
       ~onChangeText: option(string => unit)=?,

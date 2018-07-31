@@ -6,7 +6,7 @@ let make =
       ~disabled: bool=false,
       ~value: bool=false,
       ~color: option(string)=?,
-      ~theme: option(Paper_ThemeProvider.theme)=?,
+      ~theme: option(Paper_ThemeProvider.appTheme)=?,
       ~style: option(Rebolt.Style.t)=?,
       ~onValueChange: option(bool => unit)=?,
       children,

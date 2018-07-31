@@ -6,7 +6,7 @@ let make =
       ~small: bool=false,
       ~dark: bool=false,
       ~color: option(string)=?,
-      ~theme: option(Paper_ThemeProvider.theme)=?,
+      ~theme: option(Paper_ThemeProvider.appTheme)=?,
       ~icon: ReasonReact.reactElement,
       ~style: option(Rebolt.Style.t)=?,
       ~onPress: option(Rebolt.RNEvent.NativeEvent.t => unit)=?,

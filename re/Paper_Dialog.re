@@ -5,7 +5,7 @@ let make =
     (
       ~dismissable: bool=false,
       ~visible: bool=false,
-      ~theme: option(Paper_ThemeProvider.theme)=?,
+      ~theme: option(Paper_ThemeProvider.appTheme)=?,
       ~style: option(Rebolt.Style.t)=?,
       ~onDismiss: option(unit => unit),
       children,

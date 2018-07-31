@@ -8,7 +8,7 @@ let make =
       ~titleStyle: option(Rebolt.Style.t)=?,
       ~subtitle: option(string)=?,
       ~subtitleStyle: option(Rebolt.Style.t)=?,
-      ~theme: option(Paper_ThemeProvider.theme)=?,
+      ~theme: option(Paper_ThemeProvider.appTheme)=?,
       ~style: option(Rebolt.Style.t)=?,
       ~onPress: option(Rebolt.RNEvent.NativeEvent.t => unit)=?,
       children,

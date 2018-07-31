@@ -10,7 +10,7 @@ let make =
       ~numberOfLines: option(int)=?,
       ~pressRetentionOffset: option(Js.t({..}))=?,
       ~allowFontScaling: bool=false,
-      ~theme: option(Paper_ThemeProvider.theme)=?,
+      ~theme: option(Paper_ThemeProvider.appTheme)=?,
       ~style: option(Rebolt.Style.t)=?,
       ~onLayout: option(unit => unit)=?,
       ~onLongPress: option(unit => unit)=?,

@@ -9,7 +9,7 @@ let make =
       ~rippleColor: option(string)=?,
       ~underlayColor: option(string)=?,
       ~style: option(Rebolt.Style.t)=?,
-      ~theme: option(Paper_ThemeProvider.theme)=?,
+      ~theme: option(Paper_ThemeProvider.appTheme)=?,
       ~onPress: option(Rebolt.RNEvent.NativeEvent.t => unit)=?,
       children,
     ) =>

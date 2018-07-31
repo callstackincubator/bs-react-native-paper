@@ -4,7 +4,7 @@ external reactClass : ReasonReact.reactClass = "Divider";
 let make =
     (
       ~inset: bool=false,
-      ~theme: option(Paper_ThemeProvider.theme)=?,
+      ~theme: option(Paper_ThemeProvider.appTheme)=?,
       ~style: option(Rebolt.Style.t)=?,
       children,
     ) =>
