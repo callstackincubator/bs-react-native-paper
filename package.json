@@ -1,6 +1,6 @@
 {
   "name": "bs-react-native-paper",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "React Native Paper bindings for BS",
   "main": "index.js",
   "repository": "git@github.com:Astrocoders/bs-react-native-paper.git",
