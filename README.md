@@ -60,6 +60,7 @@ let make = children => {
 - [x] DrawerItem
 - [x] DrawerSection
 - [x] FAB
+- [ ] FABGroup
 - [x] Headline
 - [x] Modal
 - [x] Paper
