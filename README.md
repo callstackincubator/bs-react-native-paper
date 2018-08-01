@@ -10,6 +10,17 @@
 </Paper.Button>
 ```
 
+```ocaml
+<Paper.FABGroup
+  actions=Paper.FABGroup.[|
+    fabAction(~icon="add", ~onPress=() => Js.log("add"), ()),
+    fabAction(~icon="star", ~onPress=() => Js.log("start"), ()),
+    fabAction(~icon="notifications",  ~onPress=() => Js.log("notifications"), ()),
+  |]
+  onStateChange
+/>
+```
+
 ## Using theme
 ```ocaml
 
@@ -60,7 +71,7 @@ let make = children => {
 - [x] DrawerItem
 - [x] DrawerSection
 - [x] FAB
-- [ ] FABGroup
+- [x] FABGroup
 - [x] Headline
 - [x] Modal
 - [x] Paper
