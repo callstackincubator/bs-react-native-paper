@@ -26,19 +26,30 @@ type themeFonts = {
 
 [@bs.deriving abstract]
 type appTheme = {
-  [@bs.optional]
-  roundess: int,
-  [@bs.optional]
+  roundness: int,
   dark: bool,
-  [@bs.optional]
   colors: themeColors,
+  fonts: themeFonts,
 };
+
+[@bs.module "react-native-paper"]
+external defaultTheme : appTheme = "DefaultTheme";
 
 [@bs.deriving abstract]
 type props = {
   [@bs.optional]
   theme: appTheme,
 };
+
+let createTheme =
+    (
+      ~roundness=roundnessGet(defaultTheme),
+      ~dark=darkGet(defaultTheme),
+      ~colors=colorsGet(defaultTheme),
+      ~fonts=fontsGet(defaultTheme),
+      (),
+    ) =>
+  appTheme(~roundness, ~dark, ~colors, ~fonts);
 
 let make = (~theme=?, children) =>
   ReasonReact.wrapJsForReason(
