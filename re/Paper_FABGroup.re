@@ -2,7 +2,7 @@
 external reactClass : ReasonReact.reactClass = "FABGroup";
 
 [@bs.deriving abstract]
-type fabActions = {
+type fabAction = {
   icon: string,
   [@bs.optional]
   label: string,
@@ -31,7 +31,7 @@ type props = {
   [@bs.optional]
   onPress: Rebolt.RNEvent.NativeEvent.t => unit,
   onStateChange: fabState => unit,
-  actions: fabActions,
+  actions: array(fabAction),
 };
 
 let make =
