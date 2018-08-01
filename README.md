@@ -10,6 +10,38 @@
 </Paper.Button>
 ```
 
+## Using theme
+```ocaml
+
+/* We provide a help function called `createTheme` that defaults with DefaultTheme */
+let theme =
+  Paper.ThemeProvider.(
+    createTheme(
+      ~colors=
+        themeColors(
+          ~primary="blue",
+          ~accent="blue",
+          ~background="white",
+          ~paper="blue",
+          ~text="black",
+          ~disabled="gray",
+          ~placeholder="gray",
+        ),
+      (),
+    )
+  );
+
+let component = ReasonReact.statelessComponent("AppTheme");
+
+let make = children => {
+  ...component,
+  render: _self =>
+    <Paper.ThemeProvider theme>
+      (ReasonReact.array(children))
+    </Paper.ThemeProvider>,
+};
+```
+
 ## Bindings
 
 - [x] Button
