@@ -4,8 +4,11 @@
   "description": "React Native Paper bindings for BS",
   "main": "index.js",
   "repository": "git@github.com:Astrocoders/bs-react-native-paper.git",
+  "bugs": "https://github.com/Astrocoders/bs-react-native-paper/issues",
+  "homepage": "https://github.com/Astrocoders/bs-react-native-paper",
   "author": "Medson de Oliveira Junior <medson.oliveira.jr@gmail.com>",
   "license": "MIT",
+  "keywords": ["bucklescript", "react-native-paper"],
   "dependencies": {
     "react-native-paper": "^1.0.1",
     "reason-react": "^0.4.2",
