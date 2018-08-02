@@ -54,7 +54,7 @@ let make = children => {
 ```
 
 ## Bindings
-
+- [ ] Icons (Use https://github.com/Astrocoders/bs-react-native-vector-icons instead)
 - [x] Button
 - [x] Caption
 - [x] Card
