@@ -21,6 +21,20 @@
 />
 ```
 
+## Installation
+
+Use yarn or npm
+
+```
+$ yarn add bs-react-native-paper react-native-paper rebolt
+```
+
+Then update your `bsconfig.json`
+
+```json
+"bs-dependencies": ["reason-react", "rebolt", "bs-react-native-paper"]
+```
+
 ## Using theme
 ```ocaml
 
