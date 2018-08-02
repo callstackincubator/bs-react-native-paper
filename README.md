@@ -69,10 +69,11 @@ let make = children => {
 
 ## Bindings
 - [ ] Icons (Use https://github.com/Astrocoders/bs-react-native-vector-icons instead)
-- [ ] List
-- [ ] ListItem
-- [ ] ListSection
-- [ ] ListAccordion
+- [ ] Chip
+- [x] List
+- [x] ListItem
+- [x] ListSection
+- [x] ListAccordion
 - [x] Button
 - [x] Caption
 - [x] Card
