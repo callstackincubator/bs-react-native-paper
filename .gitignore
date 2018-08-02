@@ -60,3 +60,4 @@ typings/
 .merlin
 lib/
 
+.bsb.lock
