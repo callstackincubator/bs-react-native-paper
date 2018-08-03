@@ -92,7 +92,7 @@ let make = children => {
 - [x] FAB
 - [x] FABGroup
 - [x] Headline
-- [ ] HelpText
+- [x] HelpText
 - [x] Modal
 - [x] Paper
 - [x] Paragraph
