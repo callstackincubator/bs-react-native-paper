@@ -92,15 +92,17 @@ let make = children => {
 - [x] FAB
 - [x] FABGroup
 - [x] Headline
+- [ ] HelpText
 - [x] Modal
 - [x] Paper
 - [x] Paragraph
 - [x] ProgressBar
 - [x] RadioButton
+- [x] RadioButtonGroup
 - [x] SearchBar
+- [x] Snackbar
 - [x] Subheading
 - [x] Switch
-- [ ] Snackbar
 - [x] Text
 - [x] TextInput
 - [x] ThemeProvider
