@@ -2,12 +2,6 @@
 external reactClass : ReasonReact.reactClass = "HelpText";
 
 [@bs.deriving abstract]
-type snackbarAction = {
-  label: string,
-  onPress: unit => unit,
-};
-
-[@bs.deriving abstract]
 type props = {
   [@bs.optional]
   theme: Paper_ThemeProvider.appTheme,
