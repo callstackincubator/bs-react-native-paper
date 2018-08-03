@@ -1,4 +1,4 @@
-[@bs.module "react-native-modular"]
+[@bs.module "react-native-paper"]
 external listItem : ReasonReact.reactClass = "ListItem";
 
 [@bs.deriving abstract]

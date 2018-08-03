@@ -1,4 +1,4 @@
-[@bs.module "react-native-modular"]
+[@bs.module "react-native-paper"]
 external listAccordion : ReasonReact.reactClass = "ListAccordion";
 
 [@bs.deriving abstract]
