@@ -70,6 +70,7 @@ let make = children => {
 ## Bindings
 - [ ] Icons (Use https://github.com/Astrocoders/bs-react-native-vector-icons instead)
 - [ ] Chip
+- [x] PaperProvider
 - [x] List
 - [x] ListItem
 - [x] ListSection
