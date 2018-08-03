@@ -26,11 +26,21 @@ let make =
       ~avatar=?,
       ~onPress=?,
       ~theme=?,
+      ~style=?,
       children,
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass=listItem,
     ~props=
-      props(~title, ~description?, ~icon?, ~avatar?, ~onPress?, ~theme?, ()),
+      props(
+        ~title,
+        ~description?,
+        ~icon?,
+        ~avatar?,
+        ~onPress?,
+        ~theme?,
+        ~style?,
+        (),
+      ),
     children,
   );
