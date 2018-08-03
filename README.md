@@ -100,6 +100,7 @@ let make = children => {
 - [x] SearchBar
 - [x] Subheading
 - [x] Switch
+- [ ] Snackbar
 - [x] Text
 - [x] TextInput
 - [x] ThemeProvider
