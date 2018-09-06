@@ -1,5 +1,5 @@
 [@bs.module "react-native-paper"]
-external reactClass : ReasonReact.reactClass = "Searchbar";
+external reactClass: ReasonReact.reactClass = "Searchbar";
 
 [@bs.deriving abstract]
 type props = {
