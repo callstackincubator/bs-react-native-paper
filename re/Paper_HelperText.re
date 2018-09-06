@@ -1,5 +1,5 @@
 [@bs.module "react-native-paper"]
-external reactClass : ReasonReact.reactClass = "HelpText";
+external reactClass: ReasonReact.reactClass = "HelperText";
 
 [@bs.deriving abstract]
 type props = {
