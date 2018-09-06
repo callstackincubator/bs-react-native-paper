@@ -5,6 +5,7 @@ module CardActions = Paper_CardActions;
 module CardContent = Paper_CardContent;
 module CardCover = Paper_CardCover;
 module Checkbox = Paper_Checkbox;
+module Chip = Paper_Chip;
 module Dialog = Paper_Dialog;
 module DialogActions = Paper_DialogActions;
 module DialogContent = Paper_DialogContent;
