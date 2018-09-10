@@ -1,8 +1,16 @@
 [@bs.module "react-native-paper"]
 external reactClass : ReasonReact.reactClass = "Button";
 
+[@bs.deriving jsConverter]
+type modes = [
+  | [@bs.as "text"] `text
+  | [@bs.as "outlined"] `outlined
+  | [@bs.as "contained"] `contained
+];
+
 [@bs.deriving abstract]
 type props = {
+  mode: string,
   [@bs.optional]
   disabled: bool,
   [@bs.optional]
@@ -28,6 +36,7 @@ type props = {
 
 let make =
     (
+      ~mode=`text,
       ~disabled=?,
       ~compact=?,
       ~raised=?,
@@ -45,6 +54,7 @@ let make =
     ~reactClass,
     ~props=
       props(
+        ~mode=modesToJs(mode),
         ~disabled?,
         ~compact?,
         ~raised?,
