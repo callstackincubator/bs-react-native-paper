@@ -8,16 +8,13 @@
   "homepage": "https://github.com/Astrocoders/bs-react-native-paper",
   "author": "Medson de Oliveira Junior <medson.oliveira.jr@gmail.com>",
   "license": "MIT",
-  "keywords": [
-    "bucklescript",
-    "react-native-paper"
-  ],
+  "keywords": ["bucklescript", "react-native-paper"],
   "dependencies": {
-    "react-native-paper": "^1.0.1",
     "rebolt": "^0.2.0"
   },
   "peerDependencies": {
-    "reason-react": "^0.5.2"
+    "reason-react": "^0.5.2",
+    "react-native-paper": "*"
   },
   "devDependencies": {
     "bs-platform": "^4.0.2",
@@ -31,10 +28,7 @@
       "prettier --write --single-quote true --trailing-comma all --print-width 120 --semi false",
       "git add"
     ],
-    "*.re": [
-      "refmt --in-place",
-      "git add"
-    ]
+    "*.re": ["refmt --in-place", "git add"]
   },
   "pre-commit": "lint:staged",
   "scripts": {
