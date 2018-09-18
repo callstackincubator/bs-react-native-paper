@@ -1,5 +1,5 @@
 [@bs.module "react-native-paper"]
-external reactClass : ReasonReact.reactClass = "Paper";
+external reactClass: ReasonReact.reactClass = "Surface";
 
 let make =
     (
@@ -9,9 +9,9 @@ let make =
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass,
-    ~props=
-      Js.Null_undefined.(
-        {"style": fromOption(style), "theme": fromOption(theme)}
-      ),
+    ~props={
+      open Js.Null_undefined;
+      {"style": fromOption(style), "theme": fromOption(theme)};
+    },
     children,
   );
