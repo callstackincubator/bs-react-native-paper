@@ -4,8 +4,12 @@ external reactClass : ReasonReact.reactClass = "TextInput";
 [@bs.deriving jsConverter]
 type capitalize = [ | `none | `sentences | `words | `characters];
 
+[@bs.deriving jsConverter]
+type modes = [ | [@bs.as "flat"] `flat | [@bs.as "outlined"] `outlined];
+
 let make =
     (
+      ~mode: modes=`flat,
       ~allowFontScaling: bool=false,
       ~autoCorrect: bool=false,
       ~autoFocus: bool=false,
@@ -64,6 +68,7 @@ let make =
     ~props=
       Js.Nullable.(
         {
+          "mode": mode,
           "allowFontScaling": allowFontScaling,
           "autoCorrect": autoCorrect,
           "autoFocus": autoFocus,
