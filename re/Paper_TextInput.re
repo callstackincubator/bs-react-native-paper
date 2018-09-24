@@ -68,7 +68,7 @@ let make =
     ~props=
       Js.Nullable.(
         {
-          "mode": mode,
+          "mode": modesToJs(mode),
           "allowFontScaling": allowFontScaling,
           "autoCorrect": autoCorrect,
           "autoFocus": autoFocus,
