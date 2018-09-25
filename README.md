@@ -120,3 +120,5 @@ MIT
 
 ## Contributing
 PR are welcome!
+
+If you are updating components to paper v2.0 make sure to merge with `paper2.0` branch instead of `master` branch.
