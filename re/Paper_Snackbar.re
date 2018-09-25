@@ -1,5 +1,26 @@
 [@bs.module "react-native-paper"]
-external reactClass : ReasonReact.reactClass = "Snackbar";
+external reactClass: ReasonReact.reactClass = "Snackbar";
+
+[@bs.module "react-native-paper"] [@bs.scope "Snackbar"]
+external durationShort: int = "DURATION_SHORT";
+[@bs.module "react-native-paper"] [@bs.scope "Snackbar"]
+external durationMedium: int = "DURATION_MEDIUM";
+[@bs.module "react-native-paper"] [@bs.scope "Snackbar"]
+external durationLong: int = "DURATION_LONG";
+
+type duration =
+  | DurationShort
+  | DurationMedium
+  | DurationLong
+  | Duration(int);
+
+let getDuration = d =>
+  switch (d) {
+  | DurationShort => durationShort
+  | DurationMedium => durationMedium
+  | DurationLong => durationLong
+  | Duration(duration) => duration
+  };
 
 [@bs.deriving abstract]
 type snackbarAction = {
@@ -34,6 +55,18 @@ let make =
   ReasonReact.wrapJsForReason(
     ~reactClass,
     ~props=
-      props(~theme?, ~duration?, ~onDismiss, ~style?, ~action?, ~visible, ()),
+      props(
+        ~theme?,
+        ~duration=
+          switch (duration) {
+          | Some(duration) => getDuration(duration)
+          | None => getDuration(DurationMedium)
+          },
+        ~onDismiss,
+        ~style?,
+        ~action?,
+        ~visible,
+        (),
+      ),
     children,
   );
