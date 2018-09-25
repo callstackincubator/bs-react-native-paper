@@ -1,5 +1,5 @@
 [@bs.module "react-native-paper"]
-external listSection : ReasonReact.reactClass = "ListSection";
+external listSection: ReasonReact.reactClass = "ListSection";
 
 [@bs.deriving abstract]
 type props = {
@@ -8,7 +8,7 @@ type props = {
   [@bs.optional]
   theme: Paper_ThemeProvider.appTheme,
   [@bs.optional]
-  style: Rebolt.Style.t,
+  style: BsReactNative.Style.t,
 };
 
 let make = (~title=?, ~theme=?, children) =>

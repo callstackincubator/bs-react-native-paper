@@ -1,5 +1,5 @@
 [@bs.module "react-native-paper"]
-external reactClass : ReasonReact.reactClass = "Text";
+external reactClass: ReasonReact.reactClass = "Text";
 
 let make =
     (
@@ -11,7 +11,7 @@ let make =
       ~pressRetentionOffset: option(Js.t({..}))=?,
       ~allowFontScaling: bool=false,
       ~theme: option(Paper_ThemeProvider.appTheme)=?,
-      ~style: option(Rebolt.Style.t)=?,
+      ~style: option(BsReactNative.Style.t)=?,
       ~onLayout: option(unit => unit)=?,
       ~onLongPress: option(unit => unit)=?,
       ~onPress: option(unit => unit)=?,
@@ -20,21 +20,19 @@ let make =
   ReasonReact.wrapJsForReason(
     ~reactClass,
     ~props=
-      Js.Null_undefined.(
-        {
-          "selectable": selectable,
-          "acessible": acessible,
-          "elipsizeMode": fromOption(elipsizeMode),
-          "nativeID": fromOption(nativeID),
-          "numberOfLines": fromOption(numberOfLines),
-          "pressRetentionOffset": fromOption(pressRetentionOffset),
-          "allowFontScaling": allowFontScaling,
-          "onLayout": fromOption(onLayout),
-          "onLongPress": fromOption(onLongPress),
-          "onPress": fromOption(onPress),
-          "theme": fromOption(theme),
-          "style": fromOption(style),
-        }
-      ),
+      Js.Null_undefined.{
+        "selectable": selectable,
+        "acessible": acessible,
+        "elipsizeMode": fromOption(elipsizeMode),
+        "nativeID": fromOption(nativeID),
+        "numberOfLines": fromOption(numberOfLines),
+        "pressRetentionOffset": fromOption(pressRetentionOffset),
+        "allowFontScaling": allowFontScaling,
+        "onLayout": fromOption(onLayout),
+        "onLongPress": fromOption(onLongPress),
+        "onPress": fromOption(onPress),
+        "theme": fromOption(theme),
+        "style": fromOption(style),
+      },
     children,
   );

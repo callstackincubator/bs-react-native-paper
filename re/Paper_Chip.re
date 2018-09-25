@@ -1,5 +1,5 @@
 [@bs.module "react-native-paper"]
-external reactClass : ReasonReact.reactClass = "Chip";
+external reactClass: ReasonReact.reactClass = "Chip";
 
 [@bs.deriving jsConverter]
 type modes = [ | [@bs.as "outlined"] `outlined | [@bs.as "flat"] `flat];
@@ -21,13 +21,13 @@ type props = {
   [@bs.optional]
   color: string,
   [@bs.optional]
-  style: Rebolt.Style.t,
+  style: BsReactNative.Style.t,
   [@bs.optional]
   theme: Paper_ThemeProvider.appTheme,
   [@bs.optional]
-  onPress: Rebolt.RNEvent.NativeEvent.t => unit,
+  onPress: BsReactNative.RNEvent.NativeEvent.t => unit,
   [@bs.optional]
-  onClose: Rebolt.RNEvent.NativeEvent.t => unit,
+  onClose: BsReactNative.RNEvent.NativeEvent.t => unit,
 };
 
 let make =

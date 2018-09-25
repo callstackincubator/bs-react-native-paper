@@ -1,5 +1,5 @@
 [@bs.module "react-native-paper"]
-external reactClass : ReasonReact.reactClass = "Button";
+external reactClass: ReasonReact.reactClass = "Button";
 
 [@bs.deriving jsConverter]
 type modes = [
@@ -28,10 +28,10 @@ type props = {
   [@bs.optional]
   color: string,
   [@bs.optional]
-  style: Rebolt.Style.t,
+  style: BsReactNative.Style.t,
   [@bs.optional]
   theme: Paper_ThemeProvider.appTheme,
-  onPress: Rebolt.RNEvent.NativeEvent.t => unit,
+  onPress: BsReactNative.RNEvent.NativeEvent.t => unit,
 };
 
 let make =

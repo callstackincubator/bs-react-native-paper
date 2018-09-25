@@ -26,18 +26,18 @@
 Use yarn or npm
 
 ```
-$ yarn add bs-react-native-paper react-native-paper rebolt
+$ yarn add bs-react-native-paper react-native-paper
 ```
 
 Then update your `bsconfig.json`
 
 ```json
-"bs-dependencies": ["reason-react", "rebolt", "bs-react-native-paper"]
+"bs-dependencies": ["reason-react", "bs-react-native-paper"]
 ```
 
 ## Using theme
-```ocaml
 
+```ocaml
 /* We provide a help function called `createTheme` that defaults with DefaultTheme */
 let theme =
   Paper.ThemeProvider.(
@@ -68,55 +68,57 @@ let make = children => {
 ```
 
 ## Bindings
-- [ ] Icons (Use https://github.com/Astrocoders/bs-react-native-vector-icons instead)
-- [x] Chip
-- [x] PaperProvider
-- [x] List
-- [x] ListItem
-- [x] ListSection
-- [x] ListAccordion
-- [x] Button
-- [x] Caption
-- [x] Card
-- [x] CardActions
-- [x] CardContent
-- [x] CardCover
-- [x] Checkbox
-- [x] Dialog
-- [x] DialogActions
-- [x] DialogContent
-- [x] DialogScrollArea
-- [x] DialogTitle
-- [x] Divider
-- [x] DrawerItem
-- [x] DrawerSection
-- [x] FAB
-- [x] FABGroup
-- [x] Headline
-- [x] HelpText
-- [x] Modal
-- [x] Paper
-- [x] Paragraph
-- [x] ProgressBar
-- [x] RadioButton
-- [x] RadioButtonGroup
-- [x] SearchBar
-- [x] Snackbar
-- [x] Subheading
-- [x] Switch
-- [x] Text
-- [x] TextInput
-- [x] ThemeProvider
-- [x] Title
-- [x] Toolbar
-- [x] ToolbarAction
-- [x] ToolbarBackAction
-- [x] ToolbarContent
-- [x] TouchableRipple
+
+* [ ] Icons (Use https://github.com/Astrocoders/bs-react-native-vector-icons instead)
+* [x] Chip
+* [x] PaperProvider
+* [x] List
+* [x] ListItem
+* [x] ListSection
+* [x] ListAccordion
+* [x] Button
+* [x] Caption
+* [x] Card
+* [x] CardActions
+* [x] CardContent
+* [x] CardCover
+* [x] Checkbox
+* [x] Dialog
+* [x] DialogActions
+* [x] DialogContent
+* [x] DialogScrollArea
+* [x] DialogTitle
+* [x] Divider
+* [x] DrawerItem
+* [x] DrawerSection
+* [x] FAB
+* [x] FABGroup
+* [x] Headline
+* [x] HelpText
+* [x] Modal
+* [x] Paper
+* [x] Paragraph
+* [x] ProgressBar
+* [x] RadioButton
+* [x] RadioButtonGroup
+* [x] SearchBar
+* [x] Snackbar
+* [x] Subheading
+* [x] Switch
+* [x] Text
+* [x] TextInput
+* [x] ThemeProvider
+* [x] Title
+* [x] Toolbar
+* [x] ToolbarAction
+* [x] ToolbarBackAction
+* [x] ToolbarContent
+* [x] TouchableRipple
 
 ## License
 
 MIT
 
 ## Contributing
+
 PR are welcome!
