@@ -1,5 +1,5 @@
 [@bs.module "react-native-paper"]
-external reactClass : ReasonReact.reactClass = "TextInput";
+external reactClass: ReasonReact.reactClass = "TextInput";
 
 [@bs.deriving jsConverter]
 type capitalize = [ | `none | `sentences | `words | `characters];
@@ -49,7 +49,7 @@ let make =
       ~numberOfLines: option(int)=?,
       ~value: option(string)=?,
       ~theme: option(Paper_ThemeProvider.appTheme)=?,
-      ~style: option(Rebolt.Style.t)=?,
+      ~style: option(BsReactNative.Style.t)=?,
       ~onChange: option(unit => unit)=?,
       ~onChangeText: option(string => unit)=?,
       ~onContentSizeChange: option(unit => unit)=?,
@@ -66,68 +66,66 @@ let make =
   ReasonReact.wrapJsForReason(
     ~reactClass,
     ~props=
-      Js.Nullable.(
-        {
-          "mode": modesToJs(mode),
-          "allowFontScaling": allowFontScaling,
-          "autoCorrect": autoCorrect,
-          "autoFocus": autoFocus,
-          "autoCapitalize":
-            (
-              switch (autoCapitalize) {
-              | Some(autoCapitalize) => Some(capitalizeToJs(autoCapitalize))
-              | None => None
-              }
-            )
-            |> fromOption,
-          "autoGrow": autoGrow,
-          "blurOnSubmit": blurOnSubmit,
-          "caretHidden": caretHidden,
-          "contextMenuHidden": contextMenuHidden,
-          "dataDetectorTypes": fromOption(dataDetectorTypes),
-          "enablesReturnKeyAutomatically": enablesReturnKeyAutomatically,
-          "keyboardAppearance": fromOption(keyboardAppearance),
-          "defaultValue": fromOption(defaultValue),
-          "disabled": disabled,
-          "disableFullscreenUI": disableFullscreenUI,
-          "editable": editable,
-          "keyboardType": fromOption(keyboardType),
-          "inlineImageLeft": fromOption(inlineImageLeft),
-          "inlineImagePadding": fromOption(inlineImagePadding),
-          "maxHeight": fromOption(maxHeight),
-          "maxLength": fromOption(maxLength),
-          "label": fromOption(label),
-          "placeholder": fromOption(placeholder),
-          "placeholderTextColor": fromOption(placeholderTextColor),
-          "returnKeyType": fromOption(returnKeyType),
-          "returnKeyLabel": fromOption(returnKeyLabel),
-          "spellCheck": spellCheck,
-          "textBreakStrategy": fromOption(textBreakStrategy),
-          "underlineColorAndroid": fromOption(underlineColorAndroid),
-          "clearButtonMode": fromOption(clearButtonMode),
-          "clearTextOnFocus": fromOption(clearTextOnFocus),
-          "secureTextEntry": secureTextEntry,
-          "selectTextOnFocus": selectTextOnFocus,
-          "selection": fromOption(selection),
-          "selectionColor": fromOption(selectionColor),
-          "underlineColor": fromOption(underlineColor),
-          "multiline": multiline,
-          "numberOfLines": fromOption(numberOfLines),
-          "value": fromOption(value),
-          "theme": fromOption(theme),
-          "style": fromOption(style),
-          "onChange": fromOption(onChange),
-          "onChangeText": fromOption(onChangeText),
-          "onContentSizeChange": fromOption(onContentSizeChange),
-          "onKeyPress": fromOption(onKeyPress),
-          "onEndEditing": fromOption(onEndEditing),
-          "onLayout": fromOption(onLayout),
-          "onScroll": fromOption(onScroll),
-          "onSelectionChange": fromOption(onSelectionChange),
-          "onSubmitEditing": fromOption(onSubmitEditing),
-          "onFocus": fromOption(onFocus),
-          "onBlur": fromOption(onBlur),
-        }
-      ),
+      Js.Nullable.{
+        "mode": modesToJs(mode),
+        "allowFontScaling": allowFontScaling,
+        "autoCorrect": autoCorrect,
+        "autoFocus": autoFocus,
+        "autoCapitalize":
+          (
+            switch (autoCapitalize) {
+            | Some(autoCapitalize) => Some(capitalizeToJs(autoCapitalize))
+            | None => None
+            }
+          )
+          |> fromOption,
+        "autoGrow": autoGrow,
+        "blurOnSubmit": blurOnSubmit,
+        "caretHidden": caretHidden,
+        "contextMenuHidden": contextMenuHidden,
+        "dataDetectorTypes": fromOption(dataDetectorTypes),
+        "enablesReturnKeyAutomatically": enablesReturnKeyAutomatically,
+        "keyboardAppearance": fromOption(keyboardAppearance),
+        "defaultValue": fromOption(defaultValue),
+        "disabled": disabled,
+        "disableFullscreenUI": disableFullscreenUI,
+        "editable": editable,
+        "keyboardType": fromOption(keyboardType),
+        "inlineImageLeft": fromOption(inlineImageLeft),
+        "inlineImagePadding": fromOption(inlineImagePadding),
+        "maxHeight": fromOption(maxHeight),
+        "maxLength": fromOption(maxLength),
+        "label": fromOption(label),
+        "placeholder": fromOption(placeholder),
+        "placeholderTextColor": fromOption(placeholderTextColor),
+        "returnKeyType": fromOption(returnKeyType),
+        "returnKeyLabel": fromOption(returnKeyLabel),
+        "spellCheck": spellCheck,
+        "textBreakStrategy": fromOption(textBreakStrategy),
+        "underlineColorAndroid": fromOption(underlineColorAndroid),
+        "clearButtonMode": fromOption(clearButtonMode),
+        "clearTextOnFocus": fromOption(clearTextOnFocus),
+        "secureTextEntry": secureTextEntry,
+        "selectTextOnFocus": selectTextOnFocus,
+        "selection": fromOption(selection),
+        "selectionColor": fromOption(selectionColor),
+        "underlineColor": fromOption(underlineColor),
+        "multiline": multiline,
+        "numberOfLines": fromOption(numberOfLines),
+        "value": fromOption(value),
+        "theme": fromOption(theme),
+        "style": fromOption(style),
+        "onChange": fromOption(onChange),
+        "onChangeText": fromOption(onChangeText),
+        "onContentSizeChange": fromOption(onContentSizeChange),
+        "onKeyPress": fromOption(onKeyPress),
+        "onEndEditing": fromOption(onEndEditing),
+        "onLayout": fromOption(onLayout),
+        "onScroll": fromOption(onScroll),
+        "onSelectionChange": fromOption(onSelectionChange),
+        "onSubmitEditing": fromOption(onSubmitEditing),
+        "onFocus": fromOption(onFocus),
+        "onBlur": fromOption(onBlur),
+      },
     children,
   );

@@ -97,9 +97,13 @@ braces@^2.3.1:
     split-string "^3.0.2"
     to-regex "^3.0.1"
 
-bs-platform@^4.0.2:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-4.0.2.tgz#ee80f4948f5db0533df667612a53d9a52837cf24"
+bs-platform@^4.0.5:
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-4.0.5.tgz#d4fd9bbdd11765af5b75110a5655065ece05eed6"
+
+bs-react-native@^0.9.0:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/bs-react-native/-/bs-react-native-0.9.0.tgz#198a0d198d296e0a500be950ad43d8d31497cbe9"
 
 buffer-from@^1.0.0:
   version "1.0.0"
@@ -1002,10 +1006,6 @@ reason-react@^0.5.2:
   dependencies:
     react ">=15.0.0 || >=16.0.0"
     react-dom ">=15.0.0 || >=16.0.0"
-
-rebolt@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/rebolt/-/rebolt-0.2.0.tgz#7bbe0c4242a0d572b878e910bd6e6f376ade10be"
 
 regex-not@^1.0.0, regex-not@^1.0.2:
   version "1.0.2"

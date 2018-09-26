@@ -1,5 +1,5 @@
 [@bs.module "react-native-paper"]
-external reactClass : ReasonReact.reactClass = "Checkbox";
+external reactClass: ReasonReact.reactClass = "Checkbox";
 
 [@bs.deriving abstract]
 type props = {
@@ -11,8 +11,8 @@ type props = {
   [@bs.optional]
   color: string,
   [@bs.optional]
-  style: Rebolt.Style.t,
-  onPress: Rebolt.RNEvent.NativeEvent.t => unit,
+  style: BsReactNative.Style.t,
+  onPress: BsReactNative.RNEvent.NativeEvent.t => unit,
 };
 
 let make =

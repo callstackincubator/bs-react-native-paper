@@ -4,14 +4,15 @@ external reactClass: ReasonReact.reactClass = "Surface";
 let make =
     (
       ~theme: option(Js.t({..}))=?,
-      ~style: option(Rebolt.Style.t)=?,
+      ~style: option(BsReactNative.Style.t)=?,
       children,
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass,
-    ~props={
-      open Js.Null_undefined;
-      {"style": fromOption(style), "theme": fromOption(theme)};
-    },
+    ~props=
+      Js.Null_undefined.{
+        "style": fromOption(style),
+        "theme": fromOption(theme),
+      },
     children,
   );

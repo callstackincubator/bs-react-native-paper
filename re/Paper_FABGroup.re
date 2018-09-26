@@ -1,5 +1,5 @@
 [@bs.module "react-native-paper"]
-external reactClass : ReasonReact.reactClass = "FABGroup";
+external reactClass: ReasonReact.reactClass = "FABGroup";
 
 [@bs.deriving abstract]
 type fabAction = {
@@ -27,9 +27,9 @@ type props = {
   theme: Paper_ThemeProvider.appTheme,
   icon: ReasonReact.reactElement,
   [@bs.optional]
-  style: Rebolt.Style.t,
+  style: BsReactNative.Style.t,
   [@bs.optional]
-  onPress: Rebolt.RNEvent.NativeEvent.t => unit,
+  onPress: BsReactNative.RNEvent.NativeEvent.t => unit,
   onStateChange: fabState => unit,
   actions: array(fabAction),
 };

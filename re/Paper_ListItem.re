@@ -1,5 +1,5 @@
 [@bs.module "react-native-paper"]
-external listItem : ReasonReact.reactClass = "ListItem";
+external listItem: ReasonReact.reactClass = "ListItem";
 
 [@bs.deriving abstract]
 type props = {
@@ -11,11 +11,11 @@ type props = {
   [@bs.optional]
   avatar: ReasonReact.reactElement,
   [@bs.optional]
-  onPress: Rebolt.RNEvent.NativeEvent.t => unit,
+  onPress: BsReactNative.RNEvent.NativeEvent.t => unit,
   [@bs.optional]
   theme: Paper_ThemeProvider.appTheme,
   [@bs.optional]
-  style: Rebolt.Style.t,
+  style: BsReactNative.Style.t,
 };
 
 let make =

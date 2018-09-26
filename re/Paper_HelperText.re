@@ -6,7 +6,7 @@ type props = {
   [@bs.optional]
   theme: Paper_ThemeProvider.appTheme,
   [@bs.optional]
-  style: Rebolt.Style.t,
+  style: BsReactNative.Style.t,
   [@bs.optional]
   visible: bool,
   [@bs.as "type"]

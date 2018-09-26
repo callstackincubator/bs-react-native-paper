@@ -1,5 +1,5 @@
 [@bs.module "react-native-paper"]
-external listAccordion : ReasonReact.reactClass = "ListAccordion";
+external listAccordion: ReasonReact.reactClass = "ListAccordion";
 
 [@bs.deriving abstract]
 type props = {
@@ -11,7 +11,7 @@ type props = {
   [@bs.optional]
   theme: Paper_ThemeProvider.appTheme,
   [@bs.optional]
-  style: Rebolt.Style.t,
+  style: BsReactNative.Style.t,
 };
 
 let make = (~title, ~description=?, ~icon=?, ~theme=?, children) =>
