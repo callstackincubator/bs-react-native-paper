@@ -19,8 +19,6 @@ type props = {
   [@bs.optional]
   icon: ReasonReact.reactElement,
   [@bs.optional]
-  color: string,
-  [@bs.optional]
   style: BsReactNative.Style.t,
   [@bs.optional]
   theme: Paper_ThemeProvider.appTheme,
@@ -38,7 +36,6 @@ let make =
       ~accessibilityLabel=?,
       ~avatar=?,
       ~icon=?,
-      ~color=?,
       ~style=?,
       ~theme=?,
       ~onPress=?,
@@ -55,7 +52,6 @@ let make =
         ~accessibilityLabel?,
         ~avatar?,
         ~icon?,
-        ~color?,
         ~style?,
         ~theme?,
         ~onPress?,
