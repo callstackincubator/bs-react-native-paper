@@ -19,6 +19,7 @@ module Headline = Paper_Headline;
 module Modal = Paper_Modal;
 module Surface = Paper_Surface;
 module Paragraph = Paper_Paragraph;
+module Portal = Paper_Portal;
 module ProgressBar = Paper_ProgressBar;
 module RadioButton = Paper_RadioButton;
 module Searchbar = Paper_Searchbar;
