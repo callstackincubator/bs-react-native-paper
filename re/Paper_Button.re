@@ -26,6 +26,8 @@ type props = {
   [@bs.optional]
   color: string,
   [@bs.optional]
+  accessibilityLabel: string,
+  [@bs.optional]
   style: BsReactNative.Style.t,
   [@bs.optional]
   theme: Paper_ThemeProvider.appTheme,
@@ -42,6 +44,7 @@ let make =
       ~dark=?,
       ~icon=?,
       ~color=?,
+      ~accessibilityLabel=?,
       ~style=?,
       ~theme=?,
       ~onPress,
@@ -59,6 +62,7 @@ let make =
         ~dark?,
         ~icon?,
         ~color?,
+        ~accessibilityLabel?,
         ~style?,
         ~theme?,
         ~onPress,
