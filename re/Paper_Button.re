@@ -18,8 +18,6 @@ type props = {
   [@bs.optional]
   raised: bool,
   [@bs.optional]
-  primary: bool,
-  [@bs.optional]
   loading: bool,
   [@bs.optional]
   dark: bool,
@@ -40,7 +38,6 @@ let make =
       ~disabled=?,
       ~compact=?,
       ~raised=?,
-      ~primary=?,
       ~loading=?,
       ~dark=?,
       ~icon=?,
@@ -58,7 +55,6 @@ let make =
         ~disabled?,
         ~compact?,
         ~raised?,
-        ~primary?,
         ~loading?,
         ~dark?,
         ~icon?,
