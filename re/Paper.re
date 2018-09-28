@@ -36,7 +36,4 @@ module TouchableRipple = Paper_TouchableRipple;
 module HelperText = Paper_HelperText;
 module Utils = Paper_Utils;
 module List = Paper_List;
-module ListItem = Paper_ListItem;
-module ListAccordion = Paper_ListAccordion;
-
 module PaperProvider = Paper_PaperProvider;
