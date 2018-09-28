@@ -18,8 +18,6 @@ type props = {
   [@bs.optional]
   raised: bool,
   [@bs.optional]
-  primary: bool,
-  [@bs.optional]
   loading: bool,
   [@bs.optional]
   dark: bool,
@@ -27,6 +25,8 @@ type props = {
   icon: ReasonReact.reactElement,
   [@bs.optional]
   color: string,
+  [@bs.optional]
+  accessibilityLabel: string,
   [@bs.optional]
   style: BsReactNative.Style.t,
   [@bs.optional]
@@ -40,11 +40,11 @@ let make =
       ~disabled=?,
       ~compact=?,
       ~raised=?,
-      ~primary=?,
       ~loading=?,
       ~dark=?,
       ~icon=?,
       ~color=?,
+      ~accessibilityLabel=?,
       ~style=?,
       ~theme=?,
       ~onPress,
@@ -58,11 +58,11 @@ let make =
         ~disabled?,
         ~compact?,
         ~raised?,
-        ~primary?,
         ~loading?,
         ~dark?,
         ~icon?,
         ~color?,
+        ~accessibilityLabel?,
         ~style?,
         ~theme?,
         ~onPress,

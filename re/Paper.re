@@ -12,8 +12,7 @@ module DialogContent = Paper_DialogContent;
 module DialogScrollArea = Paper_DialogScrollArea;
 module DialogTitle = Paper_DialogTitle;
 module Divider = Paper_Divider;
-module DrawerItem = Paper_DrawerItem;
-module DrawerSection = Paper_DrawerSection;
+module Drawer = Paper_Drawer;
 module FAB = Paper_FAB;
 module Headline = Paper_Headline;
 module Modal = Paper_Modal;
@@ -38,7 +37,4 @@ module TouchableRipple = Paper_TouchableRipple;
 module HelperText = Paper_HelperText;
 module Utils = Paper_Utils;
 module List = Paper_List;
-module ListItem = Paper_ListItem;
-module ListAccordion = Paper_ListAccordion;
-
 module PaperProvider = Paper_PaperProvider;
