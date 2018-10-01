@@ -1,3 +1,4 @@
+module Appbar = Paper_Appbar;
 module Button = Paper_Button;
 module Caption = Paper_Caption;
 module Card = Paper_Card;
@@ -25,10 +26,6 @@ module Text = Paper_Text;
 module TextInput = Paper_TextInput;
 module ThemeProvider = Paper_ThemeProvider;
 module Title = Paper_Title;
-module Toolbar = Paper_Toolbar;
-module ToolbarAction = Paper_ToolbarAction;
-module TollbarBackAction = Paper_ToolbarBackAction;
-module ToolbarContent = Paper_ToolbarContent;
 module TouchableRipple = Paper_TouchableRipple;
 module HelperText = Paper_HelperText;
 module Utils = Paper_Utils;
