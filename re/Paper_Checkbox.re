@@ -30,7 +30,7 @@ let make =
       ~disabled=?,
       ~color=?,
       ~uncheckedColor=?,
-      ~onPress,
+      ~onPress=?,
       children,
     ) =>
   ReasonReact.wrapJsForReason(
@@ -41,7 +41,7 @@ let make =
         ~theme?,
         ~disabled?,
         ~color?,
-        ~onPress,
+        ~onPress?,
         ~uncheckedColor?,
         (),
       ),
@@ -59,7 +59,7 @@ module Android = {
         ~disabled=?,
         ~color=?,
         ~uncheckedColor=?,
-        ~onPress,
+        ~onPress=?,
         children,
       ) =>
     ReasonReact.wrapJsForReason(
@@ -70,7 +70,7 @@ module Android = {
           ~theme?,
           ~disabled?,
           ~color?,
-          ~onPress,
+          ~onPress?,
           ~uncheckedColor?,
           (),
         ),
@@ -95,7 +95,7 @@ module IOS = {
     color: string,
   };
 
-  let make = (~status, ~theme=?, ~disabled=?, ~color=?, ~onPress, children) =>
+  let make = (~status, ~theme=?, ~disabled=?, ~color=?, ~onPress=?, children) =>
     ReasonReact.wrapJsForReason(
       ~reactClass,
       ~props=
@@ -104,7 +104,7 @@ module IOS = {
           ~theme?,
           ~disabled?,
           ~color?,
-          ~onPress,
+          ~onPress?,
           (),
         ),
       children,
