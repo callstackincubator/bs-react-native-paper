@@ -2,7 +2,8 @@ module Config = {
   type route =
     | Home
     | SnackbarExample
-    | SurfaceExample;
+    | SurfaceExample
+    | TypographyExample;
 };
 
 include ReboltNavigation.Navigation.CreateNavigation(Config);

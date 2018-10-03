@@ -4,8 +4,7 @@ open Navigation;
 module Styles = {
   open Style;
 
-  let listItem =
-    style([paddingVertical(Pt(15.)), paddingHorizontal(Pt(10.))]);
+  let listItem = style([padding(Pt(10.))]);
 
   let listItemText = style([fontSize(Float(16.))]);
 };
@@ -21,6 +20,7 @@ type examples = array(screen);
 let examples = [|
   {id: 1, name: "Snackbar Example", route: Config.SnackbarExample},
   {id: 2, name: "Surface Example", route: Config.SurfaceExample},
+  {id: 3, name: "Typography Example", route: Config.TypographyExample},
 |];
 
 let keyExtractor = (item, _index) => string_of_int(item.id);
