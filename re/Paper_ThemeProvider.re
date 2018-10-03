@@ -1,15 +1,16 @@
 [@bs.module "react-native-paper"]
-external reactClass : ReasonReact.reactClass = "ThemeProvider";
+external reactClass: ReasonReact.reactClass = "ThemeProvider";
 
 [@bs.deriving abstract]
 type themeColors = {
   primary: string,
   accent: string,
   background: string,
-  paper: string,
+  surface: string,
   text: string,
   disabled: string,
   placeholder: string,
+  backdrop: string,
 };
 
 [@bs.deriving abstract]
@@ -33,7 +34,7 @@ type appTheme = {
 };
 
 [@bs.module "react-native-paper"]
-external defaultTheme : appTheme = "DefaultTheme";
+external defaultTheme: appTheme = "DefaultTheme";
 
 [@bs.deriving abstract]
 type props = {

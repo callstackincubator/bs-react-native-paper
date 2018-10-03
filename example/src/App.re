@@ -16,10 +16,11 @@ let theme =
           ~primary="#6200EE",
           ~accent="tomato",
           ~background="white",
-          ~paper="white",
+          ~surface="white",
           ~text="black",
           ~disabled="gray",
           ~placeholder="gray",
+          ~backdrop="black",
         ),
       (),
     )
@@ -39,6 +40,7 @@ let make = _children => {
                  switch (currentRoute) {
                  | Config.Home => <Home navigation />
                  | Config.SnackbarExample => <SnackbarExample navigation />
+                 | Config.SurfaceExample => <SurfaceExample navigation />
                  }
              }
         </StackNavigator>

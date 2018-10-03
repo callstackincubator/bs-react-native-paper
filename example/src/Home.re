@@ -20,6 +20,7 @@ type examples = array(screen);
 
 let examples = [|
   {id: 1, name: "Snackbar Example", route: Config.SnackbarExample},
+  {id: 2, name: "Surface Example", route: Config.SurfaceExample},
 |];
 
 let keyExtractor = (item, _index) => string_of_int(item.id);
