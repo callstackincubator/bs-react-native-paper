@@ -1,0 +1,23 @@
+{
+  "name": "bs-react-native-paper-tester",
+  "reason": {
+    "react-jsx": 2
+  },
+  "refmt": 3,
+  "bs-dependencies": [
+    "reason-react",
+    "bs-react-native",
+    "rebolt-navigation",
+    "../../bs-react-native-paper"
+  ],
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": true
+    }
+  ],
+  "package-specs": {
+    "module": "commonjs",
+    "in-source": true
+  }
+}
