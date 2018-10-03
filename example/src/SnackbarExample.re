@@ -23,7 +23,7 @@ let make = (~navigation: StackNavigator.navigation, _children) => {
     | ToggleVisible(visible) => ReasonReact.Update({visible: visible})
     },
   render: self =>
-    <StackNavigator.Screen headerTitle="Snackbar" navigation>
+    <StackNavigator.Screen headerTitle="Snackbar example" navigation>
       ...{
            () =>
              <View style=Styles.container>

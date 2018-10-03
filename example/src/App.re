@@ -13,13 +13,14 @@ let theme =
     createTheme(
       ~colors=
         themeColors(
-          ~primary="blue",
+          ~primary="#6200EE",
           ~accent="tomato",
           ~background="white",
-          ~paper="blue",
+          ~surface="white",
           ~text="black",
           ~disabled="gray",
           ~placeholder="gray",
+          ~backdrop="black",
         ),
       (),
     )
@@ -32,12 +33,16 @@ let make = _children => {
   render: _self =>
     <Paper.PaperProvider>
       <Paper.ThemeProvider theme>
-        <StackNavigator initialState=[|Config.Home|]>
+        <StackNavigator
+          initialState=[|Config.Home|] headerComponent=Header.make>
           ...{
                (~currentRoute, ~navigation) =>
                  switch (currentRoute) {
                  | Config.Home => <Home navigation />
                  | Config.SnackbarExample => <SnackbarExample navigation />
+                 | Config.SurfaceExample => <SurfaceExample navigation />
+                 | Config.TypographyExample => <TypographyExample navigation />
+                 | Config.DividerExample => <DividerExample navigation />
                  }
              }
         </StackNavigator>
