@@ -13,10 +13,10 @@ let theme =
     createTheme(
       ~colors=
         themeColors(
-          ~primary="blue",
+          ~primary="#6200EE",
           ~accent="tomato",
           ~background="white",
-          ~paper="blue",
+          ~paper="white",
           ~text="black",
           ~disabled="gray",
           ~placeholder="gray",
@@ -32,7 +32,8 @@ let make = _children => {
   render: _self =>
     <Paper.PaperProvider>
       <Paper.ThemeProvider theme>
-        <StackNavigator initialState=[|Config.Home|]>
+        <StackNavigator
+          initialState=[|Config.Home|] headerComponent=Header.make>
           ...{
                (~currentRoute, ~navigation) =>
                  switch (currentRoute) {
