@@ -13,7 +13,7 @@ let component = ReasonReact.statelessComponent("TypographyExample");
 let make = (~navigation: StackNavigator.navigation, _children) => {
   ...component,
   render: self =>
-    <StackNavigator.Screen headerTitle="Surface example" navigation>
+    <StackNavigator.Screen headerTitle="Typography example" navigation>
       ...{
            () =>
              <View style=Styles.container>

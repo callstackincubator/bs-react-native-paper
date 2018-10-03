@@ -3,7 +3,8 @@ module Config = {
     | Home
     | SnackbarExample
     | SurfaceExample
-    | TypographyExample;
+    | TypographyExample
+    | DividerExample;
 };
 
 include ReboltNavigation.Navigation.CreateNavigation(Config);
