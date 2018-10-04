@@ -18,10 +18,13 @@ type screen = {
 type examples = array(screen);
 
 let examples = [|
-  {id: 1, name: "Divider Example", route: Config.DividerExample},
-  {id: 2, name: "Snackbar Example", route: Config.SnackbarExample},
-  {id: 3, name: "Surface Example", route: Config.SurfaceExample},
-  {id: 4, name: "Typography Example", route: Config.TypographyExample},
+  {id: 1, name: "Checkbox Example", route: Config.CheckboxExample},
+  {id: 2, name: "Divider Example", route: Config.DividerExample},
+  {id: 3, name: "RadioButton Example", route: Config.RadioButtonExample},
+  {id: 4, name: "Snackbar Example", route: Config.SnackbarExample},
+  {id: 5, name: "Surface Example", route: Config.SurfaceExample},
+  {id: 6, name: "Switch Example", route: Config.SwitchExample},
+  {id: 7, name: "Typography Example", route: Config.TypographyExample},
 |];
 
 let keyExtractor = (item, _index) => string_of_int(item.id);

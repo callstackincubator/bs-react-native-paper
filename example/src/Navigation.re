@@ -4,7 +4,10 @@ module Config = {
     | SnackbarExample
     | SurfaceExample
     | TypographyExample
-    | DividerExample;
+    | DividerExample
+    | SwitchExample
+    | RadioButtonExample
+    | CheckboxExample;
 };
 
 include ReboltNavigation.Navigation.CreateNavigation(Config);
