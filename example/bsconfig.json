@@ -8,6 +8,7 @@
     "reason-react",
     "bs-react-native",
     "rebolt-navigation",
+    "bs-react-native-vector-icons",
     "../../bs-react-native-paper"
   ],
   "sources": [

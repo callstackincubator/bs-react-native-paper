@@ -8,6 +8,30 @@ type modes = [
   | [@bs.as "contained"] `contained
 ];
 
+type jsIconProps = {
+  .
+  "size": int,
+  "color": string,
+  "direction": string,
+};
+
+type iconProps = {
+  size: int,
+  color: string,
+  direction: string,
+};
+
+type renderIcon = jsIconProps => ReasonReact.reactElement;
+
+let renderIcon =
+    (reRenderIcon: iconProps => ReasonReact.reactElement): renderIcon =>
+  (jsIconProps: jsIconProps) =>
+    reRenderIcon({
+      size: jsIconProps##size,
+      color: jsIconProps##color,
+      direction: jsIconProps##direction,
+    });
+
 [@bs.deriving abstract]
 type props = {
   mode: string,
@@ -22,7 +46,7 @@ type props = {
   [@bs.optional]
   dark: bool,
   [@bs.optional]
-  icon: ReasonReact.reactElement,
+  icon: renderIcon,
   [@bs.optional]
   color: string,
   [@bs.optional]
