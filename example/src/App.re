@@ -43,10 +43,6 @@ let make = _children => {
                  | Config.SurfaceExample => <SurfaceExample navigation />
                  | Config.TypographyExample => <TypographyExample navigation />
                  | Config.DividerExample => <DividerExample navigation />
-                 | Config.SwitchExample => <SwitchExample navigation />
-                 | Config.RadioButtonExample =>
-                   <RadioButtonExample navigation />
-                 | Config.CheckboxExample => <CheckboxExample navigation />
                  | Config.ButtonExample => <ButtonExample navigation />
                  }
              }
