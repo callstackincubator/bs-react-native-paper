@@ -7,7 +7,8 @@ module Config = {
     | DividerExample
     | SwitchExample
     | RadioButtonExample
-    | CheckboxExample;
+    | CheckboxExample
+    | ButtonExample;
 };
 
 include ReboltNavigation.Navigation.CreateNavigation(Config);

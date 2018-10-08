@@ -47,6 +47,7 @@ let make = _children => {
                  | Config.RadioButtonExample =>
                    <RadioButtonExample navigation />
                  | Config.CheckboxExample => <CheckboxExample navigation />
+                 | Config.ButtonExample => <ButtonExample navigation />
                  }
              }
         </StackNavigator>
