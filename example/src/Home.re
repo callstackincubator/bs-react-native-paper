@@ -21,11 +21,12 @@ let examples = [|
   {id: 1, name: "Button Example", route: Config.ButtonExample},
   {id: 2, name: "Checkbox Example", route: Config.CheckboxExample},
   {id: 3, name: "Divider Example", route: Config.DividerExample},
-  {id: 4, name: "RadioButton Example", route: Config.RadioButtonExample},
-  {id: 5, name: "Snackbar Example", route: Config.SnackbarExample},
-  {id: 6, name: "Surface Example", route: Config.SurfaceExample},
-  {id: 7, name: "Switch Example", route: Config.SwitchExample},
-  {id: 8, name: "Typography Example", route: Config.TypographyExample},
+  {id: 4, name: "ListAccordion Example", route: Config.ListAccordionExample},
+  {id: 5, name: "RadioButton Example", route: Config.RadioButtonExample},
+  {id: 6, name: "Snackbar Example", route: Config.SnackbarExample},
+  {id: 7, name: "Surface Example", route: Config.SurfaceExample},
+  {id: 8, name: "Switch Example", route: Config.SwitchExample},
+  {id: 9, name: "Typography Example", route: Config.TypographyExample},
 |];
 
 let keyExtractor = (item, _index) => string_of_int(item.id);
