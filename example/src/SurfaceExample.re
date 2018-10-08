@@ -5,8 +5,14 @@ open Navigation;
 module Styles = {
   open Style;
 
-  let container =
-    style([flex(1.0), justifyContent(Center), alignItems(Center)]);
+  let container = style([flex(1.)]);
+
+  let contentContainer =
+    style([
+      justifyContent(Center),
+      alignItems(Center),
+      paddingVertical(Pt(20.)),
+    ]);
 
   let common = [
     margin(Pt(8.)),
@@ -28,11 +34,13 @@ let component = ReasonReact.statelessComponent("SurfaceExample");
 
 let make = (~navigation: StackNavigator.navigation, _children) => {
   ...component,
-  render: self =>
+  render: _self =>
     <StackNavigator.Screen headerTitle="Surface example" navigation>
       ...{
            () =>
-             <View style=Styles.container>
+             <ScrollView
+               style=Styles.container
+               contentContainerStyle=Styles.contentContainer>
                <Surface style=Styles.surface1>
                  <Text> {ReasonReact.string("1")} </Text>
                </Surface>
@@ -51,7 +59,7 @@ let make = (~navigation: StackNavigator.navigation, _children) => {
                <Surface style=Styles.surface12>
                  <Text> {ReasonReact.string("12")} </Text>
                </Surface>
-             </View>
+             </ScrollView>
          }
     </StackNavigator.Screen>,
 };

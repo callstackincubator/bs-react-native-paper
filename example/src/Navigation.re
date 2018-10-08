@@ -5,6 +5,9 @@ module Config = {
     | SurfaceExample
     | TypographyExample
     | DividerExample
+    | SwitchExample
+    | RadioButtonExample
+    | CheckboxExample
     | ButtonExample;
 };
 
