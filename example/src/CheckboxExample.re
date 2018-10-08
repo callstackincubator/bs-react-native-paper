@@ -16,30 +16,25 @@ module Styles = {
     ]);
 };
 
-type checkboxState =
-  | Checked
-  | Unchecked
-  | Indeterminate;
-
 type state = {
-  enabled: checkboxState,
-  androidEnabled: checkboxState,
-  iosEnabled: checkboxState,
+  enabled: Checkbox.status,
+  androidEnabled: Checkbox.status,
+  iosEnabled: Checkbox.status,
 };
 
 type action =
-  | ToggleCheckbox(checkboxState)
-  | ToggleCheckboxAndroid(checkboxState)
-  | ToggleCheckboxIOS(checkboxState);
+  | ToggleCheckbox(Checkbox.status)
+  | ToggleCheckboxAndroid(Checkbox.status)
+  | ToggleCheckboxIOS(Checkbox.status);
 
 let component = ReasonReact.reducerComponent("Checkbox Example");
 
 let make = (~navigation: StackNavigator.navigation, _children) => {
   ...component,
   initialState: () => {
-    enabled: Checked,
-    androidEnabled: Checked,
-    iosEnabled: Checked,
+    enabled: `checked,
+    androidEnabled: `checked,
+    iosEnabled: `checked,
   },
   reducer: (action, state) =>
     switch (action) {
@@ -61,9 +56,9 @@ let make = (~navigation: StackNavigator.navigation, _children) => {
                      self.send(
                        ToggleCheckbox(
                          switch (self.state.enabled) {
-                         | Checked => Unchecked
-                         | Unchecked => Indeterminate
-                         | Indeterminate => Checked
+                         | `checked => `unchecked
+                         | `unchecked => `indeterminate
+                         | `indeterminate => `checked
                          },
                        ),
                      )
@@ -74,9 +69,9 @@ let make = (~navigation: StackNavigator.navigation, _children) => {
                      <Checkbox
                        status={
                          switch (self.state.enabled) {
-                         | Checked => `checked
-                         | Unchecked => `unchecked
-                         | Indeterminate => `indeterminate
+                         | `checked => `unchecked
+                         | `unchecked => `indeterminate
+                         | `indeterminate => `checked
                          }
                        }
                      />
@@ -101,9 +96,9 @@ let make = (~navigation: StackNavigator.navigation, _children) => {
                      self.send(
                        ToggleCheckboxAndroid(
                          switch (self.state.androidEnabled) {
-                         | Checked => Unchecked
-                         | Unchecked => Indeterminate
-                         | Indeterminate => Checked
+                         | `checked => `unchecked
+                         | `unchecked => `indeterminate
+                         | `indeterminate => `checked
                          },
                        ),
                      )
@@ -114,9 +109,9 @@ let make = (~navigation: StackNavigator.navigation, _children) => {
                      <Checkbox.Android
                        status={
                          switch (self.state.androidEnabled) {
-                         | Checked => `checked
-                         | Unchecked => `unchecked
-                         | Indeterminate => `indeterminate
+                         | `checked => `unchecked
+                         | `unchecked => `indeterminate
+                         | `indeterminate => `checked
                          }
                        }
                      />
@@ -129,9 +124,9 @@ let make = (~navigation: StackNavigator.navigation, _children) => {
                      self.send(
                        ToggleCheckboxIOS(
                          switch (self.state.iosEnabled) {
-                         | Checked => Unchecked
-                         | Unchecked => Indeterminate
-                         | Indeterminate => Checked
+                         | `checked => `unchecked
+                         | `unchecked => `indeterminate
+                         | `indeterminate => `checked
                          },
                        ),
                      )
@@ -142,9 +137,9 @@ let make = (~navigation: StackNavigator.navigation, _children) => {
                      <Checkbox.IOS
                        status={
                          switch (self.state.iosEnabled) {
-                         | Checked => `checked
-                         | Unchecked => `unchecked
-                         | Indeterminate => `indeterminate
+                         | `checked => `unchecked
+                         | `unchecked => `indeterminate
+                         | `indeterminate => `checked
                          }
                        }
                      />
