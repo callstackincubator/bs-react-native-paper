@@ -14,13 +14,14 @@ let theme =
       ~colors=
         themeColors(
           ~primary="#6200EE",
-          ~accent="tomato",
-          ~background="white",
+          ~accent="#03dac4",
+          ~background="#f6f6f6",
           ~surface="white",
+          ~error="#B00020",
           ~text="black",
-          ~disabled="gray",
-          ~placeholder="gray",
-          ~backdrop="black",
+          ~disabled="rgba(0, 0, 0, 0.26)",
+          ~placeholder="rgba(0, 0, 0, 0.54)",
+          ~backdrop="rgba(0, 0, 0, 0.5)",
         ),
       (),
     )
@@ -52,6 +53,7 @@ let make = _children => {
                    <ListAccordionExample navigation />
                  | Config.ListSectionExample =>
                    <ListSectionExample navigation />
+                 | Config.FABExample => <FABExample navigation />
                  }
              }
         </StackNavigator>

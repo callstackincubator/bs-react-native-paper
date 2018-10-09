@@ -25,12 +25,14 @@ let make = (~navigation: StackNavigator.navigation, _children) => {
                      List.renderIcon((props: List.iconProps) =>
                        <List.Icon
                          icon={
-                           List.renderIcon((iconProps: List.iconProps) =>
-                             <RNIcons.MaterialIcons
-                               name=`_event
-                               color={iconProps.color}
-                               size={iconProps.size}
-                             />
+                           Icon.Element(
+                             Icon.renderIcon((iconProps: Icon.iconProps) =>
+                               <RNIcons.MaterialIcons
+                                 name=`_event
+                                 color={iconProps.color}
+                                 size={iconProps.size}
+                               />
+                             ),
                            )
                          }
                          color={props.color}
@@ -44,15 +46,7 @@ let make = (~navigation: StackNavigator.navigation, _children) => {
                    left={
                      List.renderIcon((props: List.iconProps) =>
                        <List.Icon
-                         icon={
-                           List.renderIcon((iconProps: List.iconProps) =>
-                             <RNIcons.MaterialIcons
-                               name=`_redeem
-                               color={iconProps.color}
-                               size={iconProps.size}
-                             />
-                           )
-                         }
+                         icon={Icon.Name("redeem")}
                          color={props.color}
                        />
                      )
@@ -95,15 +89,7 @@ let make = (~navigation: StackNavigator.navigation, _children) => {
                    right={
                      List.renderIcon((props: List.iconProps) =>
                        <List.Icon
-                         icon={
-                           List.renderIcon((iconProps: List.iconProps) =>
-                             <RNIcons.MaterialIcons
-                               name=`_info
-                               color={iconProps.color}
-                               size={iconProps.size}
-                             />
-                           )
-                         }
+                         icon={Icon.Name("info")}
                          color={props.color}
                        />
                      )
@@ -148,12 +134,14 @@ let make = (~navigation: StackNavigator.navigation, _children) => {
                      List.renderIcon((props: List.iconProps) =>
                        <List.Icon
                          icon={
-                           List.renderIcon((iconProps: List.iconProps) =>
-                             <RNIcons.MaterialIcons
-                               name=`_starBorder
-                               color={iconProps.color}
-                               size={iconProps.size}
-                             />
+                           Icon.Element(
+                             Icon.renderIcon((iconProps: Icon.iconProps) =>
+                               <RNIcons.MaterialIcons
+                                 name=`_starBorder
+                                 color={iconProps.color}
+                                 size={iconProps.size}
+                               />
+                             ),
                            )
                          }
                          color={props.color}
