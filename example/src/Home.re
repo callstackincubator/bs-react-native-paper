@@ -23,11 +23,12 @@ let examples = [|
   {id: 3, name: "Divider Example", route: Config.DividerExample},
   {id: 4, name: "FAB Example", route: Config.FABExample},
   {id: 5, name: "ListAccordion Example", route: Config.ListAccordionExample},
-  {id: 6, name: "RadioButton Example", route: Config.RadioButtonExample},
-  {id: 7, name: "Snackbar Example", route: Config.SnackbarExample},
-  {id: 8, name: "Surface Example", route: Config.SurfaceExample},
-  {id: 9, name: "Switch Example", route: Config.SwitchExample},
-  {id: 10, name: "Typography Example", route: Config.TypographyExample},
+  {id: 6, name: "ListSection Example", route: Config.ListSectionExample},
+  {id: 7, name: "RadioButton Example", route: Config.RadioButtonExample},
+  {id: 8, name: "Snackbar Example", route: Config.SnackbarExample},
+  {id: 9, name: "Surface Example", route: Config.SurfaceExample},
+  {id: 10, name: "Switch Example", route: Config.SwitchExample},
+  {id: 11, name: "Typography Example", route: Config.TypographyExample},
 |];
 
 let keyExtractor = (item, _index) => string_of_int(item.id);
@@ -58,6 +59,12 @@ let make = (~navigation: StackNavigator.navigation, _children) => {
                  data=examples
                  keyExtractor
                  renderItem={renderItem(navigation)}
+                 itemSeparatorComponent={
+                   FlatList.separatorComponent(
+                     (_props: FlatList.separatorProps(screen)) =>
+                     <Paper.Divider />
+                   )
+                 }
                />
              </View>
          }

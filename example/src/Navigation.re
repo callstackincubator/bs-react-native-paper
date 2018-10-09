@@ -10,6 +10,7 @@ module Config = {
     | CheckboxExample
     | ButtonExample
     | ListAccordionExample
+    | ListSectionExample
     | FABExample;
 };
 

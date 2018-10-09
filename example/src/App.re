@@ -51,6 +51,8 @@ let make = _children => {
                  | Config.ButtonExample => <ButtonExample navigation />
                  | Config.ListAccordionExample =>
                    <ListAccordionExample navigation />
+                 | Config.ListSectionExample =>
+                   <ListSectionExample navigation />
                  | Config.FABExample => <FABExample navigation />
                  }
              }
