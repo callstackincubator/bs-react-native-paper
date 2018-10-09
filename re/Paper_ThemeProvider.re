@@ -7,6 +7,7 @@ type themeColors = {
   accent: string,
   background: string,
   surface: string,
+  error: string,
   text: string,
   disabled: string,
   placeholder: string,
