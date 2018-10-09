@@ -8,30 +8,6 @@ type modes = [
   | [@bs.as "contained"] `contained
 ];
 
-type jsIconProps = {
-  .
-  "size": int,
-  "color": string,
-  "direction": string,
-};
-
-type iconProps = {
-  size: int,
-  color: string,
-  direction: string,
-};
-
-type renderIcon = jsIconProps => ReasonReact.reactElement;
-
-let renderIcon =
-    (reRenderIcon: iconProps => ReasonReact.reactElement): renderIcon =>
-  (jsIconProps: jsIconProps) =>
-    reRenderIcon({
-      size: jsIconProps##size,
-      color: jsIconProps##color,
-      direction: jsIconProps##direction,
-    });
-
 [@bs.deriving abstract]
 type props = {
   mode: string,
@@ -45,8 +21,10 @@ type props = {
   loading: bool,
   [@bs.optional]
   dark: bool,
-  [@bs.optional]
-  icon: renderIcon,
+  [@bs.optional] [@bs.as "icon"]
+  iconAsString: string,
+  [@bs.optional] [@bs.as "icon"]
+  iconAsRenderFunc: Icon.renderIcon,
   [@bs.optional]
   color: string,
   [@bs.optional]
@@ -77,20 +55,54 @@ let make =
   ReasonReact.wrapJsForReason(
     ~reactClass,
     ~props=
-      props(
-        ~mode=modesToJs(mode),
-        ~disabled?,
-        ~compact?,
-        ~raised?,
-        ~loading?,
-        ~dark?,
-        ~icon?,
-        ~color?,
-        ~accessibilityLabel?,
-        ~style?,
-        ~theme?,
-        ~onPress,
-        (),
-      ),
+      switch (icon) {
+      | Some(Icon.Name(name)) =>
+        props(
+          ~mode=modesToJs(mode),
+          ~disabled?,
+          ~compact?,
+          ~raised?,
+          ~loading?,
+          ~dark?,
+          ~iconAsString=name,
+          ~color?,
+          ~accessibilityLabel?,
+          ~style?,
+          ~theme?,
+          ~onPress,
+          (),
+        )
+      | Some(Icon.Element(renderFunc)) =>
+        props(
+          ~mode=modesToJs(mode),
+          ~disabled?,
+          ~compact?,
+          ~raised?,
+          ~loading?,
+          ~dark?,
+          ~iconAsRenderFunc=renderFunc,
+          ~color?,
+          ~accessibilityLabel?,
+          ~style?,
+          ~theme?,
+          ~onPress,
+          (),
+        )
+      | None =>
+        props(
+          ~mode=modesToJs(mode),
+          ~disabled?,
+          ~compact?,
+          ~raised?,
+          ~loading?,
+          ~dark?,
+          ~color?,
+          ~accessibilityLabel?,
+          ~style?,
+          ~theme?,
+          ~onPress,
+          (),
+        )
+      },
     children,
   );
