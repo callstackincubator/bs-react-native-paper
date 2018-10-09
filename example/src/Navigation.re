@@ -9,6 +9,7 @@ module Config = {
     | RadioButtonExample
     | CheckboxExample
     | ButtonExample
+    | ListAccordionExample
     | FABExample;
 };
 
