@@ -39,12 +39,14 @@ let make = (~navigation: StackNavigator.navigation, _children) => {
                    </Button>
                    <Button
                      icon={
-                       Button.renderIcon((props: Button.iconProps) =>
-                         <RNIcons.MaterialIcons
-                           name=`_add
-                           size={float_of_int(props.size)}
-                           color={props.color}
-                         />
+                       Icon.Element(
+                         Icon.renderIcon((props: Icon.iconProps) =>
+                           <RNIcons.MaterialIcons
+                             name=`_add
+                             size={props.size}
+                             color={props.color}
+                           />
+                         ),
                        )
                      }
                      onPress={_event => ()}>
@@ -76,15 +78,7 @@ let make = (~navigation: StackNavigator.navigation, _children) => {
                      {ReasonReact.string("disabled")}
                    </Button>
                    <Button
-                     icon={
-                       Button.renderIcon((props: Button.iconProps) =>
-                         <RNIcons.MaterialIcons
-                           name=`_add
-                           size={float_of_int(props.size)}
-                           color={props.color}
-                         />
-                       )
-                     }
+                     icon={Icon.Name("add")}
                      style=Styles.button
                      mode=`outlined
                      onPress={_event => ()}>
@@ -122,15 +116,7 @@ let make = (~navigation: StackNavigator.navigation, _children) => {
                      {ReasonReact.string("disabled")}
                    </Button>
                    <Button
-                     icon={
-                       Button.renderIcon((props: Button.iconProps) =>
-                         <RNIcons.MaterialIcons
-                           name=`_add
-                           size={float_of_int(props.size)}
-                           color={props.color}
-                         />
-                       )
-                     }
+                     icon={Icon.Name("add")}
                      style=Styles.button
                      mode=`contained
                      onPress={_event => ()}>
@@ -151,26 +137,28 @@ let make = (~navigation: StackNavigator.navigation, _children) => {
                      mode=`outlined
                      onPress={_event => ()}
                      icon={
-                       Button.renderIcon((props: Button.iconProps) =>
-                         <Image
-                           source={
-                             URI(
-                               Image.(
-                                 imageURISource(
-                                   ~uri=
-                                     "https://avatars0.githubusercontent.com/u/17571969?v=3&s=400",
-                                   (),
-                                 )
-                               ),
+                       Icon.Element(
+                         Icon.renderIcon((props: Icon.iconProps) =>
+                           <Image
+                             source={
+                               URI(
+                                 Image.(
+                                   imageURISource(
+                                     ~uri=
+                                       "https://avatars0.githubusercontent.com/u/17571969?v=3&s=400",
+                                     (),
+                                   )
+                                 ),
+                               )
+                             }
+                             style=Style.(
+                               style([
+                                 width(Pt(props.size)),
+                                 height(Pt(props.size)),
+                               ])
                              )
-                           }
-                           style=Style.(
-                             style([
-                               width(Pt(float_of_int(props.size))),
-                               height(Pt(float_of_int(props.size))),
-                             ])
-                           )
-                         />
+                           />
+                         ),
                        )
                      }
                      style=Styles.button>
