@@ -52,17 +52,18 @@ module Content = {
       ) =>
     ReasonReact.wrapJsForReason(
       ~reactClass,
-      props(
-        ~color?,
-        ~title,
-        ~titleStyle?,
-        ~subtitle?,
-        ~subtitleStyle?,
-        ~theme?,
-        ~style?,
-        (),
-      ),
-      ~props=children,
+      ~props=
+        props(
+          ~color?,
+          ~title,
+          ~titleStyle?,
+          ~subtitle?,
+          ~subtitleStyle?,
+          ~theme?,
+          ~style?,
+          (),
+        ),
+      children,
     );
 };
 
@@ -100,17 +101,18 @@ module Action = {
       ) =>
     ReasonReact.wrapJsForReason(
       ~reactClass,
-      props(
-        ~color?,
-        ~size?,
-        ~icon,
-        ~disabled?,
-        ~accessibilityLabel?,
-        ~onPress?,
-        ~style?,
-        (),
-      ),
-      ~props=children,
+      ~props=
+        props(
+          ~color?,
+          ~size?,
+          ~icon,
+          ~disabled?,
+          ~accessibilityLabel?,
+          ~onPress?,
+          ~style?,
+          (),
+        ),
+      children,
     );
 };
 
@@ -146,16 +148,17 @@ module BackAction = {
       ) =>
     ReasonReact.wrapJsForReason(
       ~reactClass,
-      props(
-        ~color?,
-        ~size?,
-        ~disabled?,
-        ~accessibilityLabel?,
-        ~onPress?,
-        ~style?,
-        (),
-      ),
-      ~props=children,
+      ~props=
+        props(
+          ~color?,
+          ~size?,
+          ~disabled?,
+          ~accessibilityLabel?,
+          ~onPress?,
+          ~style?,
+          (),
+        ),
+      children,
     );
 };
 
