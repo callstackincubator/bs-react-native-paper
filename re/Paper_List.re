@@ -1,4 +1,12 @@
-type iconProp = {color: string};
+type jsIconProps = {. "color": string};
+
+type iconProps = {color: string};
+
+type renderIcon = jsIconProps => ReasonReact.reactElement;
+
+let renderIcon =
+    (reRenderIcon: iconProps => ReasonReact.reactElement): renderIcon =>
+  (jsIconProps: jsIconProps) => reRenderIcon({color: jsIconProps##color});
 
 module Icon = {
   [@bs.module "react-native-paper"] [@bs.scope "List"]
@@ -7,7 +15,10 @@ module Icon = {
   [@bs.deriving abstract]
   type props = {
     color: string,
-    icon: ReasonReact.reactElement,
+    [@bs.optional] [@bs.as "icon"]
+    iconAsString: string,
+    [@bs.optional] [@bs.as "icon"]
+    iconAsRenderFunc: Icon.renderIcon,
     [@bs.optional]
     style: BsReactNative.Style.t,
   };
@@ -15,7 +26,12 @@ module Icon = {
   let make = (~color, ~icon, ~style=?) =>
     ReasonReact.wrapJsForReason(
       ~reactClass,
-      ~props=props(~color, ~icon, ~style?, ()),
+      ~props=
+        switch (icon) {
+        | Icon.Name(name) => props(~color, ~iconAsString=name, ~style?, ())
+        | Icon.Element(renderFunc) =>
+          props(~color, ~iconAsRenderFunc=renderFunc, ~style?, ())
+        },
     );
 };
 
@@ -29,7 +45,7 @@ module Accordion = {
     [@bs.optional]
     description: string,
     [@bs.optional]
-    left: iconProp => ReasonReact.reactElement,
+    left: renderIcon,
     [@bs.optional]
     theme: Paper_ThemeProvider.appTheme,
     [@bs.optional]
@@ -54,9 +70,9 @@ module Item = {
     [@bs.optional]
     description: string,
     [@bs.optional]
-    left: iconProp => ReasonReact.reactElement,
+    left: renderIcon,
     [@bs.optional]
-    right: iconProp => ReasonReact.reactElement,
+    right: renderIcon,
     [@bs.optional]
     onPress: BsReactNative.RNEvent.NativeEvent.t => unit,
     [@bs.optional]
