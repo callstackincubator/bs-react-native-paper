@@ -25,4 +25,4 @@ let make =
 
 module Actions = Paper_CardActions;
 module Content = Paper_CardContent;
-module Cover = Paper_Cover;
+module Cover = Paper_CardCover;
