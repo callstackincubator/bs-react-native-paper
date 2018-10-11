@@ -30,7 +30,8 @@ let examples = [|
   {id: 10, name: "Snackbar Example", route: Config.SnackbarExample},
   {id: 11, name: "Surface Example", route: Config.SurfaceExample},
   {id: 12, name: "Switch Example", route: Config.SwitchExample},
-  {id: 13, name: "Typography Example", route: Config.TypographyExample},
+  {id: 13, name: "TextInput Example", route: Config.TextInputExample},
+  {id: 14, name: "Typography Example", route: Config.TypographyExample},
 |];
 
 let keyExtractor = (item, _index) => string_of_int(item.id);
