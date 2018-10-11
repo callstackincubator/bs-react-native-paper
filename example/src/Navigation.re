@@ -12,6 +12,7 @@ module Config = {
     | ListAccordionExample
     | ListSectionExample
     | FABExample
+    | DialogExample
     | CardExample;
 };
 
