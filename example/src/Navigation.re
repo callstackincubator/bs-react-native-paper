@@ -12,7 +12,8 @@ module Config = {
     | ListAccordionExample
     | ListSectionExample
     | FABExample
-    | DialogExample;
+    | DialogExample
+    | CardExample;
 };
 
 include ReboltNavigation.Navigation.CreateNavigation(Config);
