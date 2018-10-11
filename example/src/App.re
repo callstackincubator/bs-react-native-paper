@@ -54,6 +54,7 @@ let make = _children => {
                  | Config.ListSectionExample =>
                    <ListSectionExample navigation />
                  | Config.FABExample => <FABExample navigation />
+                 | Config.CardExample => <CardExample navigation />
                  }
              }
         </StackNavigator>

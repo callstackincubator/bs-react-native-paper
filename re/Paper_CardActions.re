@@ -1,9 +1,15 @@
-[@bs.module "react-native-paper"]
-external reactClass: ReasonReact.reactClass = "CardActions";
+[@bs.module "react-native-paper"] [@bs.scope "Card"]
+external reactClass: ReasonReact.reactClass = "Actions";
 
-let make = (~style: option(BsReactNative.Style.t)=?, children) =>
+[@bs.deriving abstract]
+type props = {
+  [@bs.optional]
+  style: BsReactNative.Style.t,
+};
+
+let make = (~style=?, children) =>
   ReasonReact.wrapJsForReason(
     ~reactClass,
-    ~props=Js.Null_undefined.{"style": fromOption(style)},
+    ~props=props(~style?, ()),
     children,
   );
