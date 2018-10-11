@@ -13,7 +13,8 @@ module Config = {
     | ListSectionExample
     | FABExample
     | DialogExample
-    | CardExample;
+    | CardExample
+    | ProgressBarExample;
 };
 
 include ReboltNavigation.Navigation.CreateNavigation(Config);
