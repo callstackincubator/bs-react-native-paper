@@ -24,13 +24,14 @@ let examples = [|
   {id: 4, name: "Dialog Example", route: Config.DialogExample},
   {id: 5, name: "Divider Example", route: Config.DividerExample},
   {id: 6, name: "FAB Example", route: Config.FABExample},
-  {id: 7, name: "ListAccordion Example", route: Config.ListAccordionExample},
-  {id: 8, name: "ListSection Example", route: Config.ListSectionExample},
-  {id: 9, name: "RadioButton Example", route: Config.RadioButtonExample},
-  {id: 10, name: "Snackbar Example", route: Config.SnackbarExample},
-  {id: 11, name: "Surface Example", route: Config.SurfaceExample},
-  {id: 12, name: "Switch Example", route: Config.SwitchExample},
-  {id: 13, name: "Typography Example", route: Config.TypographyExample},
+  {id: 7, name: "IconButton Example", route: Config.IconButtonExample},
+  {id: 8, name: "ListAccordion Example", route: Config.ListAccordionExample},
+  {id: 9, name: "ListSection Example", route: Config.ListSectionExample},
+  {id: 10, name: "RadioButton Example", route: Config.RadioButtonExample},
+  {id: 11, name: "Snackbar Example", route: Config.SnackbarExample},
+  {id: 12, name: "Surface Example", route: Config.SurfaceExample},
+  {id: 13, name: "Switch Example", route: Config.SwitchExample},
+  {id: 14, name: "Typography Example", route: Config.TypographyExample},
 |];
 
 let keyExtractor = (item, _index) => string_of_int(item.id);
