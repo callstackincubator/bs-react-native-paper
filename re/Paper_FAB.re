@@ -1,25 +1,3 @@
-type jsIconProps = {
-  .
-  "color": string,
-  "size": float,
-};
-
-type iconProps = {
-  color: string,
-  size: float,
-};
-
-type renderIcon = jsIconProps => ReasonReact.reactElement;
-
-let renderIcon =
-    (reRenderIcon: iconProps => ReasonReact.reactElement): renderIcon =>
-  (jsIconProps: jsIconProps) =>
-    reRenderIcon({color: jsIconProps##color, size: jsIconProps##size});
-
-type iconType =
-  | IconName(string)
-  | IconElement(renderIcon);
-
 [@bs.module "react-native-paper"]
 external reactClass: ReasonReact.reactClass = "FAB";
 
@@ -44,7 +22,7 @@ type props = {
   [@bs.optional] [@bs.as "icon"]
   iconAsString: string,
   [@bs.optional] [@bs.as "icon"]
-  iconAsRenderFunc: renderIcon,
+  iconAsRenderFunc: Icon.renderIcon,
 };
 
 let make =
@@ -64,7 +42,7 @@ let make =
     ~reactClass,
     ~props=
       switch (icon) {
-      | IconName(name) =>
+      | Icon.Name(name) =>
         props(
           ~color?,
           ~iconAsString=name,
@@ -77,7 +55,7 @@ let make =
           ~small?,
           (),
         )
-      | IconElement(renderFunc) =>
+      | Icon.Element(renderFunc) =>
         props(
           ~color?,
           ~iconAsRenderFunc=renderFunc,
@@ -103,7 +81,7 @@ module Group = {
     [@bs.optional] [@bs.as "icon"]
     iconAsString: string,
     [@bs.optional] [@bs.as "icon"]
-    iconAsRenderFunc: renderIcon,
+    iconAsRenderFunc: Icon.renderIcon,
     onPress: unit => unit,
     [@bs.optional]
     label: string,
@@ -126,7 +104,7 @@ module Group = {
         _unit,
       ) =>
     switch (icon) {
-    | IconName(name) =>
+    | Icon.Name(name) =>
       _fabAction(
         ~iconAsString=name,
         ~onPress,
@@ -136,7 +114,7 @@ module Group = {
         ~style?,
         (),
       )
-    | IconElement(renderFunc) =>
+    | Icon.Element(renderFunc) =>
       _fabAction(
         ~iconAsRenderFunc=renderFunc,
         ~onPress,
@@ -173,7 +151,7 @@ module Group = {
     [@bs.optional] [@bs.as "icon"]
     iconAsString: string,
     [@bs.optional] [@bs.as "icon"]
-    iconAsRenderFunc: renderIcon,
+    iconAsRenderFunc: Icon.renderIcon,
   };
 
   let make =
@@ -193,7 +171,7 @@ module Group = {
       ~reactClass,
       ~props=
         switch (icon) {
-        | IconName(name) =>
+        | Icon.Name(name) =>
           props(
             ~color?,
             ~open_,
@@ -206,7 +184,7 @@ module Group = {
             ~accessibilityLabel?,
             (),
           )
-        | IconElement(renderFunc) =>
+        | Icon.Element(renderFunc) =>
           props(
             ~color?,
             ~open_,

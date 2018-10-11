@@ -73,7 +73,10 @@ module Action = {
 
   [@bs.deriving abstract]
   type props = {
-    icon: ReasonReact.reactElement,
+    [@bs.optional] [@bs.as "icon"]
+    iconAsString: string,
+    [@bs.optional] [@bs.as "icon"]
+    iconAsRenderFunc: Icon.renderIcon,
     [@bs.optional]
     size: int,
     [@bs.optional]
@@ -102,16 +105,30 @@ module Action = {
     ReasonReact.wrapJsForReason(
       ~reactClass,
       ~props=
-        props(
-          ~color?,
-          ~size?,
-          ~icon,
-          ~disabled?,
-          ~accessibilityLabel?,
-          ~onPress?,
-          ~style?,
-          (),
-        ),
+        switch (icon) {
+        | Icon.Name(name) =>
+          props(
+            ~color?,
+            ~size?,
+            ~iconAsString=name,
+            ~disabled?,
+            ~accessibilityLabel?,
+            ~onPress?,
+            ~style?,
+            (),
+          )
+        | Icon.Element(renderFunc) =>
+          props(
+            ~color?,
+            ~size?,
+            ~iconAsRenderFunc=renderFunc,
+            ~disabled?,
+            ~accessibilityLabel?,
+            ~onPress?,
+            ~style?,
+            (),
+          )
+        },
       children,
     );
 };
