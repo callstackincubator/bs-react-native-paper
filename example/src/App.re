@@ -57,6 +57,7 @@ let make = _children => {
                  | Config.DialogExample => <DialogExample navigation />
                  | Config.CardExample => <CardExample navigation />
                  | Config.ChipExample => <ChipExample navigation />
+                 | Config.TextInputExample => <TextInputExample navigation />
                  }
              }
         </StackNavigator>

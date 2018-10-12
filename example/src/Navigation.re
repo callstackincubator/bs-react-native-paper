@@ -14,7 +14,8 @@ module Config = {
     | FABExample
     | DialogExample
     | CardExample
-    | ChipExample;
+    | ChipExample
+    | TextInputExample;
 };
 
 include ReboltNavigation.Navigation.CreateNavigation(Config);
