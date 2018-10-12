@@ -19,6 +19,7 @@ type examples = array(screen);
 
 let examples = [|
   {id: 1, name: "Button Example", route: Config.ButtonExample},
+  {id: 2, name: "Card Example", route: Config.CardExample},
   {id: 3, name: "Chip Example", route: Config.ChipExample},
   {id: 4, name: "Checkbox Example", route: Config.CheckboxExample},
   {id: 5, name: "Dialog Example", route: Config.DialogExample},

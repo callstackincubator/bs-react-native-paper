@@ -8,6 +8,10 @@ module Styles = {
   let container = style([flex(1.0), margin(Pt(10.))]);
 };
 
+type interval = ref(option(Js.Global.intervalId));
+
+let interval = ref(None);
+
 type state = {progress: float};
 
 type action =
@@ -26,7 +30,13 @@ let make = (~navigation: StackNavigator.navigation, _children) => {
       })
     },
   didMount: self =>
-    Js.Global.setInterval(() => self.send(ProgressChanged), 16) |> ignore,
+    interval :=
+      Some(Js.Global.setInterval(() => self.send(ProgressChanged), 16)),
+  willUnmount: _self =>
+    switch (interval^) {
+    | Some(intervalId) => Js.Global.clearInterval(intervalId)
+    | None => ()
+    },
   render: self =>
     <StackNavigator.Screen headerTitle="ProgressBar example" navigation>
       ...{
