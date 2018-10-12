@@ -7,8 +7,10 @@ type props = {
   placeholder: string,
   [@bs.optional]
   value: string,
-  [@bs.optional]
-  icon: ReasonReact.reactElement,
+  [@bs.optional] [@bs.as "icon"]
+  iconAsString: string,
+  [@bs.optional] [@bs.as "icon"]
+  iconAsRenderFunc: Icon.renderIcon,
   [@bs.optional]
   theme: Paper_ThemeProvider.appTheme,
   [@bs.optional]
@@ -32,15 +34,39 @@ let make =
   ReasonReact.wrapJsForReason(
     ~reactClass,
     ~props=
-      props(
-        ~placeholder?,
-        ~value?,
-        ~icon?,
-        ~theme?,
-        ~style?,
-        ~onChangeText,
-        ~onIconPress?,
-        (),
-      ),
+      switch (icon) {
+      | Some(Icon.Name(name)) =>
+        props(
+          ~placeholder?,
+          ~value?,
+          ~iconAsString=name,
+          ~theme?,
+          ~style?,
+          ~onChangeText,
+          ~onIconPress?,
+          (),
+        )
+      | Some(Icon.Element(renderFunc)) =>
+        props(
+          ~placeholder?,
+          ~value?,
+          ~iconAsRenderFunc=renderFunc,
+          ~theme?,
+          ~style?,
+          ~onChangeText,
+          ~onIconPress?,
+          (),
+        )
+      | None =>
+        props(
+          ~placeholder?,
+          ~value?,
+          ~theme?,
+          ~style?,
+          ~onChangeText,
+          ~onIconPress?,
+          (),
+        )
+      },
     children,
   );
