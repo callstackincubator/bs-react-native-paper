@@ -16,8 +16,10 @@ type props = {
   accessibilityLabel: string,
   [@bs.optional]
   avatar: ReasonReact.reactElement,
-  [@bs.optional]
-  icon: ReasonReact.reactElement,
+  [@bs.optional] [@bs.as "icon"]
+  iconAsString: string,
+  [@bs.optional] [@bs.as "icon"]
+  iconAsRenderFunc: Icon.renderIcon,
   [@bs.optional]
   style: BsReactNative.Style.t,
   [@bs.optional]
@@ -45,18 +47,48 @@ let make =
   ReasonReact.wrapJsForReason(
     ~reactClass,
     ~props=
-      props(
-        ~mode=modesToJs(mode),
-        ~selected?,
-        ~disabled?,
-        ~accessibilityLabel?,
-        ~avatar?,
-        ~icon?,
-        ~style?,
-        ~theme?,
-        ~onPress?,
-        ~onClose?,
-        (),
-      ),
+      switch (icon) {
+      | Some(Icon.Name(name)) =>
+        props(
+          ~mode=modesToJs(mode),
+          ~selected?,
+          ~disabled?,
+          ~accessibilityLabel?,
+          ~avatar?,
+          ~iconAsString=name,
+          ~style?,
+          ~theme?,
+          ~onPress?,
+          ~onClose?,
+          (),
+        )
+      | Some(Icon.Element(renderFunc)) =>
+        props(
+          ~mode=modesToJs(mode),
+          ~selected?,
+          ~disabled?,
+          ~accessibilityLabel?,
+          ~avatar?,
+          ~iconAsRenderFunc=renderFunc,
+          ~style?,
+          ~theme?,
+          ~onPress?,
+          ~onClose?,
+          (),
+        )
+      | None =>
+        props(
+          ~mode=modesToJs(mode),
+          ~selected?,
+          ~disabled?,
+          ~accessibilityLabel?,
+          ~avatar?,
+          ~style?,
+          ~theme?,
+          ~onPress?,
+          ~onClose?,
+          (),
+        )
+      },
     children,
   );
