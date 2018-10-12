@@ -14,6 +14,7 @@ module Config = {
     | FABExample
     | DialogExample
     | CardExample
+    | AppbarExample
     | IconButtonExample
     | ProgressBarExample
     | SearchbarExample

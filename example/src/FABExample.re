@@ -41,21 +41,21 @@ let make = (~navigation: StackNavigator.navigation, _children) => {
                    small=true
                    style=Styles.fab
                    onPress={_event => ()}
-                   icon={FAB.IconName("add")}
+                   icon={Icon.Name("add")}
                  />
                  <FAB
-                   icon={FAB.IconName("favorite")}
+                   icon={Icon.Name("favorite")}
                    style=Styles.fab
                    onPress={_event => ()}
                  />
                  <FAB
-                   icon={FAB.IconName("done")}
+                   icon={Icon.Name("done")}
                    label="Extended FAB"
                    style=Styles.fab
                    onPress={_event => ()}
                  />
                  <FAB
-                   icon={FAB.IconName("cancel")}
+                   icon={Icon.Name("cancel")}
                    label="Disabled FAB"
                    style=Styles.fab
                    onPress={_event => ()}
@@ -70,13 +70,13 @@ let make = (~navigation: StackNavigator.navigation, _children) => {
                      }
                      icon={
                        self.state.visible ?
-                         FAB.IconName("today") : FAB.IconName("add")
+                         Icon.Name("today") : Icon.Name("add")
                      }
                      actions=[|
                        FAB.Group.fabAction(
                          ~icon=
-                           FAB.IconElement(
-                             FAB.renderIcon((props: FAB.iconProps) =>
+                           Icon.Element(
+                             Icon.renderIcon((props: Icon.iconProps) =>
                                <RNIcons.MaterialIcons
                                  name=`_add
                                  size={props.size}
@@ -87,19 +87,19 @@ let make = (~navigation: StackNavigator.navigation, _children) => {
                          (),
                        ),
                        FAB.Group.fabAction(
-                         ~icon=FAB.IconName("star"),
+                         ~icon=Icon.Name("star"),
                          ~label="Star",
                          ~onPress=() => (),
                          (),
                        ),
                        FAB.Group.fabAction(
-                         ~icon=FAB.IconName("email"),
+                         ~icon=Icon.Name("email"),
                          ~label="Email",
                          ~onPress=() => (),
                          (),
                        ),
                        FAB.Group.fabAction(
-                         ~icon=FAB.IconName("notifications"),
+                         ~icon=Icon.Name("notifications"),
                          ~label="Notifications",
                          ~onPress=() => (),
                          (),

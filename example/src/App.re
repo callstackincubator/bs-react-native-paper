@@ -3,9 +3,6 @@ open Navigation;
 
 module Styles = {
   open Style;
-
-  let container =
-    style([flex(1.), justifyContent(Center), alignItems(Center)]);
 };
 
 let theme =
@@ -56,6 +53,7 @@ let make = _children => {
                  | Config.FABExample => <FABExample navigation />
                  | Config.DialogExample => <DialogExample navigation />
                  | Config.CardExample => <CardExample navigation />
+                 | Config.AppbarExample => <AppbarExample navigation />
                  | Config.IconButtonExample => <IconButtonExample navigation />
                  | Config.ProgressBarExample =>
                    <ProgressBarExample navigation />
