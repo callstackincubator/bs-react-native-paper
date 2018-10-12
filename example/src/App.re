@@ -58,6 +58,11 @@ let make = _children => {
                  | Config.CardExample => <CardExample navigation />
                  | Config.ProgressBarExample =>
                    <ProgressBarExample navigation />
+                 | Config.SearchbarExample => <SearchbarExample navigation />
+                 | Config.TouchableRippleExample =>
+                   <TouchableRippleExample navigation />
+                 | Config.ChipExample => <ChipExample navigation />
+                 | Config.TextInputExample => <TextInputExample navigation />
                  }
              }
         </StackNavigator>
