@@ -9,6 +9,7 @@ module Divider = Paper_Divider;
 module Drawer = Paper_Drawer;
 module FAB = Paper_FAB;
 module Headline = Paper_Headline;
+module IconButton = Paper_IconButton;
 module Modal = Paper_Modal;
 module Surface = Paper_Surface;
 module Paragraph = Paper_Paragraph;
