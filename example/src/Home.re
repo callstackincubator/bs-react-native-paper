@@ -27,18 +27,19 @@ let examples = [|
   {id: 7, name: "FAB Example", route: Config.FABExample},
   {id: 8, name: "ListAccordion Example", route: Config.ListAccordionExample},
   {id: 9, name: "ListSection Example", route: Config.ListSectionExample},
-  {id: 10, name: "RadioButton Example", route: Config.RadioButtonExample},
-  {id: 11, name: "Searchbar Example", route: Config.SearchbarExample},
-  {id: 12, name: "Snackbar Example", route: Config.SnackbarExample},
-  {id: 13, name: "Surface Example", route: Config.SurfaceExample},
-  {id: 14, name: "Switch Example", route: Config.SwitchExample},
-  {id: 15, name: "TextInput Example", route: Config.TextInputExample},
+  {id: 10, name: "ProgressBar Example", route: Config.ProgressBarExample},
+  {id: 11, name: "RadioButton Example", route: Config.RadioButtonExample},
+  {id: 12, name: "Searchbar Example", route: Config.SearchbarExample},
+  {id: 13, name: "Snackbar Example", route: Config.SnackbarExample},
+  {id: 14, name: "Surface Example", route: Config.SurfaceExample},
+  {id: 15, name: "Switch Example", route: Config.SwitchExample},
+  {id: 16, name: "TextInput Example", route: Config.TextInputExample},
   {
-    id: 16,
+    id: 17,
     name: "TouchableRipple Example",
     route: Config.TouchableRippleExample,
   },
-  {id: 17, name: "Typography Example", route: Config.TypographyExample},
+  {id: 18, name: "Typography Example", route: Config.TypographyExample},
 |];
 
 let keyExtractor = (item, _index) => string_of_int(item.id);

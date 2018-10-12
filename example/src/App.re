@@ -56,6 +56,8 @@ let make = _children => {
                  | Config.FABExample => <FABExample navigation />
                  | Config.DialogExample => <DialogExample navigation />
                  | Config.CardExample => <CardExample navigation />
+                 | Config.ProgressBarExample =>
+                   <ProgressBarExample navigation />
                  | Config.SearchbarExample => <SearchbarExample navigation />
                  | Config.TouchableRippleExample =>
                    <TouchableRippleExample navigation />
