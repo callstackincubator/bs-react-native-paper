@@ -37,6 +37,8 @@ type appTheme = {
 [@bs.module "react-native-paper"]
 external defaultTheme: appTheme = "DefaultTheme";
 
+[@bs.module "react-native-paper"] external darkTheme: appTheme = "DarkTheme";
+
 [@bs.deriving abstract]
 type props = {
   [@bs.optional]

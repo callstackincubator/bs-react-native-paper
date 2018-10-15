@@ -3,9 +3,6 @@ open Navigation;
 
 module Styles = {
   open Style;
-
-  let container =
-    style([flex(1.), justifyContent(Center), alignItems(Center)]);
 };
 
 let theme =
@@ -54,6 +51,17 @@ let make = _children => {
                  | Config.ListSectionExample =>
                    <ListSectionExample navigation />
                  | Config.FABExample => <FABExample navigation />
+                 | Config.DialogExample => <DialogExample navigation />
+                 | Config.CardExample => <CardExample navigation />
+                 | Config.AppbarExample => <AppbarExample navigation />
+                 | Config.IconButtonExample => <IconButtonExample navigation />
+                 | Config.ProgressBarExample =>
+                   <ProgressBarExample navigation />
+                 | Config.SearchbarExample => <SearchbarExample navigation />
+                 | Config.TouchableRippleExample =>
+                   <TouchableRippleExample navigation />
+                 | Config.ChipExample => <ChipExample navigation />
+                 | Config.TextInputExample => <TextInputExample navigation />
                  }
              }
         </StackNavigator>
