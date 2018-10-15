@@ -1,3 +1,9 @@
+[![Build Status][build-badge]][build]
+[![Version][version-badge]][package]
+[![MIT License][license-badge]][license]
+[![PRs Welcome][prs-welcome-badge]][prs-welcome]
+[![Chat][chat-badge]][chat]
+
 # bs-react-native-paper
 
 [React Native Paper bindings](https://github.com/callstack/react-native-paper) for BS
@@ -29,16 +35,16 @@ Use yarn or npm
 $ yarn add bs-react-native-paper react-native-paper
 ```
 
-Then update your `bsconfig.json`
+Then add `bs-react-native-paper` to `bsconfig.json`
 
 ```json
-"bs-dependencies": ["reason-react", "bs-react-native-paper"]
+"bs-dependencies": ["bs-react-native-paper"]
 ```
 
 ## Using theme
 
 ```ocaml
-/* We provide a help function called `createTheme` that defaults with DefaultTheme */
+/* We provide a helper function called `createTheme` that defaults with DefaultTheme */
 let theme =
   Paper.ThemeProvider.(
     createTheme(
@@ -67,58 +73,19 @@ let make = children => {
 };
 ```
 
-## Bindings
-
-* [ ] Icons (Use https://github.com/Astrocoders/bs-react-native-vector-icons instead)
-* [x] Chip
-* [x] PaperProvider
-* [x] List
-* [x] ListItem
-* [x] ListSection
-* [x] ListAccordion
-* [x] Button
-* [x] Caption
-* [x] Card
-* [x] CardActions
-* [x] CardContent
-* [x] CardCover
-* [x] Checkbox
-* [x] Dialog
-* [x] DialogActions
-* [x] DialogContent
-* [x] DialogScrollArea
-* [x] DialogTitle
-* [x] Divider
-* [x] DrawerItem
-* [x] DrawerSection
-* [x] FAB
-* [x] FABGroup
-* [x] Headline
-* [x] HelpText
-* [x] Modal
-* [x] Paper
-* [x] Paragraph
-* [x] ProgressBar
-* [x] RadioButton
-* [x] RadioButtonGroup
-* [x] SearchBar
-* [x] Snackbar
-* [x] Subheading
-* [x] Switch
-* [x] Text
-* [x] TextInput
-* [x] ThemeProvider
-* [x] Title
-* [x] Toolbar
-* [x] ToolbarAction
-* [x] ToolbarBackAction
-* [x] ToolbarContent
-* [x] TouchableRipple
-
-## License
-
-MIT
-
 ## Contributing
 
-PR are welcome!
+Read the [contribution guidelines](/CONTRIBUTING.md) before contributing.
+
+<!-- badges -->
+
+[build-badge]: https://img.shields.io/circleci/project/github/callstackincubator/bs-react-native-paper/master.svg?style=flat-square
+[build]: https://circleci.com/gh/callstackincubator/bs-react-native-paper
+[version-badge]: https://img.shields.io/npm/v/bs-react-native-paper.svg?style=flat-square
+[package]: https://www.npmjs.com/package/bs-react-native-paper
+[license-badge]: https://img.shields.io/npm/l/bs-react-native-paper.svg?style=flat-square
+[license]: https://opensource.org/licenses/MIT
+[prs-welcome-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
+[prs-welcome]: http://makeapullrequest.com
+[chat-badge]: https://img.shields.io/discord/426714625279524876.svg?style=flat-square&colorB=758ED3
+[chat]: https://discord.gg/zwR2Cdh

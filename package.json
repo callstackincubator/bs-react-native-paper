@@ -38,6 +38,7 @@
     "bs:build": "bsb -make-world -clean-world",
     "bs:watch": "bsb -make-world -clean-world -w",
     "bs:setup": "bsb -make-world",
-    "lint:staged": "lint-staged"
+    "lint:staged": "lint-staged",
+    "bootstrap": "yarn && yarn --cwd example"
   }
 }
