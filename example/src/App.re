@@ -62,6 +62,8 @@ let make = _children => {
                    <TouchableRippleExample navigation />
                  | Config.ChipExample => <ChipExample navigation />
                  | Config.TextInputExample => <TextInputExample navigation />
+                 | Config.BottomNavigationExample =>
+                   <BottomNavigationExample navigation />
                  }
              }
         </StackNavigator>

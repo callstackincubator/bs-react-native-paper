@@ -20,7 +20,8 @@ module Config = {
     | SearchbarExample
     | TouchableRippleExample
     | ChipExample
-    | TextInputExample;
+    | TextInputExample
+    | BottomNavigationExample;
 };
 
 include ReboltNavigation.Navigation.CreateNavigation(Config);
