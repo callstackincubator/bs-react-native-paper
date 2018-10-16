@@ -1,3 +1,13 @@
+<p align="center">
+  <img alt="react-native-paper" src="assets/reason.png" width="300">
+  <img alt="react-native-paper" src="assets/paper-logo.svg" width="300">
+</p>
+<p align="center">
+  React-native-paper for ReasonML.
+</p>
+
+---
+
 [![Build Status][build-badge]][build]
 [![Version][version-badge]][package]
 [![MIT License][license-badge]][license]
@@ -5,27 +15,6 @@
 [![Chat][chat-badge]][chat]
 
 # bs-react-native-paper
-
-[React Native Paper bindings](https://github.com/callstack/react-native-paper) for BS
-
-```ocaml
-<Paper.Button onPress=((_event) => yourAction())>
-  <Paper.Text>
-    (ReasonReact.string("Click me"))
-  </Paper.Text>
-</Paper.Button>
-```
-
-```ocaml
-<Paper.FABGroup
-  actions=Paper.FABGroup.[|
-    fabAction(~icon="add", ~onPress=() => Js.log("add"), ()),
-    fabAction(~icon="star", ~onPress=() => Js.log("start"), ()),
-    fabAction(~icon="notifications",  ~onPress=() => Js.log("notifications"), ()),
-  |]
-  onStateChange
-/>
-```
 
 ## Installation
 
@@ -41,7 +30,9 @@ Then add `bs-react-native-paper` to `bsconfig.json`
 "bs-dependencies": ["bs-react-native-paper"]
 ```
 
-## Using theme
+## Example usage
+
+### Using theme
 
 ```ocaml
 /* We provide a helper function called `createTheme` that defaults with DefaultTheme */
@@ -50,13 +41,15 @@ let theme =
     createTheme(
       ~colors=
         themeColors(
-          ~primary="blue",
-          ~accent="blue",
-          ~background="white",
-          ~paper="blue",
+          ~primary="#6200EE",
+          ~accent="#03dac4",
+          ~background="#f6f6f6",
+          ~surface="white",
+          ~error="#B00020",
           ~text="black",
-          ~disabled="gray",
-          ~placeholder="gray",
+          ~disabled="rgba(0, 0, 0, 0.26)",
+          ~placeholder="rgba(0, 0, 0, 0.54)",
+          ~backdrop="rgba(0, 0, 0, 0.5)",
         ),
       (),
     )
@@ -72,6 +65,41 @@ let make = children => {
     </Paper.ThemeProvider>,
 };
 ```
+
+### Using components
+
+```ocaml
+<Paper.Button mode=`contained onPress={_event => self.send(YourAction)}>
+  <Paper.Text>
+    {ReasonReact.string("Click me")}
+  </Paper.Text>
+</Paper.Button>
+```
+
+```ocaml
+<Paper.FABGroup
+  actions=Paper.FABGroup.[|
+    fabAction(~icon=Icon.Name("add"), ~onPress=() => Js.log("add"), ()),
+    fabAction(~icon=Icon.Name("star"), ~onPress=() => Js.log("start"), ()),
+    fabAction(~icon=Icon.Name("notifications"),  ~onPress=() => Js.log("notifications"), ()),
+  |]
+  onStateChange
+  icon={
+    Icon.Element(
+      Icon.renderIcon((props: Icon.iconProps) =>
+        <RNIcons.MaterialIcons
+          name=`_add
+          size={props.size}
+        />
+      ),
+    )
+  }
+/>
+```
+
+## Documentation
+
+We do not have dedicated documentation for this library, but you can check example usage of components in our example app. It is located in /example directory. Components' api in most cases is very similar or the same as in `react-native-paper`, but there are cases where we had to implement props differently, so if you encounter problems I would suggest to check the source code of particular binding.
 
 ## Contributing
 
