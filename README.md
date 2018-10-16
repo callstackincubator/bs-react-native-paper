@@ -3,7 +3,7 @@
   <img alt="react-native-paper" src="assets/paper-logo.svg" width="300">
 </p>
 <p align="center">
-  [React-native-paper](https://github.com/callstack/react-native-paper) for ReasonML.
+  <a href="https://github.com/callstack/react-native-paper">React-native-paper</a> for ReasonML.
 </p>
 
 ---
