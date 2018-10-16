@@ -3,7 +3,7 @@
   <img alt="react-native-paper" src="assets/paper-logo.svg" width="300">
 </p>
 <p align="center">
-  React-native-paper for ReasonML.
+  (React-native-paper)[https://github.com/callstack/react-native-paper] for ReasonML.
 </p>
 
 ---
@@ -99,7 +99,7 @@ let make = children => {
 
 ## Documentation
 
-We do not have dedicated documentation for this library, but you can check example usage of components in our example app. It is located in /example directory. Components' api in most cases is very similar or the same as in `react-native-paper`, but there are cases where we had to implement props differently, so if you encounter problems I would suggest to check the source code of particular binding.
+We do not have dedicated documentation for this library, but you can check example usage of components in our example app. It is located in /example directory. Components' api in most cases is very similar or the same as in (react-native-paper)[https://github.com/callstack/react-native-paper], but there are cases where we had to implement props differently, so if you encounter problems I would suggest to check the source code of particular binding.
 
 ## Contributing
 
