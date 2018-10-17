@@ -1,19 +1,28 @@
 {
   "name": "bs-react-native-paper",
-  "version": "4.0.1-beta.20",
-  "description": "React Native Paper bindings for BS",
-  "main": "index.js",
-  "repository": "git@github.com:Astrocoders/bs-react-native-paper.git",
-  "bugs": "https://github.com/Astrocoders/bs-react-native-paper/issues",
-  "homepage": "https://github.com/Astrocoders/bs-react-native-paper",
+  "version": "5.0.0-alpha",
+  "description": "React Native Paper bindings for ReasonML",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/callstackincubator/bs-react-native-paper.git"
+  },
+  "bugs": "https://github.com/callstackincubator/bs-react-native-paper/issues",
+  "homepage": "https://github.com/callstackincubator/bs-react-native-paper",
   "author": "Medson de Oliveira Junior <medson.oliveira.jr@gmail.com>",
   "license": "MIT",
-  "keywords": ["bucklescript", "react-native-paper"],
+  "keywords": [
+    "bucklescript",
+    "react-native-paper",
+    "reasonml",
+    "reason",
+    "react-native",
+    "material design"
+  ],
   "dependencies": {
     "bs-react-native": "^0.9.0"
   },
   "peerDependencies": {
-    "react-native-paper": "*",
+    "react-native-paper": "^2.0.0",
     "reason-react": "^0.5.2"
   },
   "devDependencies": {
