@@ -97,6 +97,12 @@ let make = children => {
 />
 ```
 
+## Try it out
+
+Run the [example app](https://expo.io/@trensik/bs-react-native-paper-example) with [Expo](https://expo.io/) to see it in action.
+
+The source code for the examples are under the [/example](/example) folder.
+
 ## Documentation
 
 We do not have dedicated documentation for this library, but you can check example usage of components in our example app. It is located in /example directory. Components' api in most cases is very similar or the same as in [react-native-paper](https://github.com/callstack/react-native-paper), but there are cases where we had to implement props differently, so if you encounter problems I would suggest to check the source code of particular binding.
