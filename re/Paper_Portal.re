@@ -1,12 +1,13 @@
 module Host = {
   [@bs.module "react-native-paper"] [@bs.scope "Portal"]
-  external reactClass: ReasonReact.reactClass = "Host";
+  external reactClass : ReasonReact.reactClass = "Host";
 
-  let make = children => ReasonReact.wrapJsForReason(~reactClass, children);
+  let make = children =>
+    ReasonReact.wrapJsForReason(~reactClass, ~props=Js.Obj.empty(), children);
 };
 
 [@bs.module "react-native-paper"]
-external reactClass: ReasonReact.reactClass = "Portal";
+external reactClass : ReasonReact.reactClass = "Portal";
 
 [@bs.deriving abstract]
 type props = {
