@@ -10,7 +10,6 @@ module Styles = {
 };
 
 type screen = {
-  id: int,
   name: string,
   route: Config.route,
 };
@@ -18,38 +17,31 @@ type screen = {
 type examples = array(screen);
 
 let examples = [|
-  {id: 1, name: "Appbar Example", route: Config.AppbarExample},
-  {
-    id: 2,
-    name: "Bottom Navigation Example",
-    route: Config.BottomNavigationExample,
-  },
-  {id: 3, name: "Button Example", route: Config.ButtonExample},
-  {id: 4, name: "Card Example", route: Config.CardExample},
-  {id: 5, name: "Chip Example", route: Config.ChipExample},
-  {id: 6, name: "Checkbox Example", route: Config.CheckboxExample},
-  {id: 7, name: "Dialog Example", route: Config.DialogExample},
-  {id: 8, name: "Divider Example", route: Config.DividerExample},
-  {id: 9, name: "FAB Example", route: Config.FABExample},
-  {id: 10, name: "IconButton Example", route: Config.IconButtonExample},
-  {id: 11, name: "ListAccordion Example", route: Config.ListAccordionExample},
-  {id: 12, name: "ListSection Example", route: Config.ListSectionExample},
-  {id: 13, name: "ProgressBar Example", route: Config.ProgressBarExample},
-  {id: 14, name: "RadioButton Example", route: Config.RadioButtonExample},
-  {id: 15, name: "Searchbar Example", route: Config.SearchbarExample},
-  {id: 16, name: "Snackbar Example", route: Config.SnackbarExample},
-  {id: 17, name: "Surface Example", route: Config.SurfaceExample},
-  {id: 18, name: "Switch Example", route: Config.SwitchExample},
-  {id: 19, name: "TextInput Example", route: Config.TextInputExample},
-  {
-    id: 20,
-    name: "TouchableRipple Example",
-    route: Config.TouchableRippleExample,
-  },
-  {id: 21, name: "Typography Example", route: Config.TypographyExample},
+  {name: "Appbar Example", route: Config.AppbarExample},
+  {name: "Banner Example", route: Config.BannerExample},
+  {name: "Bottom Navigation Example", route: Config.BottomNavigationExample},
+  {name: "Button Example", route: Config.ButtonExample},
+  {name: "Card Example", route: Config.CardExample},
+  {name: "Chip Example", route: Config.ChipExample},
+  {name: "Checkbox Example", route: Config.CheckboxExample},
+  {name: "Dialog Example", route: Config.DialogExample},
+  {name: "Divider Example", route: Config.DividerExample},
+  {name: "FAB Example", route: Config.FABExample},
+  {name: "IconButton Example", route: Config.IconButtonExample},
+  {name: "ListAccordion Example", route: Config.ListAccordionExample},
+  {name: "ListSection Example", route: Config.ListSectionExample},
+  {name: "ProgressBar Example", route: Config.ProgressBarExample},
+  {name: "RadioButton Example", route: Config.RadioButtonExample},
+  {name: "Searchbar Example", route: Config.SearchbarExample},
+  {name: "Snackbar Example", route: Config.SnackbarExample},
+  {name: "Surface Example", route: Config.SurfaceExample},
+  {name: "Switch Example", route: Config.SwitchExample},
+  {name: "TextInput Example", route: Config.TextInputExample},
+  {name: "TouchableRipple Example", route: Config.TouchableRippleExample},
+  {name: "Typography Example", route: Config.TypographyExample},
 |];
 
-let keyExtractor = (item, _index) => string_of_int(item.id);
+let keyExtractor = (_item, index) => string_of_int(index);
 
 let renderItem = (navigation: StackNavigator.navigation) =>
   FlatList.renderItem((screen: FlatList.renderBag(screen)) =>
