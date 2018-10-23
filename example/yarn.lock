@@ -486,10 +486,10 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@callstack/react-theme-provider@^1.0.3":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@callstack/react-theme-provider/-/react-theme-provider-1.0.4.tgz#62cb2af8fedb971d509b92c79cc8476c91909477"
-  integrity sha512-BSYOMF+jHmj4E6Qv5oOEh0+KAwqr2iQnsnDhfeE9lWMmjj6tz2mZeBQAKHRz5mXy4bdhDUClZioRlwGTwA72hg==
+"@callstack/react-theme-provider@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@callstack/react-theme-provider/-/react-theme-provider-1.0.6.tgz#6298708c811f287d2bad2e10df0783b8b8e4c53d"
+  integrity sha512-v2lAll0Xd8Dhb6kyIH2vF7DbS6oa7aRxdfsV50M8m4CbGcYzd3GDhi2/N8w62rkyHBbL511r+wQ8UzxzqlsH1A==
   dependencies:
     create-react-context "^0.2.1"
     deepmerge "^2.1.1"
@@ -4411,12 +4411,12 @@ react-native-maps@0.21.0:
     babel-plugin-module-resolver "^2.3.0"
     babel-preset-react-native "1.9.0"
 
-react-native-paper@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/react-native-paper/-/react-native-paper-2.0.1.tgz#0221ead52e35811ca6d2ce41cf069d424fe92bcf"
-  integrity sha512-KGJ34ARCEDLVfhNg5YVelw0+kyCpcBPux2jAGAAFS6nedu5jrwe/d8Egqgle8oEhYDcsJ3IIxYvsXwP6qTRDWg==
+react-native-paper@^2.1.3:
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/react-native-paper/-/react-native-paper-2.1.3.tgz#ae2efce3cf8ba7d8afa6f5d743768b2be110520f"
+  integrity sha512-f9CKazmEd8c38CsX5d5+/qxv2AzD8rI/k8xNPrXk5PHWS81RrQOUSVcHJApcEFyzRMQ+gIGbijtZ3mkn0V2lSg==
   dependencies:
-    "@callstack/react-theme-provider" "^1.0.3"
+    "@callstack/react-theme-provider" "^1.0.6"
     color "^2.0.1"
     create-react-context "^0.2.2"
     hoist-non-react-statics "^2.5.0"

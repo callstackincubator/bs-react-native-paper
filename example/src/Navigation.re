@@ -21,7 +21,8 @@ module Config = {
     | TouchableRippleExample
     | ChipExample
     | TextInputExample
-    | BottomNavigationExample;
+    | BottomNavigationExample
+    | BannerExample;
 };
 
 include ReboltNavigation.Navigation.CreateNavigation(Config);

@@ -22,7 +22,6 @@ module Styles = {
 
 let renderScene =
   BottomNavigation.renderSceneType((props: BottomNavigation.renderSceneProps) => {
-    Js.log(props);
     let photos =
       Array.make(24, "https://unsplash.it/300/300/?random&__id=")
       |> Array.mapi((index, element) =>

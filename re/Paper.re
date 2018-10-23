@@ -1,4 +1,5 @@
 module Appbar = Paper_Appbar;
+module Banner = Paper_Banner;
 module BottomNavigation = Paper_BottomNavigation;
 module Button = Paper_Button;
 module Caption = Paper_Caption;
