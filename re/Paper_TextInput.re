@@ -62,6 +62,7 @@ let make =
       ~onSubmitEditing: option(unit => unit)=?,
       ~onFocus: option(unit => unit)=?,
       ~onBlur: option(unit => unit)=?,
+      ~testID: option(string)=?,
       children,
     ) =>
   ReasonReact.wrapJsForReason(
@@ -128,6 +129,7 @@ let make =
         "onSubmitEditing": fromOption(onSubmitEditing),
         "onFocus": fromOption(onFocus),
         "onBlur": fromOption(onBlur),
+        "testID": fromOption(testID),
       },
     children,
   );
