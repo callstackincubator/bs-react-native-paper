@@ -15,6 +15,7 @@ let make =
       ~onLayout: option(unit => unit)=?,
       ~onLongPress: option(unit => unit)=?,
       ~onPress: option(unit => unit)=?,
+      ~testID: option(string)=?,
       children,
     ) =>
   ReasonReact.wrapJsForReason(
@@ -33,6 +34,7 @@ let make =
         "onPress": fromOption(onPress),
         "theme": fromOption(theme),
         "style": fromOption(style),
+        "testID": fromOption(testID),
       },
     children,
   );
