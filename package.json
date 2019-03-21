@@ -1,6 +1,6 @@
 {
   "name": "bs-react-native-paper",
-  "version": "5.0.0-alpha.1",
+  "version": "5.0.1",
   "description": "React Native Paper bindings for ReasonML",
   "repository": {
     "type": "git",
