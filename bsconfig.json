@@ -11,5 +11,5 @@
       "dir": "re"
     }
   ],
-  "namespace": "true"
+  "namespace": true
 }
