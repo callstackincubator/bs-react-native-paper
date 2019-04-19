@@ -1,4 +1,5 @@
 open BsReactNative;
+open BsReactNativePaper;
 open Paper;
 
 module Styles = {
