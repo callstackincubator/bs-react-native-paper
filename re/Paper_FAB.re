@@ -152,6 +152,8 @@ module Group = {
     iconAsString: string,
     [@bs.optional] [@bs.as "icon"]
     iconAsRenderFunc: Icon.renderIcon,
+    [@bs.optional]
+    fabStyle: BsReactNative.Style.t,
   };
 
   let make =
@@ -161,6 +163,7 @@ module Group = {
         ~theme=?,
         ~icon,
         ~style=?,
+        ~fabStyle=?,
         ~onPress=?,
         ~onStateChange,
         ~accessibilityLabel=?,
@@ -182,6 +185,7 @@ module Group = {
             ~actions,
             ~onStateChange,
             ~accessibilityLabel?,
+            ~fabStyle?,
             (),
           )
         | Icon.Element(renderFunc) =>
@@ -195,6 +199,7 @@ module Group = {
             ~actions,
             ~onStateChange,
             ~accessibilityLabel?,
+            ~fabStyle?,
             (),
           )
         },

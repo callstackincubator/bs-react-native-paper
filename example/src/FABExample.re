@@ -16,6 +16,7 @@ module Styles = {
   let row = style([flex(1.), justifyContent(Center), alignItems(Center)]);
 
   let fab = style([margin(Pt(8.))]);
+  let fabStyle = style([backgroundColor(String("#6200EE"))]);
 };
 
 type state = {visible: bool};
@@ -73,6 +74,7 @@ let make = (~navigation: StackNavigator.navigation, _children) => {
                        self.state.visible ?
                          Icon.Name("today") : Icon.Name("add")
                      }
+                     fabStyle=Styles.fabStyle
                      actions=[|
                        FAB.Group.fabAction(
                          ~icon=
