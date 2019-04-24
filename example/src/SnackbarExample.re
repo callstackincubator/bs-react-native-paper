@@ -1,5 +1,6 @@
 open BsReactNative;
 open Navigation;
+open BsReactNativePaper;
 
 module Styles = {
   open Style;

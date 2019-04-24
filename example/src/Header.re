@@ -1,3 +1,4 @@
+open BsReactNativePaper;
 open Paper;
 open BsReactNative;
 open ReboltNavigation;
