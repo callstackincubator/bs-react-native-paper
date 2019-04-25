@@ -1,9 +1,9 @@
 {
   "name": "bs-react-native-paper",
   "reason": {
-    "react-jsx": 2
+    "react-jsx": 3
   },
-  "bs-dependencies": ["reason-react", "bs-react-native"],
+  "bs-dependencies": ["reason-react", "bs-react-native/reason-react-native"],
   "refmt": 3,
   "bsc-flags": ["-bs-super-errors"],
   "sources": [
