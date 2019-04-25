@@ -37,7 +37,7 @@
       "git add"
     ],
     "*.re": [
-      "refmt --in-place",
+      "bsrefmt --in-place",
       "git add"
     ]
   },

@@ -4,7 +4,7 @@ external reactClass: ReasonReact.reactClass = "Content";
 [@bs.deriving abstract]
 type props = {
   [@bs.optional]
-  style: BsReactNative.Style.t,
+  style: ReactNative.Style.t,
 };
 
 let make = (~style=?, children) =>

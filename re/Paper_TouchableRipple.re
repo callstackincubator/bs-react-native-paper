@@ -8,9 +8,9 @@ let make =
       ~disabled: bool=false,
       ~rippleColor: option(string)=?,
       ~underlayColor: option(string)=?,
-      ~style: option(BsReactNative.Style.t)=?,
+      ~style: option(ReactNative.Style.t)=?,
       ~theme: option(Paper_ThemeProvider.appTheme)=?,
-      ~onPress: option(BsReactNative.RNEvent.NativeEvent.t => unit)=?,
+      ~onPress: option(ReactNative.Event.pressEvent => unit)=?,
       children,
     ) =>
   ReasonReact.wrapJsForReason(

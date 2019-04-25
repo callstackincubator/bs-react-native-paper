@@ -30,10 +30,10 @@ type props = {
   [@bs.optional]
   accessibilityLabel: string,
   [@bs.optional]
-  style: BsReactNative.Style.t,
+  style: ReactNative.Style.t,
   [@bs.optional]
   theme: Paper_ThemeProvider.appTheme,
-  onPress: BsReactNative.RNEvent.NativeEvent.t => unit,
+  onPress: ReactNative.Event.pressEvent => unit,
 };
 
 let make =

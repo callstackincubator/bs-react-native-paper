@@ -6,11 +6,11 @@ type props = {
   [@bs.optional]
   elevation: int,
   [@bs.optional]
-  onLongPress: BsReactNative.RNEvent.NativeEvent.t => unit,
+  onLongPress: ReactNative.Event.pressEvent => unit,
   [@bs.optional]
-  onPress: BsReactNative.RNEvent.NativeEvent.t => unit,
+  onPress: ReactNative.Event.pressEvent => unit,
   [@bs.optional]
-  style: BsReactNative.Style.t,
+  style: ReactNative.Style.t,
   [@bs.optional]
   theme: Paper_ThemeProvider.appTheme,
 };

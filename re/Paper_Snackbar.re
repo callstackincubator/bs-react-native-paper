@@ -36,7 +36,7 @@ type props = {
   duration: int,
   onDismiss: unit => unit,
   [@bs.optional]
-  style: BsReactNative.Style.t,
+  style: ReactNative.Style.t,
   [@bs.optional]
   action: snackbarAction,
   visible: bool,

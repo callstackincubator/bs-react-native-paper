@@ -19,7 +19,7 @@ type props = {
   [@bs.optional]
   color: string,
   [@bs.optional]
-  onPress: BsReactNative.RNEvent.NativeEvent.t => unit,
+  onPress: ReactNative.Event.pressEvent => unit,
   [@bs.optional]
   uncheckedColor: string,
 };
@@ -105,7 +105,7 @@ module IOS = {
     [@bs.optional]
     color: string,
     [@bs.optional]
-    onPress: BsReactNative.RNEvent.NativeEvent.t => unit,
+    onPress: ReactNative.Event.pressEvent => unit,
   };
 
   let make =

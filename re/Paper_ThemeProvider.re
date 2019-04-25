@@ -1,6 +1,3 @@
-[@bs.module "react-native-paper"]
-external reactClass: ReasonReact.reactClass = "ThemeProvider";
-
 [@bs.deriving abstract]
 type themeColors = {
   primary: string,
@@ -39,12 +36,6 @@ external defaultTheme: appTheme = "DefaultTheme";
 
 [@bs.module "react-native-paper"] external darkTheme: appTheme = "DarkTheme";
 
-[@bs.deriving abstract]
-type props = {
-  [@bs.optional]
-  theme: appTheme,
-};
-
 let createTheme =
     (
       ~roundness=roundnessGet(defaultTheme),
@@ -55,9 +46,5 @@ let createTheme =
     ) =>
   appTheme(~roundness, ~dark, ~colors, ~fonts);
 
-let make = (~theme=?, children) =>
-  ReasonReact.wrapJsForReason(
-    ~reactClass,
-    ~props=props(~theme?, ()),
-    children,
-  );
+[@bs.module "react-native-paper"] [@react.component]
+external make: (~theme: appTheme=?) => React.element = "ThemeProvider";

@@ -6,7 +6,7 @@ let make =
       ~progress: option(float),
       ~color: option(string)=?,
       ~theme: option(Js.t({..}))=?,
-      ~style: option(BsReactNative.Style.t)=?,
+      ~style: option(ReactNative.Style.t)=?,
       children,
     ) =>
   ReasonReact.wrapJsForReason(

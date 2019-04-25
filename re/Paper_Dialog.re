@@ -10,7 +10,7 @@ type props = {
   [@bs.optional]
   theme: Paper_ThemeProvider.appTheme,
   [@bs.optional]
-  style: BsReactNative.Style.t,
+  style: ReactNative.Style.t,
 };
 
 let make =
@@ -28,7 +28,7 @@ module Actions = {
   [@bs.deriving abstract]
   type props = {
     [@bs.optional]
-    style: BsReactNative.Style.t,
+    style: ReactNative.Style.t,
   };
 
   let make = (~style=?, children) =>
@@ -46,7 +46,7 @@ module Content = {
   [@bs.deriving abstract]
   type props = {
     [@bs.optional]
-    style: BsReactNative.Style.t,
+    style: ReactNative.Style.t,
   };
 
   let make = (~style=?, children) =>
@@ -63,7 +63,7 @@ module ScrollArea = {
   [@bs.deriving abstract]
   type props = {
     [@bs.optional]
-    style: BsReactNative.Style.t,
+    style: ReactNative.Style.t,
   };
 
   let make = (~style=?, children) =>
@@ -82,7 +82,7 @@ module Title = {
     [@bs.optional]
     theme: Paper_ThemeProvider.appTheme,
     [@bs.optional]
-    style: BsReactNative.Style.t,
+    style: ReactNative.Style.t,
   };
 
   let make = (~style=?, ~theme=?, children) =>

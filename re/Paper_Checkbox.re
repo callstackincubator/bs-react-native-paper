@@ -12,7 +12,7 @@ type status = [
 type props = {
   status: string,
   [@bs.optional]
-  onPress: BsReactNative.RNEvent.NativeEvent.t => unit,
+  onPress: ReactNative.Event.pressEvent => unit,
   [@bs.optional]
   theme: Paper_ThemeProvider.appTheme,
   [@bs.optional]
@@ -86,7 +86,7 @@ module IOS = {
   type props = {
     status: string,
     [@bs.optional]
-    onPress: BsReactNative.RNEvent.NativeEvent.t => unit,
+    onPress: ReactNative.Event.pressEvent => unit,
     [@bs.optional]
     theme: Paper_ThemeProvider.appTheme,
     [@bs.optional]

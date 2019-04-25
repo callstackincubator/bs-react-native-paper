@@ -8,8 +8,8 @@ module Item = {
         ~icon: option(ReasonReact.reactElement)=?,
         ~active: bool=false,
         ~theme: option(Paper_ThemeProvider.appTheme)=?,
-        ~onPress: option(BsReactNative.RNEvent.NativeEvent.t => unit)=?,
-        ~style: option(BsReactNative.Style.t)=?,
+        ~onPress: option(ReactNative.Event.pressEvent => unit)=?,
+        ~style: option(ReactNative.Style.t)=?,
         children,
       ) =>
     ReasonReact.wrapJsForReason(

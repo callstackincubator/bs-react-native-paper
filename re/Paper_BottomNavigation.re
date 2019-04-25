@@ -105,13 +105,13 @@ type props = {
   [@bs.optional]
   inactiveColor: string,
   [@bs.optional]
-  barStyle: BsReactNative.Style.t,
+  barStyle: ReactNative.Style.t,
   [@bs.optional]
   shifting: bool,
   [@bs.optional]
   labeled: bool,
   [@bs.optional]
-  style: BsReactNative.Style.t,
+  style: ReactNative.Style.t,
   [@bs.optional]
   theme: Paper_ThemeProvider.appTheme,
 };
