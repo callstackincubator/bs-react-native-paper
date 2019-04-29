@@ -151,9 +151,9 @@ bs-platform@^5.0.3:
   resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-5.0.3.tgz#2b167603ef52574cb9534fabab702f6013715e6c"
   integrity sha512-GAeypBebeDGTay5kJ3v5Z3Whp1Q4zQ0hAttflVtPG3zps88xDZnVAlS3JGIIBDmJFEMyNtv5947a/IWKvWXcPw==
 
-"bs-react-native-monorepo@https://github.com/reasonml-community/bs-react-native.git":
+"bs-react-native@https://github.com/reasonml-community/bs-react-native.git":
   version "0.0.0"
-  resolved "https://github.com/reasonml-community/bs-react-native.git#19328d67d101df7691659aa30838122fddfb7349"
+  resolved "https://github.com/reasonml-community/bs-react-native.git#4f95f3a3c4fa96c8047921ff7659c8b6e5706c95"
 
 buffer-from@^1.0.0:
   version "1.0.0"
