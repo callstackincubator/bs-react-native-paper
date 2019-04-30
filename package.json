@@ -1,6 +1,6 @@
 {
   "name": "bs-react-native-paper",
-  "version": "5.0.1",
+  "version": "5.1.0",
   "description": "React Native Paper bindings for ReasonML",
   "repository": {
     "type": "git",
@@ -37,7 +37,10 @@
       "prettier --write --single-quote true --trailing-comma all --print-width 120 --semi false",
       "git add"
     ],
-    "*.re": ["refmt --in-place", "git add"]
+    "*.re": [
+      "refmt --in-place",
+      "git add"
+    ]
   },
   "pre-commit": "lint:staged",
   "scripts": {
