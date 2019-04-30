@@ -5,7 +5,8 @@ external make:
     ~onDismiss: unit => unit,
     ~dismissable: bool=?,
     ~theme: Paper_ThemeProvider.appTheme=?,
-    ~style: ReactNative.Style.t=?
+    ~style: ReactNative.Style.t=?,
+    ~children: React.element
   ) =>
   React.element =
   "Dialog";
