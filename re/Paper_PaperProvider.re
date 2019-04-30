@@ -1,5 +1,2 @@
-[@bs.module "react-native-paper"]
-external reactClass : ReasonReact.reactClass = "Provider";
-
-let make = children =>
-  ReasonReact.wrapJsForReason(~reactClass, ~props=Js.Obj.empty(), children);
+[@bs.module "react-native-paper"] [@react.component]
+external make: (~children: React.element) => React.element = "Provider";

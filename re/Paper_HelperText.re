@@ -6,7 +6,7 @@ type props = {
   [@bs.optional]
   theme: Paper_ThemeProvider.appTheme,
   [@bs.optional]
-  style: BsReactNative.Style.t,
+  style: ReactNative.Style.t,
   [@bs.optional]
   visible: bool,
   [@bs.as "type"]

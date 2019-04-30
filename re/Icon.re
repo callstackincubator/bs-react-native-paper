@@ -11,10 +11,9 @@ type iconProps = {
   direction: string,
 };
 
-type renderIcon = jsIconProps => ReasonReact.reactElement;
+type renderIcon = jsIconProps => React.element;
 
-let renderIcon =
-    (reRenderIcon: iconProps => ReasonReact.reactElement): renderIcon =>
+let renderIcon = (reRenderIcon: iconProps => React.element): renderIcon =>
   (jsIconProps: jsIconProps) =>
     reRenderIcon({
       color: jsIconProps##color,

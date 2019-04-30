@@ -20,7 +20,7 @@ module Icon = {
     [@bs.optional] [@bs.as "icon"]
     iconAsRenderFunc: Icon.renderIcon,
     [@bs.optional]
-    style: BsReactNative.Style.t,
+    style: ReactNative.Style.t,
   };
 
   let make = (~color, ~icon, ~style=?) =>
@@ -49,7 +49,7 @@ module Accordion = {
     [@bs.optional]
     theme: Paper_ThemeProvider.appTheme,
     [@bs.optional]
-    style: BsReactNative.Style.t,
+    style: ReactNative.Style.t,
   };
 
   let make = (~title, ~description=?, ~left=?, ~theme=?, ~style=?, children) =>
@@ -74,11 +74,11 @@ module Item = {
     [@bs.optional]
     right: renderIcon,
     [@bs.optional]
-    onPress: BsReactNative.RNEvent.NativeEvent.t => unit,
+    onPress: ReactNative.Event.pressEvent => unit,
     [@bs.optional]
     theme: Paper_ThemeProvider.appTheme,
     [@bs.optional]
-    style: BsReactNative.Style.t,
+    style: ReactNative.Style.t,
   };
 
   let make =
@@ -120,7 +120,7 @@ module Section = {
     [@bs.optional]
     theme: Paper_ThemeProvider.appTheme,
     [@bs.optional]
-    style: BsReactNative.Style.t,
+    style: ReactNative.Style.t,
   };
 
   let make = (~title=?, ~theme=?, children) =>

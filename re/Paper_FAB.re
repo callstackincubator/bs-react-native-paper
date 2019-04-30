@@ -14,9 +14,9 @@ type props = {
   [@bs.optional]
   theme: Paper_ThemeProvider.appTheme,
   [@bs.optional]
-  style: BsReactNative.Style.t,
+  style: ReactNative.Style.t,
   [@bs.optional]
-  onPress: BsReactNative.RNEvent.NativeEvent.t => unit,
+  onPress: ReactNative.Event.pressEvent => unit,
   [@bs.optional]
   accessibilityLabel: string,
   [@bs.optional] [@bs.as "icon"]
@@ -90,7 +90,7 @@ module Group = {
     [@bs.optional]
     color: string,
     [@bs.optional]
-    style: BsReactNative.Style.t,
+    style: ReactNative.Style.t,
   };
 
   let fabAction =
@@ -143,9 +143,9 @@ module Group = {
     [@bs.optional]
     theme: Paper_ThemeProvider.appTheme,
     [@bs.optional]
-    style: BsReactNative.Style.t,
+    style: ReactNative.Style.t,
     [@bs.optional]
-    onPress: BsReactNative.RNEvent.NativeEvent.t => unit,
+    onPress: ReactNative.Event.pressEvent => unit,
     [@bs.optional]
     accessibilityLabel: string,
     [@bs.optional] [@bs.as "icon"]

@@ -4,7 +4,7 @@ external reactClass: ReasonReact.reactClass = "Surface";
 let make =
     (
       ~theme: option(Js.t({..}))=?,
-      ~style: option(BsReactNative.Style.t)=?,
+      ~style: option(ReactNative.Style.t)=?,
       children,
     ) =>
   ReasonReact.wrapJsForReason(

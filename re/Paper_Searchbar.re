@@ -14,10 +14,10 @@ type props = {
   [@bs.optional]
   theme: Paper_ThemeProvider.appTheme,
   [@bs.optional]
-  style: BsReactNative.Style.t,
+  style: ReactNative.Style.t,
   onChangeText: string => unit,
   [@bs.optional]
-  onIconPress: BsReactNative.RNEvent.NativeEvent.t => unit,
+  onIconPress: ReactNative.Event.pressEvent => unit,
 };
 
 let make =

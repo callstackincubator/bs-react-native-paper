@@ -16,7 +16,7 @@ module type ImageComponent = {
     imageURISource;
   type imageSource =
     | URI(imageURISource)
-    | Required(BsReactNative.Packager.required)
+    | Required(ReactNative.Packager.required)
     | Multiple(list(imageURISource));
   type defaultURISource;
   let defaultURISource:
@@ -24,7 +24,7 @@ module type ImageComponent = {
     defaultURISource;
   type defaultSource =
     | URI(defaultURISource)
-    | Required(BsReactNative.Packager.required);
+    | Required(ReactNative.Packager.required);
   module Event: {
     type error;
     type progress = {
@@ -35,19 +35,19 @@ module type ImageComponent = {
   let make:
     (
       ~onError: Event.error => unit=?,
-      ~onLayout: BsReactNative.RNEvent.NativeLayoutEvent.t => unit=?,
+      ~onLayout: ReactNative.Event.layoutEvent => unit=?,
       ~onLoad: unit => unit=?,
       ~onLoadEnd: unit => unit=?,
       ~onLoadStart: unit => unit=?,
       ~resizeMode: [< | `center | `contain | `cover | `repeat | `stretch]=?,
       ~source: imageSource=?,
-      ~style: BsReactNative.Style.t=?,
+      ~style: ReactNative.Style.t=?,
       ~testID: string=?,
       ~resizeMethod: [< | `auto | `resize | `scale]=?,
       ~accessibilityLabel: string=?,
       ~accessible: bool=?,
       ~blurRadius: float=?,
-      ~capInsets: BsReactNative.Types.insets=?,
+      ~capInsets: ReactNative.Types.edgeInsets=?,
       ~defaultSource: defaultSource=?,
       ~onPartialLoad: unit => unit=?,
       ~onProgress: Event.progress => unit=?,
@@ -61,7 +61,8 @@ module type ImageComponent = {
     );
 };
 
-module CreateComponent = (Impl: BsReactNative.View.Impl) : ImageComponent => {
+module type Impl = {let view: ReasonReact.reactClass;};
+module CreateComponent = (Impl: Impl) : ImageComponent => {
   type imageURISource;
   [@bs.obj]
   external imageURISource:
@@ -87,7 +88,7 @@ module CreateComponent = (Impl: BsReactNative.View.Impl) : ImageComponent => {
     "";
   type imageSource =
     | URI(imageURISource)
-    | Required(BsReactNative.Packager.required)
+    | Required(ReactNative.Packager.required)
     | Multiple(list(imageURISource));
   type defaultURISource;
   [@bs.obj]
@@ -97,7 +98,7 @@ module CreateComponent = (Impl: BsReactNative.View.Impl) : ImageComponent => {
     "";
   type defaultSource =
     | URI(defaultURISource)
-    | Required(BsReactNative.Packager.required);
+    | Required(ReactNative.Packager.required);
   type rawImageSourceJS;
   external rawImageSourceJS: 'a => rawImageSourceJS = "%identity";
   module Event = {

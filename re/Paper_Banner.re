@@ -24,7 +24,7 @@ type props = {
   [@bs.optional]
   image: renderImage,
   [@bs.optional]
-  style: BsReactNative.Style.t,
+  style: ReactNative.Style.t,
   [@bs.optional]
   theme: Paper_ThemeProvider.appTheme,
 };

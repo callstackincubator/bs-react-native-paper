@@ -21,13 +21,13 @@ type props = {
   [@bs.optional] [@bs.as "icon"]
   iconAsRenderFunc: Icon.renderIcon,
   [@bs.optional]
-  style: BsReactNative.Style.t,
+  style: ReactNative.Style.t,
   [@bs.optional]
   theme: Paper_ThemeProvider.appTheme,
   [@bs.optional]
-  onPress: BsReactNative.RNEvent.NativeEvent.t => unit,
+  onPress: ReactNative.Event.pressEvent => unit,
   [@bs.optional]
-  onClose: BsReactNative.RNEvent.NativeEvent.t => unit,
+  onClose: ReactNative.Event.pressEvent => unit,
 };
 
 let make =

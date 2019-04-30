@@ -1,9 +1,4 @@
-[@bs.module "react-native-paper"]
-external reactClass: ReasonReact.reactClass = "Title";
-
-let make = (~style: option(BsReactNative.Style.t)=?, children) =>
-  ReasonReact.wrapJsForReason(
-    ~reactClass,
-    ~props=Js.Null_undefined.{"style": fromOption(style)},
-    children,
-  );
+[@bs.module "react-native-paper"] [@react.component]
+external make:
+  (~style: ReactNative.Style.t=?, ~children: React.element) => React.element =
+  "Title";
