@@ -1,94 +1,33 @@
-[@bs.module "react-native-paper"]
-external reactClass: ReasonReact.reactClass = "Dialog";
-
-[@bs.deriving abstract]
-type props = {
-  visible: bool,
-  onDismiss: unit => unit,
-  [@bs.optional]
-  dismissable: bool,
-  [@bs.optional]
-  theme: Paper_ThemeProvider.appTheme,
-  [@bs.optional]
-  style: ReactNative.Style.t,
-};
-
-let make =
-    (~dismissable=true, ~visible, ~theme=?, ~style=?, ~onDismiss, children) =>
-  ReasonReact.wrapJsForReason(
-    ~reactClass,
-    ~props=props(~visible, ~onDismiss, ~dismissable, ~theme?, ~style?, ()),
-    children,
-  );
+[@bs.module "react-native-paper"] [@react.component]
+external make:
+  (
+    ~visible: bool,
+    ~onDismiss: unit => unit,
+    ~dismissable: bool=?,
+    ~theme: Paper_ThemeProvider.appTheme=?,
+    ~style: ReactNative.Style.t=?
+  ) =>
+  React.element =
+  "Dialog";
 
 module Actions = {
-  [@bs.module "react-native-paper"] [@bs.scope "Dialog"]
-  external reactClass: ReasonReact.reactClass = "Actions";
-
-  [@bs.deriving abstract]
-  type props = {
-    [@bs.optional]
-    style: ReactNative.Style.t,
-  };
-
-  let make = (~style=?, children) =>
-    ReasonReact.wrapJsForReason(
-      ~reactClass,
-      ~props=props(~style?, ()),
-      children,
-    );
+  [@bs.module "react-native-paper"] [@bs.scope "Dialog"] [@react.component]
+  external make: (~style: ReactNative.Style.t=?) => React.element = "Actions";
 };
 
 module Content = {
-  [@bs.module "react-native-paper"] [@bs.scope "Dialog"]
-  external reactClass: ReasonReact.reactClass = "Content";
-
-  [@bs.deriving abstract]
-  type props = {
-    [@bs.optional]
-    style: ReactNative.Style.t,
-  };
-
-  let make = (~style=?, children) =>
-    ReasonReact.wrapJsForReason(
-      ~reactClass,
-      ~props=props(~style?, ()),
-      children,
-    );
+  [@bs.module "react-native-paper"] [@bs.scope "Dialog"] [@react.component]
+  external make: (~style: ReactNative.Style.t=?) => React.element = "Content";
 };
 module ScrollArea = {
-  [@bs.module "react-native-paper"] [@bs.scope "Dialog"]
-  external reactClass: ReasonReact.reactClass = "ScrollArea";
-
-  [@bs.deriving abstract]
-  type props = {
-    [@bs.optional]
-    style: ReactNative.Style.t,
-  };
-
-  let make = (~style=?, children) =>
-    ReasonReact.wrapJsForReason(
-      ~reactClass,
-      ~props=props(~style?, ()),
-      children,
-    );
+  [@bs.module "react-native-paper"] [@bs.scope "Dialog"] [@react.component]
+  external make: (~style: ReactNative.Style.t=?) => React.element =
+    "ScrollArea";
 };
 module Title = {
-  [@bs.module "react-native-paper"] [@bs.scope "Dialog"]
-  external reactClass: ReasonReact.reactClass = "Title";
-
-  [@bs.deriving abstract]
-  type props = {
-    [@bs.optional]
-    theme: Paper_ThemeProvider.appTheme,
-    [@bs.optional]
-    style: ReactNative.Style.t,
-  };
-
-  let make = (~style=?, ~theme=?, children) =>
-    ReasonReact.wrapJsForReason(
-      ~reactClass,
-      ~props=props(~style?, ~theme?, ()),
-      children,
-    );
+  [@bs.module "react-native-paper"] [@bs.scope "Dialog"] [@react.component]
+  external make:
+    (~theme: Paper_ThemeProvider.appTheme=?, ~style: ReactNative.Style.t=?) =>
+    React.element =
+    "Title";
 };
