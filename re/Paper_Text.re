@@ -3,17 +3,17 @@ external make:
   (
     ~selectable: bool=?,
     ~acessible: bool=?,
-    ~elipsizeMode: option(string)=?,
-    ~nativeID: option(string)=?,
-    ~numberOfLines: option(int)=?,
-    ~pressRetentionOffset: option(Js.t({..}))=?,
+    ~elipsizeMode: string=?,
+    ~nativeID: string=?,
+    ~numberOfLines: int=?,
+    ~pressRetentionOffset: Js.t({..})=?,
     ~allowFontScaling: bool=?,
-    ~theme: option(Paper_ThemeProvider.appTheme)=?,
-    ~style: option(ReactNative.Style.t)=?,
-    ~onLayout: option(unit => unit)=?,
-    ~onLongPress: option(unit => unit)=?,
-    ~onPress: option(unit => unit)=?,
-    ~testID: option(string)=?,
+    ~theme: Paper_ThemeProvider.appTheme=?,
+    ~style: ReactNative.Style.t=?,
+    ~onLayout: unit => unit=?,
+    ~onLongPress: unit => unit=?,
+    ~onPress: unit => unit=?,
+    ~testID: string=?,
     ~children: React.element
   ) =>
   React.element =
