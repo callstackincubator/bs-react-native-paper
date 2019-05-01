@@ -1,4 +1,4 @@
-[@bs.module "react-native-paper"]
+[@bs.module "react-native-paper"] [@react.component]
 external make:
   (
     ~placeholder: string=?,
