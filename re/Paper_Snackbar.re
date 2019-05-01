@@ -1,6 +1,3 @@
-[@bs.module "react-native-paper"]
-external reactClass: ReasonReact.reactClass = "Snackbar";
-
 [@bs.module "react-native-paper"] [@bs.scope "Snackbar"]
 external durationShort: int = "DURATION_SHORT";
 [@bs.module "react-native-paper"] [@bs.scope "Snackbar"]
@@ -28,45 +25,27 @@ type snackbarAction = {
   onPress: unit => unit,
 };
 
-[@bs.deriving abstract]
-type props = {
-  [@bs.optional]
-  theme: Paper_ThemeProvider.appTheme,
-  [@bs.optional]
-  duration: int,
-  onDismiss: unit => unit,
-  [@bs.optional]
-  style: ReactNative.Style.t,
-  [@bs.optional]
-  action: snackbarAction,
-  visible: bool,
-};
+[@bs.module "react-native-paper"] [@react.component]
+external make:
+  (
+    ~theme: Paper_ThemeProvider.appTheme=?,
+    ~duration: int=?,
+    ~onDismiss: unit => unit,
+    ~style: ReactNative.Style.t=?,
+    ~action: snackbarAction=?,
+    ~visible: bool,
+    ~children: React.element
+  ) =>
+  React.element =
+  "Snackbar";
 
-let make =
-    (
-      ~theme=?,
-      ~duration=?,
-      ~onDismiss,
-      ~style=?,
-      ~action=?,
-      ~visible,
-      children,
-    ) =>
-  ReasonReact.wrapJsForReason(
-    ~reactClass,
-    ~props=
-      props(
-        ~theme?,
-        ~duration=
-          switch (duration) {
-          | Some(duration) => getDuration(duration)
-          | None => getDuration(DurationMedium)
-          },
-        ~onDismiss,
-        ~style?,
-        ~action?,
-        ~visible,
-        (),
-      ),
-    children,
+let makeProps = (~duration) => {
+  makeProps(
+    ~duration={
+      switch (duration) {
+      | Some(duration) => getDuration(duration)
+      | None => getDuration(DurationMedium)
+      };
+    },
   );
+};
