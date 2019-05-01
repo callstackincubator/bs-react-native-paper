@@ -61,52 +61,19 @@ module Accordion = {
 };
 
 module Item = {
-  [@bs.module "react-native-paper"] [@bs.scope "List"]
-  external listItem: ReasonReact.reactClass = "Item";
-
-  [@bs.deriving abstract]
-  type props = {
-    title: string,
-    [@bs.optional]
-    description: string,
-    [@bs.optional]
-    left: renderIcon,
-    [@bs.optional]
-    right: renderIcon,
-    [@bs.optional]
-    onPress: ReactNative.Event.pressEvent => unit,
-    [@bs.optional]
-    theme: Paper_ThemeProvider.appTheme,
-    [@bs.optional]
-    style: ReactNative.Style.t,
-  };
-
-  let make =
-      (
-        ~title,
-        ~description=?,
-        ~left=?,
-        ~right=?,
-        ~onPress=?,
-        ~theme=?,
-        ~style=?,
-        children,
-      ) =>
-    ReasonReact.wrapJsForReason(
-      ~reactClass=listItem,
-      ~props=
-        props(
-          ~title,
-          ~description?,
-          ~left?,
-          ~right?,
-          ~onPress?,
-          ~theme?,
-          ~style?,
-          (),
-        ),
-      children,
-    );
+  [@bs.module "react-native-paper"] [@bs.scope "List"] [@react.component]
+  external make:
+    (
+      ~title: string,
+      ~description: string=?,
+      ~left: renderIcon=?,
+      ~right: renderIcon=?,
+      ~onPress: ReactNative.Event.pressEvent => unit=?,
+      ~theme: Paper_ThemeProvider.appTheme=?,
+      ~style: ReactNative.Style.t=?
+    ) =>
+    React.element =
+    "Item";
 };
 
 module Section = {
