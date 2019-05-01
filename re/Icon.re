@@ -24,3 +24,7 @@ let renderIcon = (reRenderIcon: iconProps => React.element): renderIcon =>
 type iconType =
   | Name(string)
   | Element(renderIcon);
+
+type jsIconType('a) =
+  | String: jsIconType(string)
+  | Element: jsIconType(renderIcon);
