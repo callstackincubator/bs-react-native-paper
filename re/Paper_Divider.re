@@ -1,20 +1,9 @@
 [@bs.module "react-native-paper"]
-external reactClass: ReasonReact.reactClass = "Divider";
-
-let make =
-    (
-      ~inset: bool=false,
-      ~theme: option(Paper_ThemeProvider.appTheme)=?,
-      ~style: option(ReactNative.Style.t)=?,
-      children,
-    ) =>
-  ReasonReact.wrapJsForReason(
-    ~reactClass,
-    ~props=
-      Js.Null_undefined.{
-        "inset": inset,
-        "style": fromOption(style),
-        "theme": fromOption(theme),
-      },
-    children,
-  );
+external make:
+  (
+    ~inset: bool=?,
+    ~theme: Paper_ThemeProvider.appTheme=?,
+    ~style: ReactNative.Style.t=?
+  ) =>
+  React.element =
+  "Divider";
