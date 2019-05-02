@@ -13,12 +13,31 @@ type props = {
   style: BsReactNative.Style.t,
   [@bs.optional]
   theme: Paper_ThemeProvider.appTheme,
+  [@bs.optional]
+  testID: string,
 };
 
 let make =
-    (~elevation=?, ~onLongPress=?, ~onPress=?, ~style=?, ~theme=?, children) =>
+    (
+      ~elevation=?,
+      ~onLongPress=?,
+      ~onPress=?,
+      ~style=?,
+      ~theme=?,
+      ~testID=?,
+      children,
+    ) =>
   ReasonReact.wrapJsForReason(
-    ~props=props(~elevation?, ~onLongPress?, ~onPress?, ~style?, ~theme?, ()),
+    ~props=
+      props(
+        ~elevation?,
+        ~onLongPress?,
+        ~onPress?,
+        ~style?,
+        ~theme?,
+        ~testID?,
+        (),
+      ),
     ~reactClass,
     children,
   );
