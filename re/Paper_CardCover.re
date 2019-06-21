@@ -47,7 +47,7 @@ module type ImageComponent = {
       ~accessibilityLabel: string=?,
       ~accessible: bool=?,
       ~blurRadius: float=?,
-      ~capInsets: ReactNative.Types.edgeInsets=?,
+      ~capInsets: ReactNative.View.edgeInsets=?,
       ~defaultSource: defaultSource=?,
       ~onPartialLoad: unit => unit=?,
       ~onProgress: Event.progress => unit=?,

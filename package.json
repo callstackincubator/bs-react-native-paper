@@ -19,17 +19,17 @@
     "material design"
   ],
   "peerDependencies": {
-    "bs-react-native-monorepo": "https://github.com/reasonml-community/bs-react-native.git",
+    "reason-react-native": "^0.60.0",
     "react-native-paper": "^2.0.0",
     "reason-react": "^0.7.0"
   },
   "devDependencies": {
     "bs-platform": "^5.0.3",
-    "bs-react-native-monorepo": "reasonml-community/bs-react-native#57dcd84bfba20950a4b79bc83f3324bbb96e49b0",
     "lint-staged": "^8.1.5",
     "pre-commit": "^1.2.2",
     "prettier": "^1.17.0",
-    "reason-react": "^0.7.0"
+    "reason-react": "^0.7.0",
+    "reason-react-native": "^0.60.0"
   },
   "lint-staged": {
     "*.js": [

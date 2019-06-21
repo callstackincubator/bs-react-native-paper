@@ -3,7 +3,7 @@
   "reason": {
     "react-jsx": 3
   },
-  "bs-dependencies": ["reason-react", "bs-react-native-monorepo/reason-react-native"],
+  "bs-dependencies": ["reason-react", "reason-react-native"],
   "refmt": 3,
   "bsc-flags": ["-bs-super-errors"],
   "sources": [
