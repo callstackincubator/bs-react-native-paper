@@ -13,22 +13,31 @@ external make:
 
 module Actions = {
   [@bs.module "react-native-paper"] [@bs.scope "Dialog"] [@react.component]
-  external make: (~style: ReactNative.Style.t=?) => React.element = "Actions";
+  external make:
+    (~style: ReactNative.Style.t=?, ~children: React.element) => React.element =
+    "Actions";
 };
 
 module Content = {
   [@bs.module "react-native-paper"] [@bs.scope "Dialog"] [@react.component]
-  external make: (~style: ReactNative.Style.t=?) => React.element = "Content";
+  external make:
+    (~style: ReactNative.Style.t=?, ~children: React.element) => React.element =
+    "Content";
 };
 module ScrollArea = {
   [@bs.module "react-native-paper"] [@bs.scope "Dialog"] [@react.component]
-  external make: (~style: ReactNative.Style.t=?) => React.element =
+  external make:
+    (~style: ReactNative.Style.t=?, ~children: React.element) => React.element =
     "ScrollArea";
 };
 module Title = {
   [@bs.module "react-native-paper"] [@bs.scope "Dialog"] [@react.component]
   external make:
-    (~theme: Paper_ThemeProvider.appTheme=?, ~style: ReactNative.Style.t=?) =>
+    (
+      ~theme: Paper_ThemeProvider.appTheme=?,
+      ~style: ReactNative.Style.t=?,
+      ~children: React.element
+    ) =>
     React.element =
     "Title";
 };
