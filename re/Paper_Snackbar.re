@@ -39,7 +39,7 @@ external make:
   React.element =
   "Snackbar";
 
-let makeProps = (~duration) => {
+let makeProps = (~duration=?) => {
   makeProps(
     ~duration={
       switch (duration) {
