@@ -47,4 +47,5 @@ let createTheme =
   appTheme(~roundness, ~dark, ~colors, ~fonts);
 
 [@bs.module "react-native-paper"] [@react.component]
-external make: (~theme: appTheme=?) => React.element = "ThemeProvider";
+external make: (~theme: appTheme=?, ~children: React.element) => React.element =
+  "ThemeProvider";
